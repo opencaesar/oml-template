@@ -1,0 +1,18 @@
+sudo: false
+
+language: python
+
+python:
+  - "3.7"
+
+services:
+  - xvfb
+
+before_install:
+  - sudo apt-get install graphviz
+
+install:
+  - pip3 install bikeshed && bikeshed update
+
+script:
+  - ./gradlew build generateDocs
