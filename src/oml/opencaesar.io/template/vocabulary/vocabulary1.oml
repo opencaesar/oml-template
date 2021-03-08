@@ -10,7 +10,7 @@ vocabulary <http://opencaesar.io/template/vocabulary/vocabulary1> with # as voca
 	aspect A
 
 	// Example concept
-	concept C
+	concept C :> A
 
 	// Example relation entity
 	relation entity R [
