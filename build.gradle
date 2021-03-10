@@ -76,7 +76,7 @@ dependencies {
 /*
  * A task to extract and merge the OML dependencies
  */
-task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask) {
+task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml") {
     inputZipPaths = configurations.oml.files
     outputCatalogFolder = file('build/oml')
 }
@@ -84,7 +84,7 @@ task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask) {
 /*
  * A task to generate Bikeshed specification for the OML catalog
  */
-task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, dependsOn: downloadDependencies) {
+task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml", dependsOn: downloadDependencies) {
 	// OML catalog
 	inputCatalogPath = file('catalog.xml')
 	// OWL folder
@@ -99,7 +99,7 @@ task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, dependsOn:
  * A task to generate the model documentation in HTML
  */
 import org.gradle.internal.os.OperatingSystem
-task generateDocs(dependsOn: omlToBikeshed) {
+task generateDocs(dependsOn: omlToBikeshed, group:"oml") {
 	doLast {
 		if (OperatingSystem.current().isWindows()) {
 			exec { 
@@ -125,7 +125,7 @@ task generateDocs(dependsOn: omlToBikeshed) {
 /*
  * A task to convert the OML catalog to OWL catalog
  */
-task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, dependsOn: downloadDependencies) {
+task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, group:"oml", dependsOn: downloadDependencies) {
 	// OML catalog
 	inputCatalogPath = file('catalog.xml')
 	// OWL catalog
@@ -135,7 +135,7 @@ task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, dependsOn: downloadDepende
 /*
  * A task to run the Openllet reasoner on the OWL catalog
  */
-task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, dependsOn: omlToOwl) {
+task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", dependsOn: omlToOwl) {
 	// OWL catalog
 	catalogPath = file('build/owl/catalog.xml')
 	// Input ontology IRI to reason on
@@ -153,7 +153,7 @@ task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, dependsOn: omlToOwl)
 /*
  * Start the headless Fuseki server
  */
-task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask) {
+task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
 	configurationPath = file('.fuseki.ttl')
 	outputFolderPath = file('.fuseki')
 }
@@ -161,14 +161,14 @@ task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask) {
 /*
  * Stop the headless Fuseki server
  */
-task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask) {
+task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
 	outputFolderPath = file('.fuseki')
 }
 
 /*
  * A task to load an OWL catalog to a Fuseki dataset endpoint
  */
-task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, dependsOn: owlReason) {
+task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: owlReason) {
 	catalogPath = file('build/owl/catalog.xml')
 	endpointURL = "http://localhost:3030/$dataset.name".toString()
     fileExtensions = ['owl', 'ttl']
@@ -182,7 +182,7 @@ task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, dependsOn: owlReason) {
 /*
  * A task to run a set of SPARQL queries on a Fuseki dataset endpoint
  */
-task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, dependsOn: owlLoad) {
+task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn: owlLoad) {
 	endpointURL = "http://localhost:3030/$dataset.name".toString()
 	queryPath = file('src/sparql')
 	resultPath = file('build/frames')
@@ -191,7 +191,7 @@ task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, dependsOn: owlLoad) {
 /*
  * A task to run a set of SHACL validation rules on a Fuseki dataset endpoint
  */
-task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, dependsOn: owlLoad) {
+task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, group:"oml", dependsOn: owlLoad) {
 	endpointURL = "http://localhost:3030/$dataset.name".toString()
 	queryPath = file('src/shacl')
 	resultPath = file('build/reports')
@@ -200,14 +200,14 @@ task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, dependsOn:
 /*
  * A task to build the project, which executes several tasks together
  */
-task build() {
+task build(group:"oml") {
 	dependsOn owlReason
 }
 
 /*
  * A task to delete the build artifacts
  */
-task clean(type: Delete) {
+task clean(type: Delete, group:"oml") {
 	delete 'build'
 }
 
@@ -216,7 +216,7 @@ task clean(type: Delete) {
  */
 apply plugin: 'maven-publish'
 
-task omlZip(type: Zip) {
+task omlZip(type: Zip, group:"oml") {
 	from file('src/oml')
 	include "**/*.oml"
 	destinationDirectory = file('build/libs')
