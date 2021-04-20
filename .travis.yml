@@ -14,5 +14,10 @@ before_install:
 install:
   - pip3 install bikeshed && bikeshed update
 
+cache:
+  directories:
+    - $HOME/.m2
+    - $HOME/.gradle
+    
 script:
   - ./gradlew build generateDocs
