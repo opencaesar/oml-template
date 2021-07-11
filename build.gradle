@@ -81,10 +81,14 @@ task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml"
 task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml", dependsOn: downloadDependencies) {
     // OML catalog
     inputCatalogPath = file('catalog.xml')
-    // OWL folder
-    outputFolderPath = file('build/bikeshed')
+    // OML catalog title
+    inputCatalogTitle = project.title
+    // OML catalog version
+    inputCatalogVersion = project.version
     // Input Ontology Iri
     rootOntologyIri = "$dataset.rootOntologyIri".toString()
+    // OWL folder
+    outputFolderPath = file('build/bikeshed')
     // Publish URL
     publishUrl = "$dataset.publishUrl".toString()
 }
