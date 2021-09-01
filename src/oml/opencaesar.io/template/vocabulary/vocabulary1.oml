@@ -4,8 +4,11 @@
 vocabulary <http://opencaesar.io/template/vocabulary/vocabulary1> with # as vocabulary1 {
 	
 	// The vocabulary bundle used by this description bundle
-	extends <http://www.w3.org/2002/07/owl>
+
+	extends <http://purl.org/dc/elements/1.1> with / as dc
 	
+	extends <http://www.w3.org/2002/07/owl>
+
 	// Example aspect
 	aspect A
 
