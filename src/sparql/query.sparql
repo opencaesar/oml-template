@@ -1,4 +1,4 @@
-PREFIX vocabulary1:   <http://opencaesar.io/template/vocabulary/vocabulary1#>
+PREFIX vocabulary1:   <http://opencaesar.io/template/vocabulary/vocabulary1##>
 
 SELECT ?x ?y
 

@@ -1,12 +1,12 @@
 @dc:title "Example Vocabulary Bundle"
 @dc:creator "Example Company"
 @dc:rights "Copyright 2019, by Example Company"
-vocabulary bundle <http://opencaesar.io/template/vocabulary/bundle> with # as vocabulary-bundle {
+vocabulary bundle <http://opencaesar.io/template/vocabulary/bundle#> as vocabulary-bundle {
 		
 	// The vocabularies included in this bundle
 	
-	includes <http://purl.org/dc/elements/1.1> with / as dc	
+	includes <http://purl.org/dc/elements/1.1/> as dc	
 
-	includes <http://opencaesar.io/template/vocabulary/vocabulary1>
+	includes <http://opencaesar.io/template/vocabulary/vocabulary1#>
 
 }
