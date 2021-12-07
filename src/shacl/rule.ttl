@@ -1,12 +1,12 @@
-@prefix sh: <http://www.w3.org/ns/shacl##> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns##> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema##> .
-@prefix owl: <http://www.w3.org/2002/07/owl##> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 
-@prefix vocabulary1: <http://opencaesar.io/template/vocabulary/vocabulary1##> .
+@prefix vocabulary1: <http://opencaesar.io/template/vocabulary/vocabulary1#> .
 
 # The namespace for the shacl shapes ontology
-@prefix shapes: <http://shapes##> .
+@prefix shapes: <http://shapes#> .
 
 
 # The following defines the `shapes` ontology.
