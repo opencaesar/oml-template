@@ -22,21 +22,23 @@ buildscript {
         classpath 'io.opencaesar.owl:owl-query-gradle:+'
         classpath 'io.opencaesar.owl:owl-load-gradle:+'
         classpath 'io.opencaesar.owl:owl-reason-gradle:+'
-        classpath 'io.opencaesar.oml:oml-bikeshed-gradle:1.0.+'
-        classpath 'io.opencaesar.oml:oml-merge-gradle:1.0.+'
+        classpath 'io.opencaesar.oml:oml-bikeshed-gradle:1.1.+'
+        classpath 'io.opencaesar.oml:oml-merge-gradle:1.1.+'
         classpath 'io.opencaesar.adapters:oml2owl-gradle:1.0.+'
     }
 }
 
 // Dataset-specific variables
-ext.dataset = [
+ext {
     // Name of dataset (matches one used in .fuseki.ttl file)
-    name: 'oml-template',
+    dataset = 'oml-template'
     // Root ontology IRI of the dataset
-    rootOntologyIri: 'http://opencaesar.io/template/description/bundle',
+    rootIri = 'http://opencaesar.io/template/description/bundle'
     // URL for publishing dataset documentation
-    publishUrl: 'https://opencaesar.github.io/oml-template'
-]
+    url = 'https://opencaesar.github.io/oml-template'
+    // Bikeshed folder
+    bikeshed = 'build/bikeshed'
+}
 
 /*
  * The repositories to look up OML dependencies in
@@ -86,11 +88,11 @@ task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml
     // OML catalog version
     inputCatalogVersion = project.version
     // Input Ontology Iri
-    rootOntologyIri = "$dataset.rootOntologyIri".toString()
+    rootOntologyIri = "$rootIri".toString()
     // OWL folder
-    outputFolderPath = file('build/bikeshed')
+    outputFolderPath = file("$bikeshed")
     // Publish URL
-    publishUrl = "$dataset.publishUrl".toString()
+    publishUrl = "$url".toString()
 }
 
 /*
@@ -98,24 +100,13 @@ task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml
  */
 import org.gradle.internal.os.OperatingSystem
 task generateDocs(dependsOn: omlToBikeshed, group:"oml") {
+	inputs.files(fileTree("$bikeshed").include('**/*.bs'))
+	outputs.files(fileTree("$bikeshed").include('**/*.html'))
     doLast {
         if (OperatingSystem.current().isWindows()) {
-            exec { 
-                if (project.hasProperty('BIKESHED')) {
-                    environment 'PATH', "${environment.PATH}:${BIKESHED}"
-                }
-                commandLine 'build/bikeshed/publish.bat' 
-            }
+            exec { commandLine "$bikeshed/publish.bat" }
         } else {
-            exec { 
-                commandLine 'chmod', '+x', 'build/bikeshed/publish.sh' 
-            }
-            exec {
-                if (project.hasProperty('BIKESHED')) {
-                    environment 'PATH', "${environment.PATH}:${BIKESHED}"
-                }
-                commandLine 'build/bikeshed/publish.sh'
-            }
+            exec { commandLine "$bikeshed/publish.sh" }
         }
     }
 }
@@ -137,12 +128,12 @@ task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", depends
     // OWL catalog
     catalogPath = file('build/owl/catalog.xml')
     // Input ontology IRI to reason on
-    inputOntologyIri = "$dataset.rootOntologyIri".toString()
+    inputOntologyIri = "$rootIri".toString()
     // Entailment statements to generate and the ontologies to persist them in
     specs = [
-        "$dataset.rootOntologyIri/classes = ALL_SUBCLASS".toString(),
-        "$dataset.rootOntologyIri/properties = INVERSE_PROPERTY | ALL_SUBPROPERTY".toString(),
-        "$dataset.rootOntologyIri/individuals = ALL_INSTANCE | DATA_PROPERTY_VALUE | OBJECT_PROPERTY_VALUE | SAME_AS".toString()
+        "$rootIri/classes = ALL_SUBCLASS".toString(),
+        "$rootIri/properties = INVERSE_PROPERTY | ALL_SUBPROPERTY".toString(),
+        "$rootIri/individuals = ALL_INSTANCE | DATA_PROPERTY_VALUE | OBJECT_PROPERTY_VALUE | SAME_AS".toString()
     ]
     // Junit error report
     reportPath = file('build/reports/reasoning.xml')
@@ -168,12 +159,12 @@ task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
  */
 task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: owlReason) {
     catalogPath = file('build/owl/catalog.xml')
-    endpointURL = "http://localhost:3030/$dataset.name".toString()
+    endpointURL = "http://localhost:3030/$dataset".toString()
     fileExtensions = ['owl', 'ttl']
     iris = [
-        "$dataset.rootOntologyIri/classes".toString(),
-        "$dataset.rootOntologyIri/properties".toString(),
-        "$dataset.rootOntologyIri/individuals".toString()
+        "$rootIri/classes".toString(),
+        "$rootIri/properties".toString(),
+        "$rootIri/individuals".toString()
     ]
 }
 
@@ -181,7 +172,7 @@ task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: ow
  * A task to run a set of SPARQL queries on a Fuseki dataset endpoint
  */
 task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn: owlLoad) {
-    endpointURL = "http://localhost:3030/$dataset.name".toString()
+    endpointURL = "http://localhost:3030/$dataset".toString()
     queryPath = file('src/sparql')
     resultPath = file('build/frames')
 }
@@ -190,7 +181,7 @@ task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn:
  * A task to run a set of SHACL validation rules on a Fuseki dataset endpoint
  */
 task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, group:"oml", dependsOn: owlLoad) {
-    endpointURL = "http://localhost:3030/$dataset.name".toString()
+    endpointURL = "http://localhost:3030/$dataset".toString()
     queryPath = file('src/shacl')
     resultPath = file('build/reports')
 }
