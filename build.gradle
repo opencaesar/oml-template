@@ -98,17 +98,14 @@ task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml
 /*
  * A task to generate the model documentation in HTML
  */
-import org.gradle.internal.os.OperatingSystem
-task generateDocs(dependsOn: omlToBikeshed, group:"oml") {
+task generateDocs(type: Exec, dependsOn: omlToBikeshed) {
 	inputs.files(fileTree("$bikeshed").include('**/*.bs'))
 	outputs.files(fileTree("$bikeshed").include('**/*.html'))
-    doLast {
-        if (OperatingSystem.current().isWindows()) {
-            exec { commandLine "$bikeshed/publish.bat" }
-        } else {
-            exec { commandLine "$bikeshed/publish.sh" }
-        }
-    }
+	if (org.gradle.internal.os.OperatingSystem.current().isWindows()) {
+		commandLine "$bikeshed/publish.bat"
+	} else {
+		commandLine "$bikeshed/publish.sh"
+	}
 }
 
 /*
