@@ -179,6 +179,7 @@ task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn:
  * A task to run a set of SHACL validation rules on a Fuseki dataset endpoint
  */
 task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, group:"oml", dependsOn: owlLoad) {
+	inputs.files(owlLoad.inputs.files) // rerun when the dataset changes
     endpointURL = "http://localhost:3030/$dataset".toString()
     queryPath = file('src/shacl')
     resultPath = file('build/reports')
