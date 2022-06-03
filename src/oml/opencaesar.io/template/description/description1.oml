@@ -3,8 +3,6 @@
 @dc:rights "Copyright 2019, by Example Company"
 description <http://opencaesar.io/template/description/description1#> as description1 {
 	
-	// The vocabulary used by this description
-
 	uses <http://purl.org/dc/elements/1.1/> as dc
 
 	uses <http://opencaesar.io/template/vocabulary/vocabulary1#> as vocabulary1
