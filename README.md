@@ -9,8 +9,8 @@ This repository has a template [OML](https://github.com/opencaesar/oml) project.
 
 ## Clone
 ```
-  git clone https://github.com/opencaesar/oml-template.git
-  cd oml-template
+git clone https://github.com/opencaesar/oml-template.git
+cd oml-template
 ```
 
 ## Build
