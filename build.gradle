@@ -1,10 +1,10 @@
 /* 
  * Dataset maven coordinates
  */
-ext.title = "OML Template"
+ext.title = "OML 2.x Template"
 description='The OML template project'
 group = 'io.opencaesar.ontologies'
-version = '0.1.0'
+version = '1.0.0'
 
 apply from: "${rootDir}/gradle/maven-deployment.gradle"
 
@@ -59,7 +59,7 @@ configurations {
  * Dependency versions
  */
 ext { 
-    coreVersion = '3.+'
+    coreVersion = '5.+'
 }
 
 /*
