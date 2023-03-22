@@ -9,8 +9,8 @@ This repository has a template [OML](https://github.com/opencaesar/oml) project.
 
 ## Clone
 ```
-  git clone https://github.com/opencaesar/oml-template.git
-  cd oml-template
+git clone https://github.com/opencaesar/oml-template.git
+cd oml-template
 ```
 
 ## Build
@@ -45,19 +45,19 @@ Note: if bikeshed is not in the PATH, you can add -pBIKESHED=path/to/bikeshed ar
 ```
 ./gradlew owlLoad
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below)  
+Pre-req: A Fuseki server with the oml-template dataset must be running at http://localhost:3030/oml-template (see below)
 
 ## Run SPARQL Queries
 ```
 ./gradlew owlQuery
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below)  
+Pre-req: A Fuseki server with the oml-template dataset must be running at http://localhost:3030/oml-template (see below)
 
 ## Run SHACL Rules
 ```
 ./gradlew owlShacl
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below) 
+Pre-req: A Fuseki server with the oml-template dataset must be running at http://localhost:3030/oml-template (see below)
 
 ## Publish to Maven Local
 ```
