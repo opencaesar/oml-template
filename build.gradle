@@ -17,12 +17,12 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'io.opencaesar.owl:owl-fuseki-gradle:+'
-        classpath 'io.opencaesar.owl:owl-shacl-fuseki-gradle:+'
-        classpath 'io.opencaesar.owl:owl-query-gradle:+'
-        classpath 'io.opencaesar.owl:owl-load-gradle:+'
-        classpath 'io.opencaesar.owl:owl-reason-gradle:+'
-        classpath 'io.opencaesar.oml:oml-bikeshed-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-fuseki-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-shacl-fuseki-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-query-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-load-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-reason-gradle:2.+'
+        classpath 'io.opencaesar.owl:owl-doc-gradle:2.+'
         classpath 'io.opencaesar.oml:oml-merge-gradle:2.+'
         classpath 'io.opencaesar.adapters:oml2owl-gradle:2.+'
     }
@@ -34,10 +34,6 @@ ext {
     dataset = 'oml-template'
     // Root ontology IRI of the dataset
     rootIri = 'http://opencaesar.io/template/description/bundle'
-    // URL for publishing dataset documentation
-    url = 'https://opencaesar.github.io/oml-template'
-    // Bikeshed folder
-    bikeshed = 'build/bikeshed'
 }
 
 /*
@@ -56,17 +52,10 @@ configurations {
 }
 
 /*
- * Dependency versions
- */
-ext { 
-    coreVersion = '5.+'
-}
-
-/*
  * The OML dependencies
  */
 dependencies {
-    oml "io.opencaesar.ontologies:core-vocabularies:$coreVersion"
+    oml "io.opencaesar.ontologies:core-vocabularies:4.+"
 }
 
 /*
@@ -75,37 +64,6 @@ dependencies {
 task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml") {
     inputZipPaths = configurations.oml.files
     outputCatalogFolder = file('build/oml')
-}
-
-/*
- * A task to generate Bikeshed specification for the OML catalog
- */
-task omlToBikeshed(type: io.opencaesar.oml.bikeshed.Oml2BikeshedTask, group:"oml", dependsOn: downloadDependencies) {
-    // OML catalog
-    inputCatalogPath = file('catalog.xml')
-    // OML catalog title
-    inputCatalogTitle = project.title
-    // OML catalog version
-    inputCatalogVersion = project.version
-    // Input Ontology Iri
-    rootOntologyIri = "$rootIri".toString()
-    // OWL folder
-    outputFolderPath = file("$bikeshed")
-    // Publish URL
-    publishUrl = "$url".toString()
-}
-
-/*
- * A task to generate the model documentation in HTML
- */
-task generateDocs(type: Exec, dependsOn: omlToBikeshed) {
-    inputs.files(fileTree("$bikeshed").include('**/*.bs'))
-    outputs.files(fileTree("$bikeshed").include('**/*.html'))
-    if (org.gradle.internal.os.OperatingSystem.current().isWindows()) {
-        commandLine "$bikeshed/publish.bat"
-    } else {
-        commandLine "$bikeshed/publish.sh"
-    }
 }
 
 /*
@@ -134,6 +92,24 @@ task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", depends
     ]
     // Junit error report
     reportPath = file('build/reports/reasoning.xml')
+}
+
+/*
+ * A task to generate documentation for the OWL catalog
+ */
+task generateDocs (type: io.opencaesar.owl.doc.OwlDocTask, dependsOn: owlReason) {
+    // OWL catalog
+    inputCatalogPath = file('build/owl/catalog.xml')
+    // OWL catalog title
+    inputCatalogTitle = project.title
+    // OWL catalog version
+    inputCatalogVersion = project.version
+    // OWL Ontology Iris
+    inputOntologyIris = [ "$rootIri/classes", "$rootIri/properties",  "$rootIri/individuals" ]
+    // Output folder
+    outputFolderPath = file('build/doc')
+    // Output case sensitivie path
+    outputCaseSensitive = org.gradle.internal.os.OperatingSystem.current().isLinux()
 }
 
 /*
