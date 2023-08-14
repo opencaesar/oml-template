@@ -55,13 +55,13 @@ configurations {
  * The OML dependencies
  */
 dependencies {
-    oml "io.opencaesar.ontologies:core-vocabularies:4.+"
+    oml "io.opencaesar.ontologies:core-vocabularies:5.+"
 }
 
 /*
  * A task to extract and merge the OML dependencies
  */
-task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml") {
+task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml", dependsOn: configurations.oml) {
     inputZipPaths = configurations.oml.files
     outputCatalogFolder = file('build/oml')
 }
