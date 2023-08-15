@@ -1,12 +1,16 @@
 /* 
- * Dataset maven coordinates
+ * The Maven coordinates for the project artifact
  */
 ext.title = "OML 2.x Template"
 description='The OML template project'
 group = 'io.opencaesar.ontologies'
 version = '1.0.0'
 
-apply from: "${rootDir}/gradle/maven-deployment.gradle"
+/* 
+ * The Gradle plugins 
+ */
+apply plugin: 'base'
+apply plugin: 'oml'
 
 /* 
  * The Gradle task dependencies 
@@ -28,7 +32,9 @@ buildscript {
     }
 }
 
-// Dataset-specific variables
+/*
+ * Dataset-specific variables
+ */
 ext {
     // Name of dataset (matches one used in .fuseki.ttl file)
     dataset = 'oml-template'
@@ -45,13 +51,6 @@ repositories {
 }
 
 /*
- * The configuration of OML dependencies
- */
-configurations {
-    oml
-}
-
-/*
  * The OML dependencies
  */
 dependencies {
@@ -60,6 +59,7 @@ dependencies {
 
 /*
  * A task to extract and merge the OML dependencies
+ * @seeAlso https://github.com/opencaesar/oml-tools/blob/master/oml-merge/README.md
  */
 task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml", dependsOn: configurations.oml) {
     inputZipPaths = configurations.oml.files
@@ -68,6 +68,7 @@ task downloadDependencies(type:io.opencaesar.oml.merge.OmlMergeTask, group:"oml"
 
 /*
  * A task to convert the OML catalog to OWL catalog
+ * @seeAlso https://github.com/opencaesar/owl-adapter/blob/master/oml2owl/README.md
  */
 task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, group:"oml", dependsOn: downloadDependencies) {
     // OML catalog
@@ -78,6 +79,7 @@ task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, group:"oml", dependsOn: do
 
 /*
  * A task to run the Openllet reasoner on the OWL catalog
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-reason/README.md
  */
 task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", dependsOn: omlToOwl) {
     // OWL catalog
@@ -90,14 +92,15 @@ task owlReason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", depends
         "$rootIri/properties = INVERSE_PROPERTY | ALL_SUBPROPERTY".toString(),
         "$rootIri/individuals = ALL_INSTANCE | DATA_PROPERTY_VALUE | OBJECT_PROPERTY_VALUE | SAME_AS".toString()
     ]
-    // Junit error report
+    // Error report
     reportPath = file('build/reports/reasoning.xml')
 }
 
 /*
  * A task to generate documentation for the OWL catalog
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-doc/README.md
  */
-task generateDocs (type: io.opencaesar.owl.doc.OwlDocTask, dependsOn: owlReason) {
+task generateDocs (type: io.opencaesar.owl.doc.OwlDocTask, group:"oml", dependsOn: owlReason) {
     // OWL catalog
     inputCatalogPath = file('build/owl/catalog.xml')
     // OWL catalog title
@@ -114,6 +117,7 @@ task generateDocs (type: io.opencaesar.owl.doc.OwlDocTask, dependsOn: owlReason)
 
 /*
  * Start the headless Fuseki server
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-fuseki/README.md
  */
 task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
     configurationPath = file('.fuseki.ttl')
@@ -122,6 +126,7 @@ task startFuseki(type: io.opencaesar.owl.fuseki.StartFusekiTask, group:"oml") {
 
 /*
  * Stop the headless Fuseki server
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-fuseki/README.md
  */
 task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
     outputFolderPath = file('.fuseki')
@@ -129,6 +134,7 @@ task stopFuseki(type: io.opencaesar.owl.fuseki.StopFusekiTask, group:"oml") {
 
 /*
  * A task to load an OWL catalog to a Fuseki dataset endpoint
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-load/README.md
  */
 task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: owlReason) {
     inputs.files(startFuseki.outputFolderPath) // rerun when fuseki restarts
@@ -144,6 +150,7 @@ task owlLoad(type:io.opencaesar.owl.load.OwlLoadTask, group:"oml", dependsOn: ow
 
 /*
  * A task to run a set of SPARQL queries on a Fuseki dataset endpoint
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-query/README.md
  */
 task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn: owlLoad) {
     inputs.files(owlLoad.inputs.files) // rerun when the dataset changes
@@ -154,6 +161,7 @@ task owlQuery(type:io.opencaesar.owl.query.OwlQueryTask, group:"oml", dependsOn:
 
 /*
  * A task to run a set of SHACL validation rules on a Fuseki dataset endpoint
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-shacl/README.md
  */
 task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, group:"oml", dependsOn: owlLoad) {
     inputs.files(owlLoad.inputs.files) // rerun when the dataset changes
@@ -163,22 +171,15 @@ task owlShacl(type:io.opencaesar.owl.shacl.fuseki.OwlShaclFusekiTask, group:"oml
 }
 
 /*
- * A task to build the project, which executes several tasks together
+ * A task to check the project's build artifacts
+ * @seeAlso https://docs.gradle.org/current/userguide/base_plugin.html
  */
-tasks.named('build') {
-    group "oml"
+tasks.named('check') {
     dependsOn owlReason
 }
 
 /*
- * A task to delete the build artifacts
- */
-tasks.named('clean') {
-    group "oml"
-}
-
-/*
- * Publish artifact to maven
+ * Define project's artifacts
  */
 task omlZip(type: Zip, group:"oml") {
     from file('src/oml')
@@ -188,7 +189,89 @@ task omlZip(type: Zip, group:"oml") {
     archiveVersion = project.version
 }
 
-publishing.publications.maven.artifact omlZip
+artifacts.default omlZip
+
+/*
+ * Publish project artifacts to maven
+ */
+apply plugin: 'maven-publish'
+apply plugin: 'signing' 
+
+def pomConfig = {
+    licenses {
+        license {
+            name "The Apache Software License, Version 2.0"
+            url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+            distribution "repo"
+        }
+    }
+    developers {
+        developer {
+            id "melaasar"
+            name "Maged Elaasar"
+            email "melaasar@gmail.com"
+        }
+    }
+    scm {
+        url 'https://github.com/opencaesar/'+rootProject.name
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId project.group
+            artifactId project.name
+            version project.version
+            
+            pom {
+                packaging = 'zip'
+                withXml {
+                    def root = asNode()
+                    if (configurations.find { it.name == 'oml' }) {
+                        def dependencies = root.appendNode('dependencies')
+                        configurations.oml.resolvedConfiguration.resolvedArtifacts.each {
+                            def dependency = dependencies.appendNode('dependency')
+                            dependency.appendNode('groupId', it.moduleVersion.id.group)
+                            dependency.appendNode('artifactId', it.moduleVersion.id.name)
+                            dependency.appendNode('version', it.moduleVersion.id.version)
+                            if (it.classifier != null) {
+                                dependency.appendNode('classifier', it.classifier)
+                                dependency.appendNode('type', it.extension)
+                            }
+                        }
+                    }
+                    root.appendNode('name', project.ext.title)
+                    root.appendNode('description', project.description)
+                    root.appendNode('url', 'https://github.com/opencaesar/'+rootProject.name)
+                    root.children().last() + pomConfig
+                }
+            }
+        }
+    }
+    repositories {
+        maven {
+            name = "sonatype"
+            url = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            credentials {
+                username = project.findProperty('ossrhUsername')
+                password = project.findProperty('ossrhPassword')
+            }
+        }
+    }
+}
+
+signing {
+    def pgpSigningKey = project.findProperty('pgpSigningKey')
+    if (pgpSigningKey != null) { pgpSigningKey = new String(pgpSigningKey.decodeBase64()) }
+    def pgpSigningPassword = project.findProperty('pgpSigningPassword')
+    useInMemoryPgpKeys(pgpSigningKey, pgpSigningPassword)
+    sign publishing.publications.maven
+}
+
+gradle.taskGraph.whenReady { taskGraph ->
+    signMavenPublication.onlyIf { taskGraph.allTasks.any{it.name == 'publishMavenPublicationToSonatypeRepository'} }
+}
 
 /*
  * Integration with the Eclipse IDE
