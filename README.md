@@ -22,6 +22,14 @@ Check the consistency of the dataset
 ./gradlew build
 ```
 
+## Generate Docs
+
+Generate documentation from dataset
+
+```
+./gradlew generateDocs
+```
+
 ## Start Fuseki Server
 
 Start the Fuseki triple store
