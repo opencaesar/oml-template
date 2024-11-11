@@ -7,6 +7,8 @@
 
 This repository has a template [OML](https://github.com/opencaesar/oml) project. It is meant to be forked as a starting point by pressing the 'Use this template' button above.
 
+> this template is suitable for use with OML Rosetta and OML Luxor (but not OML Vision)
+
 ## Clone
 ```
   git clone https://github.com/opencaesar/oml-template.git
@@ -14,52 +16,87 @@ This repository has a template [OML](https://github.com/opencaesar/oml) project.
 ```
 
 ## Build
-Equivalent to owlReason task
+
+Check the consistency of the dataset
+
 ```
 ./gradlew build
 ```
 
-## Generate Docs
-You must first have Bikeshed (the app itself) installed from [here](https://tabatkins.github.io/bikeshed/#install-final)
-```
-./gradlew generateDocs
-```
-Note: if bikeshed is not in the PATH, you can add -pBIKESHED=path/to/bikeshed argument
-
-## Run OWL Reasoner
-```
-./gradlew owlReason
-```
-
 ## Start Fuseki Server
+
+Start the Fuseki triple store
+
 ```
 ./gradlew startFuseki
 ```
 
+Navigate to http://localhost:3030
+
+Verify you see a dataset: `template`
+
 ## Stop Fuseki Server
+
+Stop the Fuseki triple store
+
 ```
 ./gradlew stopFuseki
 ```
 
-## Load to Fuseki Dataset
+## Load Dataset to Fuseki
+
+Load the dataset to Fuseki server
+
 ```
-./gradlew owlLoad
+./gradlew load
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below)  
+
+Navigate to http://localhost:3030/#/dataset/template/info
+
+Click on `count triples in all graphs` and observe the triple counts
 
 ## Run SPARQL Queries
+
+Run the SPARQL queries
+
 ```
-./gradlew owlQuery
+./gradlew query
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below)  
+
+Inspect the results at `build/results/template`
 
 ## Run SHACL Rules
+Run the SHACL rules
+
 ```
-./gradlew owlShacl
+./gradlew validate
 ```
-Pre-req: A Fuseki server with a firesat dataset must be running at http://localhost:3030/firesat (see below) 
+
+Inspect the results at `build/logs/template`
 
 ## Publish to Maven Local
+
+Publish the OML dataset as an archive in the local maven repo
+
 ```
 ./gradlew publishToMavenLocal
 ```
+
+Inspect the OML archive
+
+```
+ls ~/.m2/repository/io/opencaesar/oml-template
+```
+
+## Customize Template
+
+The name of this project is `oml-template`. You can change it to your own project name. The easiest way to do this is to look for the word `template` in this repo and replace it. The files that need to be changes include:
+
+- `.project` (name)
+- `.catalog.xml` (first rewriteURI)
+- `README.md` (various places)
+- `.oml/fuseki.ttl` (fuseki:name)
+- `.oml/oml.yml` (various places)
+- `src/oml/*` (namespaces of ontologies)
+- `src/sparcl/*` (namespaces of ontologies)
+- `src/shacl/*` (namespaces of ontologies)
