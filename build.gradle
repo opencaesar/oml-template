@@ -18,6 +18,7 @@ buildscript {
 		classpath "io.opencaesar.owl:owl-load-gradle:$owl"
 		classpath "io.opencaesar.owl:owl-save-gradle:$owl"
 		classpath "io.opencaesar.owl:owl-reason-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-doc-gradle:$owl"
 		classpath "io.opencaesar.oml:oml-merge-gradle:$oml"
 		classpath "io.opencaesar.adapters:oml2owl-gradle:$oml"
 		classpath "io.opencaesar.adapters:owl2oml-gradle:$oml"
@@ -74,6 +75,23 @@ task omlToOwl(type:io.opencaesar.oml2owl.Oml2OwlTask, group:"oml", dependsOn: do
 	inputCatalogPath = file('catalog.xml')
 	outputCatalogPath = file('build/owl/catalog.xml')
 	generateRules = true
+}
+
+/*
+ * A task to generate documentation for the OWL catalog
+ * @seeAlso https://github.com/opencaesar/owl-tools/blob/master/owl-doc/README.md
+ */
+task generateDocs (type: io.opencaesar.owl.doc.OwlDocTask, dependsOn: omlToOwl) {
+    // OML catalog
+    inputCatalogPath = file('build/owl/catalog.xml')
+    // OML catalog title
+    inputCatalogTitle = oml.project.title
+    // OML catalog version
+    inputCatalogVersion = oml.project.version
+    // Output folder
+    outputFolderPath = file('build/docs')
+    // Output case sensitivie path
+    outputCaseSensitive = org.gradle.internal.os.OperatingSystem.current().isLinux()
 }
 
 /*
