@@ -2,14 +2,14 @@ name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "experiment" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "experiment" ]
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: read
 
@@ -34,7 +34,7 @@ jobs:
     - name: Publish Docs
       uses: actions/upload-pages-artifact@v1
       with:
-        path: build/docs
+        path: build/owl
 
   deploy:
 
