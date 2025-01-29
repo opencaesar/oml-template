@@ -9,7 +9,7 @@ description <http://opencaesar.io/template/description/description1#> as descrip
 
 	// Example concept instance
 	instance c1 : vocabulary1:C [
-		vocabulary1:hasCanonicalName "オービターミッション"
+		vocabulary1:hasCanonicalName "災害が発生する"
 	]
 	
 	// Example concept instance
