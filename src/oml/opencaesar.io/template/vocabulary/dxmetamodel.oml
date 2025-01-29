@@ -1,4 +1,4 @@
-vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
+vocabulary <http://opencaesar.io/template/vocabulary/dxmetamodel#> as dxmetamodel {
 
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 

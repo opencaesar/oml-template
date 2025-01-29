@@ -1,6 +1,0 @@
-description bundle <http://example.com/model/description/bundle#> as ^bundle {
-
-	uses <http://example.com/model/vocabulary/bundle#>
-
-	includes <http://example.com/model/description/activity#>
-}

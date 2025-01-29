@@ -1,0 +1,4 @@
+vocabulary bundle <http://opencaesar.io/template/vocabulary/bundle#> as ^bundle {
+
+	includes <http://opencaesar.io/template/vocabulary/dxmetamodel#>
+}
