@@ -16,20 +16,25 @@ apply plugin: 'oml'
  * The Gradle task dependencies 
  */
 buildscript {
+	ext {
+		oml = '2.+'
+   		owl = '2.+'
+    } 
 	repositories {
 		mavenLocal()
 		mavenCentral()
 	}
 	dependencies {
-        classpath 'io.opencaesar.owl:owl-doc-gradle:2.+'
-        classpath 'io.opencaesar.owl:owl-fuseki-gradle:+'
-        classpath 'io.opencaesar.owl:owl-query-gradle:+'
-        classpath 'io.opencaesar.owl:owl-load-gradle:+'
-        classpath 'io.opencaesar.owl:owl-save-gradle:+'
-        classpath 'io.opencaesar.owl:owl-reason-gradle:+'
-        classpath 'io.opencaesar.oml:oml-merge-gradle:+'
-        classpath 'io.opencaesar.adapters:oml2owl-gradle:+'
-        classpath 'io.opencaesar.adapters:owl2oml-gradle:+'
+		classpath "io.opencaesar.owl:owl-fuseki-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-shacl-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-query-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-load-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-save-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-reason-gradle:$owl"
+		classpath "io.opencaesar.owl:owl-doc-gradle:$owl"
+		classpath "io.opencaesar.oml:oml-merge-gradle:$oml"
+		classpath "io.opencaesar.adapters:oml2owl-gradle:$oml"
+		classpath "io.opencaesar.adapters:owl2oml-gradle:$oml"
 	}
 }
 
