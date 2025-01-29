@@ -8,7 +8,9 @@ description <http://opencaesar.io/template/description/description1#> as descrip
 	uses <http://opencaesar.io/template/vocabulary/vocabulary1#> as vocabulary1
 
 	// Example concept instance
-	instance c1 : vocabulary1:C
+	instance c1 : vocabulary1:C [
+		vocabulary1:hasCanonicalName "災害が発生する"		
+	]
 	
 	// Example concept instance
 	instance c2 : vocabulary1:C
