@@ -1,8 +1,0 @@
-description <http://opencaesar.io/template/description/activity#> as activity {
-
-	uses <http://opencaesar.io/template/vocabulary/dxmetamodel#> as dxmetamodel
-	
-	instance _19_0_3_1f900fd_1670981248749_666531_174 : dxmetamodel:Activity [
-		dxmetamodel:hasCanonicalName "災害が発生する"
-	]
-}

@@ -2,5 +2,5 @@ description bundle <http://opencaesar.io/template/description/bundle#> as ^bundl
 
 	uses <http://opencaesar.io/template/vocabulary/bundle#>
 
-	includes <http://opencaesar.io/template/description/activity#>
+	includes <http://opencaesar.io/template/description/description1#>
 }
