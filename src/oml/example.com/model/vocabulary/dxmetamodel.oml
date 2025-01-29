@@ -1,14 +1,7 @@
 vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
 
-	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
-
-	extends <http://purl.org/dc/elements/1.1/> as dc
-
 	extends <http://www.w3.org/2001/XMLSchema#> as xsd
 
-
-	@rdfs:label "Activity"
-	@dc:description "SysML Activity is mapped to mission:Function"
 	concept Activity
 
 	scalar property hasCanonicalName [
@@ -16,4 +9,3 @@ vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
 		range xsd:string
 	]
 }
-
