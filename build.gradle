@@ -55,7 +55,7 @@ repositories {
  * The OML dependencies
  */
 dependencies {
-    oml "io.opencaesar.ontologies:imce-vocabularies:+"
+    oml "io.opencaesar.ontologies:core-vocabularies:+"
 }
 
 /*
