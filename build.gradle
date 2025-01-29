@@ -45,7 +45,7 @@ ext {
     // Name of dataset (matches one used in .fuseki.ttl file)
     dataset = 'model'
     // Root ontology IRI of the dataset
-    rootIri = 'http://example.com/model/description/bundle'
+    rootIri = 'http://opencaesar.io/template/description/bundle'
 }
 
 /*
