@@ -28,9 +28,6 @@ jobs:
     - name: Build
       run: ./gradlew build
 
-    - name: Generate Docs
-      run: ./gradlew generateDocs
-
     - name: Publish Docs
       uses: actions/upload-pages-artifact@v1
       with:

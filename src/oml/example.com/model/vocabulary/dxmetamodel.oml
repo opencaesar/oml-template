@@ -1,0 +1,17 @@
+vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
+
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	extends <http://purl.org/dc/elements/1.1/> as dc
+
+	extends <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+	extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+
+
+	@rdfs:label "Activity"
+	@dc:description "SysML Activity is mapped to mission:Function"
+	concept Activity < mission:Function
+
+}
+

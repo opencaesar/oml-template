@@ -1,109 +1,38 @@
-# OML Template
+# Scope of this branch
 
-[![Build Status](https://github.com/opencaesar/oml-template/actions/workflows/ci.yml/badge.svg)](https://github.com/opencaesar/oml-template/actions/workflows/ci.yml)
-[![Release](https://img.shields.io/github/v/release/opencaesar/oml-template?label=Release)](https://github.com/opencaesar/oml-template/releases/latest)
-[![Documentation](https://img.shields.io/badge/Documentation-HTML-orange)](https://www.opencaesar.io/oml-template/) 
+test from mac book pro
 
-This repository has a template [OML](https://github.com/opencaesar/oml) project. It is meant to be forked as a starting point by pressing the 'Use this template' button above.
+This branch [13-describe-the-analysis-workflow-using-imce-process-vocabularies](https://github.com/UTNAK/kepler16b-using-imce-vocabulary/tree/13-describe-the-analysis-workflow-using-imce-process-vocabularies) investigate how might we describe the analysis workflow using IMCE project and analysis vocabularies.
 
-> this template is suitable for use with OML Rosetta and OML Luxor (but not OML Vision)
 
-## Clone
-```
-  git clone https://github.com/opencaesar/oml-template.git
-  cd oml-template
-```
+![IMCE Process Vocabularies](img/image-1.png)
 
-## Build
 
-Check the consistency of the dataset
+# OML Kepler 16b example with IMCE Vocabularies
 
-```
-./gradlew build
-```
+[![CI](https://github.com/opencaesar/kepler16b-example/actions/workflows/ci.yml/badge.svg)](https://github.com/opencaesar/kepler16b-example/actions/workflows/ci.yml)
+[![Pages](https://img.shields.io/badge/Pages-HTML-blue)](http://opencaesar.github.io/kepler16b-example/) 
 
-## Generate Docs
+This is a reformulated OML model of [kepler16b-example](https://github.com/opencaesar/kepler16b-example) using the [IMCE Vocabularies](https://github.com/opencaesar/imce-vocabularies).
+This is a demonstration of the modular approach in OML Vocabulary usage.
 
-Generate documentation from dataset
+For details, check this [tutorial](http://www.opencaesar.io/oml-tutorials/#model).
 
-```
-./gradlew generateDocs
-```
 
-## Start Fuseki Server
+## Stand on the shoulders of giants
 
-Start the Fuseki triple store
+### Modular Vocabulary stacks of Kepler-16b model
 
-```
-./gradlew startFuseki
-```
+![alt text](img/image.png)
 
-Navigate to http://localhost:3030
+### IMCE Vocabularies as foundations and Discipline Vocabularies
 
-Verify you see a dataset: `template`
+[mechanical.oml](./src/oml/example.com/model/vocabulary/mechanical.oml) and [kpinterface.oml](./src/oml/example.com/model/vocabulary/kpinterface.oml) extend [IMCE mission.oml](https://github.com/opencaesar/imce-vocabularies/blob/master/src/oml/imce.jpl.nasa.gov/foundation/mission.oml).
 
-## Stop Fuseki Server
 
-Stop the Fuseki triple store
+![alt text](img/image-5.png)
 
-```
-./gradlew stopFuseki
-```
 
-## Load Dataset to Fuseki
+## Original Kepler-16b Vocabularies
 
-Load the dataset to Fuseki server
-
-```
-./gradlew load
-```
-
-Navigate to http://localhost:3030/#/dataset/template/info
-
-Click on `count triples in all graphs` and observe the triple counts
-
-## Run SPARQL Queries
-
-Run the SPARQL queries
-
-```
-./gradlew query
-```
-
-Inspect the results at `build/results/template`
-
-## Run SHACL Rules
-Run the SHACL rules
-
-```
-./gradlew validate
-```
-
-Inspect the results at `build/logs/template`
-
-## Publish to Maven Local
-
-Publish the OML dataset as an archive in the local maven repo
-
-```
-./gradlew publishToMavenLocal
-```
-
-Inspect the OML archive
-
-```
-ls ~/.m2/repository/io/opencaesar/oml-template
-```
-
-## Customize Template
-
-The name of this project is `oml-template`. You can change it to your own project name. The easiest way to do this is to look for the word `template` in this repo and replace it. The files that need to be changes include:
-
-- `.project` (name)
-- `.catalog.xml` (first rewriteURI)
-- `README.md` (various places)
-- `.oml/fuseki.ttl` (fuseki:name)
-- `.oml/oml.yml` (various places)
-- `src/oml/*` (namespaces of ontologies)
-- `src/sparcl/*` (namespaces of ontologies)
-- `src/shacl/*` (namespaces of ontologies)
+![alt text](img/image-4.png)

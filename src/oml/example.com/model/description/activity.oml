@@ -1,0 +1,12 @@
+description <http://example.com/model/description/activity#> as activity {
+
+  uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+  uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+  uses <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel
+	
+// SysML Imported - dxmetamodel:Activity
+	instance _19_0_3_1f900fd_1670981248749_666531_174 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_1f900fd_1670981248749_666531_174"
+		base:hasCanonicalName "災害が発生する"
+	]
+}
