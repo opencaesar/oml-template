@@ -9,4 +9,4 @@ description <http://example.com/model/description/activity#> as activity {
 		base:hasIdentifier "_19_0_3_1f900fd_1670981248749_666531_174"
 		base:hasCanonicalName "災害が発生する"
 	]
-}
+} 
