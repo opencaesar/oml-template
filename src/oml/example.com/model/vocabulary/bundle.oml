@@ -1,17 +1,4 @@
-@dc:creator "OpenCAESAR"
-
-
 vocabulary bundle <http://example.com/model/vocabulary/bundle#> as ^bundle {
 
- 	includes <http://purl.org/dc/elements/1.1/> as dc
-//	includes <http://example.com/model/vocabulary/kpinterface#>
-//	includes <http://example.com/model/vocabulary/mechanical#>
-//	includes <http://example.com/model/vocabulary/stateanalysis#>
-	
-//	includes <http://imce.jpl.nasa.gov/foundation/base#>
-//	includes <http://imce.jpl.nasa.gov/foundation/analysis#>
-//	includes <http://imce.jpl.nasa.gov/foundation/mission#>
-//	includes <http://imce.jpl.nasa.gov/foundation/project#>
-	
 	includes <http://example.com/model/vocabulary/dxmetamodel#>
 }
