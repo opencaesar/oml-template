@@ -4,8 +4,6 @@ vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
 
 	extends <http://purl.org/dc/elements/1.1/> as dc
 
-	extends <http://imce.jpl.nasa.gov/foundation/base#> as base
-
 	extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission
 
 
