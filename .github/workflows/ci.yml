@@ -20,16 +20,21 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-        cache: 'gradle'
 
     - name: Check Current Locale
       run: Get-WinSystemLocale
       shell: pwsh
 
-    - name: Set Japanese
-      run: Set-WinSystemLocale ja-JP
+    - name: Install Japanese Language Pack
+      run: |
+        Set-Culture ja-JP
+        Set-WinSystemLocale -SystemLocale ja-JP
+        Set-WinUILanguageOverride -Language ja-JP
+        Set-WinUserLanguageList ja-JP -Force
+        Set-WinHomeLocation -GeoId 94
       shell: pwsh
 
-    - name: Check Current Locale
-      run: Get-WinSystemLocale
-      shell: pwsh
+    - name: Reboot to Apply Changes (if necessary)
+      run: shutdown -r;exit
+      shell: cmd
+
