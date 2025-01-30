@@ -22,9 +22,24 @@ jobs:
         distribution: 'temurin'
         cache: 'gradle'
 
+    - name: Check Current Locale
+      run: Get-WinSystemLocale
+      shell: pwsh
+
     - name: Install Japanese Language Pack
       run: |
-        powershell -Command "Add-WindowsLanguagePack -Language 'ja-JP' -Confirm:$false"
+        $LangList = New-WinUserLanguageList ja-JP
+        $LangList[0].InputMethodTips.Add("0411:00000411")
+        Set-WinUserLanguageList -LanguageList $LangList -Force
+        Set-WinUILanguageOverride -Language ja-JP
+        Set-WinUserLocale -UserLocale ja-JP
+        Set-WinSystemLocale -SystemLocale ja-JP
+        Set-Culture -CultureInfo ja-JP
+      shell: pwsh
+
+    - name: Reboot to Apply Changes (if necessary)
+      run: shutdown /r /t 0
+      shell: cmd
 
     - name: Setup Gradle
       uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3.1.0
