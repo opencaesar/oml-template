@@ -26,15 +26,12 @@ jobs:
       run: Get-WinSystemLocale
       shell: pwsh
 
-    - name: Install Japanese Language Pack
-      run: |
-        $LangList = New-WinUserLanguageList ja-JP
-        $LangList[0].InputMethodTips.Add("0411:00000411")
-        Set-WinUserLanguageList -LanguageList $LangList -Force
-        Set-WinUILanguageOverride -Language ja-JP
-        Set-WinUserLocale -UserLocale ja-JP
-        Set-WinSystemLocale -SystemLocale ja-JP
-        Set-Culture -CultureInfo ja-JP
+    - name: Install Current Locale
+      run: Set-WinSystemLocale ja-JP
+      shell: pwsh
+
+    - name: Check Current Locale
+      run: Get-WinSystemLocale
       shell: pwsh
 
     - name: Reboot to Apply Changes (if necessary)
