@@ -23,6 +23,7 @@ jobs:
         cache: 'gradle'
 
     - name: Install Japanese Language Pack
+      shell: pwsh
       run: Install-Language ja-JP
 
     - name: Setup Gradle
