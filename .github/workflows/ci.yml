@@ -39,7 +39,8 @@ jobs:
         Set-WinSystemLocale -SystemLocale ja-JP
 
         # Set Japanese as the default user locale
-        $LangList = New-WinUserLanguageList ja-JP
+        $LangList = Get-WinUserLanguageList
+        $LangList.Add("ja-JP")
         Set-WinUserLanguageList -LanguageList $LangList -Force
 
     - name: Install Japanese Language Pack
