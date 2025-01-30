@@ -26,10 +26,6 @@ jobs:
       run: Get-WinSystemLocale
       shell: pwsh
 
-    - name: Install Japanese
-      run: Install-Language ja-JP
-      shell: pwsh
-
     - name: Set Japanese
       run: Set-WinSystemLocale ja-JP
       shell: pwsh
@@ -37,14 +33,3 @@ jobs:
     - name: Check Current Locale
       run: Get-WinSystemLocale
       shell: pwsh
-
-    - name: Setup Gradle
-      uses: gradle/actions/setup-gradle@417ae3ccd767c252f5661f1ace9f835f9654f2b5 # v3.1.0
-
-    - name: Build
-      run: ./gradlew build -d
-
-    - name: Publish Docs
-      uses: actions/upload-pages-artifact@v3
-      with:
-        path: build/owl
