@@ -1,0 +1,1184 @@
+description <http://example.com/model/description/activity#> as activity {
+
+  uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+  uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+  uses <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel
+	
+  extends <http://example.com/model/description/block#> as block
+
+// SysML Imported - dxmetamodel:Activity
+	instance _19_0_3_1f900fd_1670981248749_666531_174 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_1f900fd_1670981248749_666531_174"
+		base:hasCanonicalName "災害が発生する"
+	]
+	instance _19_0_3_1f900fd_1670981481831_412709_310 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_1f900fd_1670981481831_412709_310"
+		base:hasCanonicalName "災害観測を要求する"
+	]
+	instance _19_0_3_1f900fd_1670982423768_700482_529 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_1f900fd_1670982423768_700482_529"
+		base:hasCanonicalName "被害状況を把握する"
+	]
+	instance _19_0_3_1f900fd_1670985958554_428136_1500 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_1f900fd_1670985958554_428136_1500"
+		base:hasCanonicalName "光学センサ系を観測対象へ指向する（緊急時）"
+	]
+	instance _19_0_3_2f000fa_1673230528364_457097_84 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673230528364_457097_84"
+		base:hasCanonicalName "恒星光を発する"
+	]
+	instance _19_0_3_2f000fa_1673230581145_250011_85 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673230581145_250011_85"
+		base:hasCanonicalName "太陽光を発する"
+	]
+	instance _19_0_3_2f000fa_1673234747523_108130_607 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673234747523_108130_607"
+		base:hasCanonicalName "観測開始コマンドを発行する（平時）"
+	]
+	instance _19_0_3_2f000fa_1673238885982_522091_872 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673238885982_522091_872"
+		base:hasCanonicalName "送信アンテナを地上局へ対向する（平時）"
+	]
+	instance _19_0_3_2f000fa_1673239046041_990100_910 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673239046041_990100_910"
+		base:hasCanonicalName "伝送開始コマンドを発行する（平時）"
+	]
+	instance _19_0_3_2f000fa_1673240305515_522824_1111 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673240305515_522824_1111"
+		base:hasCanonicalName "送信アンテナ対向コマンドを発行する（平時）"
+	]
+	instance _19_0_3_2f000fa_1673264394540_203221_2263 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673264394540_203221_2263"
+		base:hasCanonicalName "伝送開始コマンドを発行する（緊急時）"
+	]
+	instance _19_0_3_2f000fa_1673264464038_648550_2286 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673264464038_648550_2286"
+		base:hasCanonicalName "送信アンテナ対向コマンドを発行する（緊急時）"
+	]
+	instance _19_0_3_2f000fa_1673264741701_33051_2378 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_2f000fa_1673264741701_33051_2378"
+		base:hasCanonicalName "送信アンテナを地上局へ対向する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1670821469748_694136_1609 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469748_694136_1609"
+		base:hasCanonicalName "③で記載されたデータベースシート及び解析条件シートの中身を確認後、システムモデルと同期"
+	]
+	instance _19_0_3_8df0284_1670821469915_518649_7264 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469915_518649_7264"
+		base:hasCanonicalName "必要に応じて、「Remark」も追記"
+	]
+	instance _19_0_3_8df0284_1670821469948_814026_8485 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469948_814026_8485"
+		base:hasCanonicalName "CSMを使用してシステムモデルを作成"
+	]
+	instance _19_0_3_8df0284_1670821469990_784182_10038 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469990_784182_10038"
+		base:hasCanonicalName "CDPで解析を実施"
+	]
+	instance _19_0_3_8df0284_1670821470075_634911_12024 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470075_634911_12024"
+		base:hasCanonicalName "解析条件シートの1行目A～F列に、解析条件シート内のヘッダを記載する"
+	]
+	instance _19_0_3_8df0284_1670821470145_137293_14620 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470145_137293_14620"
+		base:hasCanonicalName "記載対象となるValuePropertyの「Value,Type」を追記する"
+	]
+	instance _19_0_3_8df0284_1670821470292_906662_19963 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470292_906662_19963"
+		base:hasCanonicalName "当該解析条件の「ValueProperty,Default Value,Type」に関連付けたいValuePropertyの情報を記載する"
+	]
+	instance _19_0_3_8df0284_1670821470295_722714_20152 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470295_722714_20152"
+		base:hasCanonicalName "①で作成したシステムモデル内の階層構造を解析実施者に提示（解析用データベースシートに階層構造の情報を出力）"
+	]
+	instance _19_0_3_8df0284_1670821470537_911774_29809 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470537_911774_29809"
+		base:hasCanonicalName "挿入した行へ「Element,Description,Value,Type,Owner」を記載"
+	]
+	instance _19_0_3_8df0284_1670821470600_85552_32655 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470600_85552_32655"
+		base:hasCanonicalName "CSMとCDP解析の連携方法"
+	]
+	instance _19_0_3_8df0284_1670821470617_561074_33304 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470617_561074_33304"
+		base:hasCanonicalName "解析用データベース設定内容がシステムモデルに適切に取り込まれていることを解析実施者と確認"
+	]
+	instance _19_0_3_8df0284_1670821470750_712573_38100 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470750_712573_38100"
+		base:hasCanonicalName "解析実施者が、解析用データベース内の値を変更し、CDPで解析を実施"
+	]
+	instance _19_0_3_8df0284_1670821470850_114550_42603 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470850_114550_42603"
+		base:hasCanonicalName "解析用データベース初回作成"
+	]
+	instance _19_0_3_8df0284_1670821470914_183316_45600 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470914_183316_45600"
+		base:hasCanonicalName "モデラーが、CSMを使用してシステムモデルへ新規Block要素を追加"
+	]
+	instance _19_0_3_8df0284_1670821471059_489354_51067 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471059_489354_51067"
+		base:hasCanonicalName "解析用データベースに、新規シートとして「解析条件シート」を作成する"
+	]
+	instance _19_0_3_8df0284_1670821471110_712897_53124 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471110_712897_53124"
+		base:hasCanonicalName "システムモデルへ登録する解析条件毎に、「Owner,Name,Applied Stereotype」を記載する"
+	]
+	instance _19_0_3_8df0284_1670821471135_141678_54259 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471135_141678_54259"
+		base:hasCanonicalName "CDPでの解析結果が追記された解析用データベース（⑥で作成したファイル）をシステムモデルと同期"
+	]
+	instance _19_0_3_8df0284_1670821471142_661681_54604 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471142_661681_54604"
+		base:hasCanonicalName "データベースシートにて、パラメータを追加したい「Block」の直下に空行を挿入"
+	]
+	instance _19_0_3_8df0284_1670821471240_760092_57099 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471240_760092_57099"
+		base:hasCanonicalName "CDPでの解析結果を解析用データベースに取り込み"
+	]
+	instance _19_0_3_8df0284_1670917477378_998856_5817 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670917477378_998856_5817"
+		base:hasCanonicalName "観測を行う（緊急時）"
+	]
+	instance _19_0_3_8df0284_1670918142694_421472_5865 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1670918142694_421472_5865"
+		base:hasCanonicalName "観測運用計画を送信する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1671516982241_544918_1614 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1671516982241_544918_1614"
+		base:hasCanonicalName "災害を観測する"
+	]
+	instance _19_0_3_8df0284_1671673961376_656709_2637 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1671673961376_656709_2637"
+		base:hasCanonicalName "Context Behavior"
+	]
+	instance _19_0_3_8df0284_1671673982350_303982_2662 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1671673982350_303982_2662"
+		base:hasCanonicalName "総合システム Behavior"
+	]
+	instance _19_0_3_8df0284_1671674069154_662982_2715 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1671674069154_662982_2715"
+		base:hasCanonicalName "衛星／地上システム Behavior"
+	]
+	instance _19_0_3_8df0284_1671674091322_41029_2740 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1671674091322_41029_2740"
+		base:hasCanonicalName "サブシステムBehavior"
+	]
+	instance _19_0_3_8df0284_1672040506752_72541_5098 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672040506752_72541_5098"
+		base:hasCanonicalName "ベースマップ画像の収集・更新を行う"
+	]
+	instance _19_0_3_8df0284_1672101138459_603085_1298 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672101138459_603085_1298"
+		base:hasCanonicalName "観測を行う（平時）"
+	]
+	instance _19_0_3_8df0284_1672101750921_610061_1617 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672101750921_610061_1617"
+		base:hasCanonicalName "観測対象が光を反射する"
+	]
+	instance _19_0_3_8df0284_1672105835201_839473_2609 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672105835201_839473_2609"
+		base:hasCanonicalName "GPS信号を発する"
+	]
+	instance _19_0_3_8df0284_1672107164905_64135_3451 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672107164905_64135_3451"
+		base:hasCanonicalName "観測データを取得する（平時）"
+	]
+	instance _19_0_3_8df0284_1672107235896_381758_3490 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672107235896_381758_3490"
+		base:hasCanonicalName "観測データの圧縮処理を行う（平時）"
+	]
+	instance _19_0_3_8df0284_1672107273763_912398_3532 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672107273763_912398_3532"
+		base:hasCanonicalName "観測運用計画を受信・蓄積する（平時）"
+	]
+	instance _19_0_3_8df0284_1672107363129_547864_3594 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672107363129_547864_3594"
+		base:hasCanonicalName "観測データを蓄積する（平時）"
+	]
+	instance _19_0_3_8df0284_1672107390072_448452_3636 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672107390072_448452_3636"
+		base:hasCanonicalName "観測データを地上局へ伝送する（平時）"
+	]
+	instance _19_0_3_8df0284_1672979792087_253915_1199 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672979792087_253915_1199"
+		base:hasCanonicalName "観測データを取得・蓄積する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672979792087_857651_1198 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672979792087_857651_1198"
+		base:hasCanonicalName "観測データを伝送する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672979792087_910654_1200 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672979792087_910654_1200"
+		base:hasCanonicalName "基準姿勢をとる（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672980513707_716343_2190 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672980513707_716343_2190"
+		base:hasCanonicalName "観測運用計画を立案する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672980711364_329675_2271 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672980711364_329675_2271"
+		base:hasCanonicalName "観測データを受信・蓄積する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672980711364_81582_2270 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672980711364_81582_2270"
+		base:hasCanonicalName "観測データの標準処理を行う（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672981906065_396623_2519 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672981906065_396623_2519"
+		base:hasCanonicalName "観測データの圧縮処理を行う（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672981906065_706457_2518 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672981906065_706457_2518"
+		base:hasCanonicalName "観測データを取得する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982016998_34403_2551 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982016998_34403_2551"
+		base:hasCanonicalName "観測対象に向けて衛星システムをマヌーバさせる（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982016998_792051_2550 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982016998_792051_2550"
+		base:hasCanonicalName "観測対象に対し衛星システムの姿勢を安定させる（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982087238_219157_2571 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982087238_219157_2571"
+		base:hasCanonicalName "観測データを蓄積する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982087238_415893_2572 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982087238_415893_2572"
+		base:hasCanonicalName "観測運用コマンドを発行する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982087238_49622_2568 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982087238_49622_2568"
+		base:hasCanonicalName "観測運用計画を受信・蓄積する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982087238_815479_2569 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982087238_815479_2569"
+		base:hasCanonicalName "姿勢マヌーバコマンドを発行する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672982087238_927448_2570 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1672982087238_927448_2570"
+		base:hasCanonicalName "観測データを伝送する（緊急時）"
+	]
+	instance _19_0_3_8df0284_1673323478528_661862_477 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673323478528_661862_477"
+		base:hasCanonicalName "観測データの派生プロダクト生成を行う（平時）"
+	]
+	instance _19_0_3_8df0284_1673323834995_410865_582 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673323834995_410865_582"
+		base:hasCanonicalName "標準処理画像を蓄積する（平時）"
+	]
+	instance _19_0_3_8df0284_1673323844798_691289_610 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673323844798_691289_610"
+		base:hasCanonicalName "パンシャープン画像等を蓄積する（平時）"
+	]
+	instance _19_0_3_8df0284_1673325091049_886111_1242 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673325091049_886111_1242"
+		base:hasCanonicalName "平時観測時の画像を提供する"
+	]
+	instance _19_0_3_8df0284_1673326983744_420507_1542 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673326983744_420507_1542"
+		base:hasCanonicalName "対象画像データを抽出する"
+	]
+	instance _19_0_3_8df0284_1673327140762_34294_1626 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1673327140762_34294_1626"
+		base:hasCanonicalName "基準姿勢に向けて衛星システムをマヌーバさせる（緊急時）"
+	]
+	instance _19_0_3_8df0284_1674626728180_337695_94 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1674626728180_337695_94"
+		base:hasCanonicalName "ベースマップ画像の収集・更新を行う"
+	]
+	instance _19_0_3_8df0284_1674626742786_240786_158 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_8df0284_1674626742786_240786_158"
+		base:hasCanonicalName "災害を観測する"
+	]
+	instance _19_0_3_c2602ee_1671174281178_801947_3444 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1671174281178_801947_3444"
+		base:hasCanonicalName "観測データの派生プロダクト生成を行う（緊急時）"
+	]
+	instance _19_0_3_c2602ee_1672972347190_442541_430 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972347190_442541_430"
+		base:hasCanonicalName "観測データを受信・蓄積する（平時）"
+	]
+	instance _19_0_3_c2602ee_1672972347190_579800_431 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972347190_579800_431"
+		base:hasCanonicalName "観測運用計画を送信する（平時）"
+	]
+	instance _19_0_3_c2602ee_1672972347190_773407_432 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972347190_773407_432"
+		base:hasCanonicalName "観測運用計画を立案する（平時）"
+	]
+	instance _19_0_3_c2602ee_1672972347190_870188_429 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972347190_870188_429"
+		base:hasCanonicalName "観測データの標準処理を行なう（平時）"
+	]
+	instance _19_0_3_c2602ee_1672972495010_634065_643 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972495010_634065_643"
+		base:hasCanonicalName "観測データを取得・蓄積する（平時）"
+	]
+	instance _19_0_3_c2602ee_1672972495017_120175_652 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972495017_120175_652"
+		base:hasCanonicalName "観測データを伝送する（平時）"
+	]
+	instance _19_0_3_c2602ee_1672974766054_75127_2150 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1672974766054_75127_2150"
+		base:hasCanonicalName "直下視に対し衛星システムの姿勢を安定させる（平時）"
+	]
+	instance _19_0_3_c2602ee_1702604868571_449785_1324 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1702604868571_449785_1324"
+		base:hasCanonicalName "送信アンテナをデータ中継衛星へ対向する（緊急時）"
+	]
+	instance _19_0_3_c2602ee_1702606947810_67907_1902 : dxmetamodel:Activity [
+		base:hasIdentifier "_19_0_3_c2602ee_1702606947810_67907_1902"
+		base:hasCanonicalName "送信アンテナをデータ中継衛星へ対向する（平時）"
+	]
+	instance _2022x_2_420019d_1732781759585_671058_26759 : dxmetamodel:Activity [
+		base:hasIdentifier "_2022x_2_420019d_1732781759585_671058_26759"
+		base:hasCanonicalName "activitywithcontext"
+	]
+
+// SysML Imported - dxmetamodel:Function
+	instance _19_0_3_8df0284_1673330852646_636681_154 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673330852646_636681_154"
+		base:hasCanonicalName "システムが持つ機能"
+	]
+	instance _19_0_3_8df0284_1673491647262_183675_4370 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673491647262_183675_4370"
+		base:hasCanonicalName "観測データ取得機能"
+	]
+	instance _19_0_3_8df0284_1673491970937_516264_4441 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673491970937_516264_4441"
+		base:hasCanonicalName "観測データ蓄積機能"
+	]
+	instance _19_0_3_8df0284_1673493264655_19747_123 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673493264655_19747_123"
+		base:hasCanonicalName "圧縮処理機能"
+	]
+	instance _19_0_3_8df0284_1673496149650_87110_166 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496149650_87110_166"
+		base:hasCanonicalName "姿勢マヌーバ機能"
+	]
+	instance _19_0_3_8df0284_1673496173108_465085_168 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496173108_465085_168"
+		base:hasCanonicalName "姿勢制御機能"
+	]
+	instance _19_0_3_8df0284_1673496190483_394604_170 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496190483_394604_170"
+		base:hasCanonicalName "地上局指向機能"
+	]
+	instance _19_0_3_8df0284_1673496332588_795716_244 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496332588_795716_244"
+		base:hasCanonicalName "観測データ伝送機能"
+	]
+	instance _19_0_3_8df0284_1673496983689_329902_413 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496983689_329902_413"
+		base:hasCanonicalName "コマンド受信・蓄積機能"
+	]
+	instance _19_0_3_8df0284_1673496983689_980699_414 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_8df0284_1673496983689_980699_414"
+		base:hasCanonicalName "ストアードコマンド発行機能"
+	]
+	instance _19_0_3_c2602ee_1702606548134_876673_1466 : dxmetamodel:Function [
+		base:hasIdentifier "_19_0_3_c2602ee_1702606548134_876673_1466"
+		base:hasCanonicalName "データ中継衛星指向機能"
+	]
+
+// SysML Imported - dxmetamodel:Allocate
+	relation instance _19_0_3_8df0284_1672105835211_619407_2621 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672105835201_839473_2609
+		to block:_19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1674700575507_653445_6186 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496983689_329902_413
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1673507047068_942032_353 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_c2602ee_1702868056966_619648_301 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1702606548134_876673_1466
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1673323844820_410695_628 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673323844798_691289_610
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1672988269325_339632_4165 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to block:_19_0_3_8df0284_1670821471227_954948_56587
+	]
+	relation instance _19_0_3_2f000fa_1673240185330_253199_1105 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673239046041_990100_910
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_2f000fa_1673264420512_309613_2283 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673264394540_203221_2263
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1671524430078_519889_3330 : dxmetamodel:Allocate [
+		from _19_0_3_1f900fd_1670985958554_428136_1500
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1673506989310_421132_317 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673493264655_19747_123
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1673507031235_471595_344 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496190483_394604_170
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1673327339151_959179_1643 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673327140762_34294_1626
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1672980026018_866089_2073 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672979792087_910654_1200
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_2f000fa_1673230674251_738707_150 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673230581145_250011_85
+		to block:_19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1672982397609_77748_2686 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982087238_815479_2569
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1673507007594_121662_326 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496149650_87110_166
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1673507019590_365982_335 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496173108_465085_168
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1673326983791_97332_1560 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673326983744_420507_1542
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1673325134854_872402_1262 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673325091049_886111_1242
+		to block:_19_0_3_8df0284_1670821471114_386604_53300
+	]
+	relation instance _19_0_3_2f000fa_1673230674273_147267_152 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673230528364_457097_84
+		to block:_19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1673323835026_882835_599 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673323834995_410865_582
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1671523866048_67303_989 : dxmetamodel:Allocate [
+		from _19_0_3_1f900fd_1670981248749_666531_174
+		to block:_19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1672988377966_814686_4167 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to block:_19_0_3_8df0284_1670821471227_954948_56587
+	]
+	relation instance _19_0_3_8df0284_1671523883288_723545_1011 : dxmetamodel:Allocate [
+		from _19_0_3_1f900fd_1670981481831_412709_310
+		to block:_19_0_3_8df0284_1670821471088_935922_52137
+	]
+	relation instance _19_0_3_c2602ee_1672974788908_57659_2173 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672974766054_75127_2150
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1671523886740_685015_1032 : dxmetamodel:Allocate [
+		from _19_0_3_1f900fd_1670982423768_700482_529
+		to block:_19_0_3_8df0284_1670821471088_935922_52137
+	]
+	relation instance _19_0_3_8df0284_1672101138519_976195_1329 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to block:_19_0_3_8df0284_1670821471114_386604_53300
+	]
+	relation instance _19_0_3_8df0284_1671523769568_164936_955 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to block:_19_0_3_8df0284_1670821471114_386604_53300
+	]
+	relation instance _19_0_3_8df0284_1672107235942_582105_3520 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672107235896_381758_3490
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1672981931439_426096_2538 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672981906065_396623_2519
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1672980776872_108521_2303 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672980711364_81582_2270
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_c2602ee_1672976299081_817220_2821 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972347190_870188_429
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1673323498000_58352_529 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673323478528_661862_477
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1671524479644_497082_3437 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1671174281178_801947_3444
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1672104821397_196401_2335 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1672982450248_94019_2696 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982087238_927448_2570
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1672980018567_662614_2013 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1672107164920_927341_3464 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672107164905_64135_3451
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1672981937285_535919_2548 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672981906065_706457_2518
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1672105194836_462374_2419 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1672980003822_691458_1951 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to block:_19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_c2602ee_1672972400126_984299_563 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972347190_442541_430
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1672980792882_256896_2354 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672980711364_329675_2271
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1672107390119_99473_3666 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672107390072_448452_3636
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_c2602ee_1672974970166_413426_2230 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672107363129_547864_3594
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1672982174301_644245_2655 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982087238_219157_2571
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1673507077514_281926_371 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673496332588_795716_244
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1673506969701_297118_308 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673491647262_183675_4370
+		to block:_19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1673507059803_431406_362 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1673491970937_516264_4441
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1672101750936_274654_1629 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672101750921_610061_1617
+		to block:_19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1672982362255_795761_2666 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982016998_34403_2551
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1672982033192_300322_2566 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982016998_792051_2550
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1672982110857_720870_2595 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982087238_415893_2572
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_c2602ee_1672974879454_256370_2203 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672107273763_912398_3532
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1672982383842_489593_2676 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672982087238_49622_2568
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_c2602ee_1672976442358_384108_2830 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972347190_773407_432
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1672980538492_412157_2216 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1672980513707_716343_2190
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_c2602ee_1672976451710_732112_2839 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1672972347190_579800_431
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1671524470320_718897_3375 : dxmetamodel:Allocate [
+		from _19_0_3_8df0284_1670918142694_421472_5865
+		to block:_19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_2f000fa_1673234805846_151555_627 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673234747523_108130_607
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_c2602ee_1702606964508_345093_1934 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1702606947810_67907_1902
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_c2602ee_1702604868587_551606_1337 : dxmetamodel:Allocate [
+		from _19_0_3_c2602ee_1702604868571_449785_1324
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_2f000fa_1673238984832_736070_892 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673238885982_522091_872
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_2f000fa_1673264839588_486020_2403 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673264741701_33051_2378
+		to block:_19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_2f000fa_1673240339646_450579_1131 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673240305515_522824_1111
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_2f000fa_1673264810303_126245_2379 : dxmetamodel:Allocate [
+		from _19_0_3_2f000fa_1673264464038_648550_2286
+		to block:_19_0_3_8df0284_1672023055732_509882_117
+	]
+
+// SysML Imported - dxmetamodel:deriveAct
+	relation instance _19_0_3_8df0284_1673497205817_351247_531 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_329902_413
+		to _19_0_3_8df0284_1672107273763_912398_3532
+	]
+	relation instance _19_0_3_8df0284_1673497189075_163110_524 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_329902_413
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_8df0284_1673332564780_391104_495 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673330852646_636681_154
+		to _19_0_3_8df0284_1671674091322_41029_2740
+	]
+	relation instance _19_0_3_8df0284_1673497617166_734147_614 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673239046041_990100_910
+	]
+	relation instance _19_0_3_8df0284_1673497608858_590599_607 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673264394540_203221_2263
+	]
+	relation instance _19_0_3_8df0284_1673497236448_955108_540 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_8df0284_1672982087238_815479_2569
+	]
+	relation instance _19_0_3_8df0284_1673497385612_362662_573 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_8df0284_1672982087238_415893_2572
+	]
+	relation instance _19_0_3_8df0284_1673497684965_616329_626 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673240305515_522824_1111
+	]
+	relation instance _19_0_3_8df0284_1673497709740_686913_634 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673264464038_648550_2286
+	]
+	relation instance _19_0_3_c2602ee_1702868036079_793373_291 : dxmetamodel:DeriveAct [
+		from _19_0_3_c2602ee_1702606548134_876673_1466
+		to _19_0_3_c2602ee_1702606947810_67907_1902
+	]
+	relation instance _19_0_3_c2602ee_1702868462060_661997_639 : dxmetamodel:DeriveAct [
+		from _19_0_3_c2602ee_1702606548134_876673_1466
+		to _19_0_3_c2602ee_1702604868571_449785_1324
+	]
+	relation instance _19_0_3_8df0284_1673493328988_171180_160 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673493264655_19747_123
+		to _19_0_3_8df0284_1672107235896_381758_3490
+	]
+	relation instance _19_0_3_8df0284_1673493307103_375059_152 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673493264655_19747_123
+		to _19_0_3_8df0284_1672981906065_396623_2519
+	]
+	relation instance _19_0_3_8df0284_1673496896910_423423_406 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496190483_394604_170
+		to _19_0_3_2f000fa_1673238885982_522091_872
+	]
+	relation instance _19_0_3_8df0284_1673496885938_517651_399 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496190483_394604_170
+		to _19_0_3_2f000fa_1673264741701_33051_2378
+	]
+	relation instance _19_0_3_8df0284_1673496743308_286901_383 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496149650_87110_166
+		to _19_0_3_8df0284_1673327140762_34294_1626
+	]
+	relation instance _19_0_3_8df0284_1673496492981_857451_249 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496149650_87110_166
+		to _19_0_3_8df0284_1672982016998_34403_2551
+	]
+	relation instance _19_0_3_8df0284_1673497745852_924162_642 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496173108_465085_168
+		to _19_0_3_c2602ee_1672974766054_75127_2150
+	]
+	relation instance _19_0_3_8df0284_1673496852072_972318_392 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496173108_465085_168
+		to _19_0_3_8df0284_1672982016998_792051_2550
+	]
+	relation instance _19_0_3_8df0284_1673497261203_631144_547 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496332588_795716_244
+		to _19_0_3_8df0284_1672982087238_927448_2570
+	]
+	relation instance _19_0_3_8df0284_1673497275891_930792_554 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673496332588_795716_244
+		to _19_0_3_8df0284_1672107390072_448452_3636
+	]
+	relation instance _19_0_3_8df0284_1673493051390_188427_119 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673491647262_183675_4370
+		to _19_0_3_8df0284_1672107164905_64135_3451
+	]
+	relation instance _19_0_3_8df0284_1673493024463_263426_111 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673491647262_183675_4370
+		to _19_0_3_8df0284_1672981906065_706457_2518
+	]
+	relation instance _19_0_3_8df0284_1673492180234_443632_4490 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673491970937_516264_4441
+		to _19_0_3_8df0284_1672107363129_547864_3594
+	]
+	relation instance _19_0_3_8df0284_1673492080079_487460_4470 : dxmetamodel:DeriveAct [
+		from _19_0_3_8df0284_1673491970937_516264_4441
+		to _19_0_3_8df0284_1672982087238_219157_2571
+	]
+
+// SysML Imported - mission:invokes
+	relation instance _19_0_3_8df0284_1672109257906_148252_4456 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_8df0284_1672105835201_839473_2609
+	]
+	relation instance _19_0_3_8df0284_1672105835199_334829_2608 : mission:Invokes [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to _19_0_3_8df0284_1672105835201_839473_2609
+	]
+	relation instance _19_0_3_8df0284_1673323844798_818362_609 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_8df0284_1673323844798_691289_610
+	]
+	relation instance _19_0_3_8df0284_1674626728168_767403_89 : mission:Invokes [
+		from _19_0_3_8df0284_1674626728180_337695_94
+		to _19_0_3_8df0284_1672040506752_72541_5098
+	]
+	relation instance _19_0_3_2f000fa_1673239092267_382916_919 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_2f000fa_1673239046041_990100_910
+	]
+	relation instance _19_0_3_1f900fd_1673856992980_100794_5282 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673239046041_990100_910
+	]
+	relation instance _19_0_3_1f900fd_1673857346622_846707_6177 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673264394540_203221_2263
+	]
+	relation instance _19_0_3_2f000fa_1673264420497_36686_2272 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_2f000fa_1673264394540_203221_2263
+	]
+	relation instance _19_0_3_1f900fd_1670994491846_766329_1945 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_1f900fd_1670985958554_428136_1500
+	]
+	relation instance _19_0_3_8df0284_1672979792287_56987_1333 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_910654_1200
+		to _19_0_3_8df0284_1673327140762_34294_1626
+	]
+	relation instance _19_0_3_1f900fd_1673856282504_306348_4218 : mission:Invokes [
+		from _19_0_3_8df0284_1673496149650_87110_166
+		to _19_0_3_8df0284_1673327140762_34294_1626
+	]
+	relation instance _19_0_3_8df0284_1672980025996_106714_2061 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672979792087_910654_1200
+	]
+	relation instance _19_0_3_2f000fa_1673260377589_76447_1332 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_2f000fa_1673230581145_250011_85
+	]
+	relation instance _19_0_3_2f000fa_1673230674120_425014_128 : mission:Invokes [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to _19_0_3_2f000fa_1673230581145_250011_85
+	]
+	relation instance _19_0_3_8df0284_1672979792287_644001_1332 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_910654_1200
+		to _19_0_3_8df0284_1672982087238_815479_2569
+	]
+	relation instance _19_0_3_1f900fd_1673857017329_83361_5346 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_8df0284_1672982087238_815479_2569
+	]
+	relation instance _19_0_3_8df0284_1672110172385_812807_4762 : mission:Invokes [
+		from _19_0_3_1f900fd_1670985958554_428136_1500
+		to _19_0_3_8df0284_1672982087238_815479_2569
+	]
+	relation instance _19_0_3_8df0284_1673326983734_598395_1541 : mission:Invokes [
+		from _19_0_3_8df0284_1673325091049_886111_1242
+		to _19_0_3_8df0284_1673326983744_420507_1542
+	]
+	relation instance _19_0_3_8df0284_1673325134854_872749_1251 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_8df0284_1673325091049_886111_1242
+	]
+	relation instance _19_0_3_8df0284_1670821470283_551542_19603 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821469915_518649_7264
+	]
+	relation instance _19_0_3_2f000fa_1673260452065_389302_1368 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_2f000fa_1673230528364_457097_84
+	]
+	relation instance _19_0_3_2f000fa_1673230674135_397837_129 : mission:Invokes [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to _19_0_3_2f000fa_1673230528364_457097_84
+	]
+	relation instance _19_0_3_8df0284_1673323834988_218069_581 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_8df0284_1673323834995_410865_582
+	]
+	relation instance _19_0_3_1f900fd_1670981248741_653076_173 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_1f900fd_1670981248749_666531_174
+	]
+	relation instance _19_0_3_8df0284_1674626742784_430307_153 : mission:Invokes [
+		from _19_0_3_8df0284_1674626742786_240786_158
+		to _19_0_3_8df0284_1671516982241_544918_1614
+	]
+	relation instance _19_0_3_1f900fd_1670981481826_219038_309 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_1f900fd_1670981481831_412709_310
+	]
+	relation instance _19_0_3_c2602ee_1672974788908_804038_2161 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_c2602ee_1672974766054_75127_2150
+	]
+	relation instance _19_0_3_1f900fd_1673856609672_593402_4586 : mission:Invokes [
+		from _19_0_3_8df0284_1673496173108_465085_168
+		to _19_0_3_c2602ee_1672974766054_75127_2150
+	]
+	relation instance _19_0_3_1f900fd_1670982423764_71690_528 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_1f900fd_1670982423768_700482_529
+	]
+	relation instance _19_0_3_8df0284_1672103883758_194197_1894 : mission:Invokes [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to _19_0_3_8df0284_1672101138459_603085_1298
+	]
+	relation instance _19_0_3_1f900fd_1670994010862_942173_1670 : mission:Invokes [
+		from _19_0_3_8df0284_1671516982241_544918_1614
+		to _19_0_3_8df0284_1670917477378_998856_5817
+	]
+	relation instance _19_0_3_c2602ee_1672974320291_98698_1840 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_8df0284_1672107235896_381758_3490
+	]
+	relation instance _19_0_3_1f900fd_1673854267963_271777_4018 : mission:Invokes [
+		from _19_0_3_8df0284_1673493264655_19747_123
+		to _19_0_3_8df0284_1672107235896_381758_3490
+	]
+	relation instance _19_0_3_1f900fd_1673854249549_850526_3973 : mission:Invokes [
+		from _19_0_3_8df0284_1673493264655_19747_123
+		to _19_0_3_8df0284_1672981906065_396623_2519
+	]
+	relation instance _19_0_3_8df0284_1672979792256_149554_1284 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672981906065_396623_2519
+	]
+	relation instance _19_0_3_8df0284_1672980776872_567515_2290 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672980711364_81582_2270
+	]
+	relation instance _19_0_3_c2602ee_1672972403034_771685_597 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972347190_870188_429
+	]
+	relation instance _19_0_3_8df0284_1673323492801_494494_490 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_8df0284_1673323478528_661862_477
+	]
+	relation instance _19_0_3_c2602ee_1671174281178_577069_3443 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_c2602ee_1671174281178_801947_3444
+	]
+	relation instance _19_0_3_c2602ee_1672972510964_806990_1318 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972495017_120175_652
+	]
+	relation instance _19_0_3_8df0284_1672980018551_491789_1999 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672979792087_857651_1198
+	]
+	relation instance _19_0_3_8df0284_1672979792187_459784_1239 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_8df0284_1672982087238_927448_2570
+	]
+	relation instance _19_0_3_1f900fd_1673857323613_247155_6119 : mission:Invokes [
+		from _19_0_3_8df0284_1673496332588_795716_244
+		to _19_0_3_8df0284_1672982087238_927448_2570
+	]
+	relation instance _19_0_3_c2602ee_1672974341344_263530_1885 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_8df0284_1672107164905_64135_3451
+	]
+	relation instance _19_0_3_1f900fd_1673853685873_352749_3641 : mission:Invokes [
+		from _19_0_3_8df0284_1673491647262_183675_4370
+		to _19_0_3_8df0284_1672107164905_64135_3451
+	]
+	relation instance _19_0_3_8df0284_1672979792256_110717_1283 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672981906065_706457_2518
+	]
+	relation instance _19_0_3_1f900fd_1673853665670_929619_3583 : mission:Invokes [
+		from _19_0_3_8df0284_1673491647262_183675_4370
+		to _19_0_3_8df0284_1672981906065_706457_2518
+	]
+	relation instance _19_0_3_c2602ee_1672972508040_625280_1245 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972495010_634065_643
+	]
+	relation instance _19_0_3_8df0284_1672980003806_499021_1937 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672979792087_253915_1199
+	]
+	relation instance _19_0_3_c2602ee_1672972400110_415493_550 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972347190_442541_430
+	]
+	relation instance _19_0_3_8df0284_1672980792882_58216_2341 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672980711364_329675_2271
+	]
+	relation instance _19_0_3_1f900fd_1673857302906_433580_6059 : mission:Invokes [
+		from _19_0_3_8df0284_1673496332588_795716_244
+		to _19_0_3_8df0284_1672107390072_448452_3636
+	]
+	relation instance _19_0_3_c2602ee_1672975121275_702779_2243 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_8df0284_1672107390072_448452_3636
+	]
+	relation instance _19_0_3_1f900fd_1673857212334_684044_5903 : mission:Invokes [
+		from _19_0_3_8df0284_1673491970937_516264_4441
+		to _19_0_3_8df0284_1672107363129_547864_3594
+	]
+	relation instance _19_0_3_c2602ee_1672974565736_197865_1993 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_8df0284_1672107363129_547864_3594
+	]
+	relation instance _19_0_3_1f900fd_1673857188617_574534_5856 : mission:Invokes [
+		from _19_0_3_8df0284_1673491970937_516264_4441
+		to _19_0_3_8df0284_1672982087238_219157_2571
+	]
+	relation instance _19_0_3_8df0284_1672979792256_904301_1285 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672982087238_219157_2571
+	]
+	relation instance _19_0_3_8df0284_1672103890577_640400_1954 : mission:Invokes [
+		from _19_0_3_8df0284_1672040506752_72541_5098
+		to _19_0_3_8df0284_1672101750921_610061_1617
+	]
+	relation instance _19_0_3_8df0284_1671068136281_149428_1525 : mission:Invokes [
+		from _19_0_3_1f900fd_1670985958554_428136_1500
+		to _19_0_3_8df0284_1672982016998_34403_2551
+	]
+	relation instance _19_0_3_1f900fd_1673856269058_192707_4147 : mission:Invokes [
+		from _19_0_3_8df0284_1673496149650_87110_166
+		to _19_0_3_8df0284_1672982016998_34403_2551
+	]
+	relation instance _19_0_3_8df0284_1672979792256_293915_1286 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672982016998_792051_2550
+	]
+	relation instance _19_0_3_1f900fd_1673856558926_136180_4502 : mission:Invokes [
+		from _19_0_3_8df0284_1673496173108_465085_168
+		to _19_0_3_8df0284_1672982016998_792051_2550
+	]
+	relation instance _19_0_3_1f900fd_1673857032177_976015_5378 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_8df0284_1672982087238_415893_2572
+	]
+	relation instance _19_0_3_8df0284_1672979792256_332998_1282 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672982087238_415893_2572
+	]
+	relation instance _19_0_3_c2602ee_1672973852743_970750_1763 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_8df0284_1672107273763_912398_3532
+	]
+	relation instance _19_0_3_1f900fd_1673856926354_461094_5157 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_329902_413
+		to _19_0_3_8df0284_1672107273763_912398_3532
+	]
+	relation instance _19_0_3_2f000fa_1673238703733_511909_840 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_8df0284_1672107273763_912398_3532
+	]
+	relation instance _19_0_3_2f000fa_1673266152260_368716_2706 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_910654_1200
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_2f000fa_1673263044046_594879_1967 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_253915_1199
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_1f900fd_1673856904116_208691_5123 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_329902_413
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_2f000fa_1673264354300_373880_2231 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_8df0284_1672109895960_206390_4685 : mission:Invokes [
+		from _19_0_3_1f900fd_1670985958554_428136_1500
+		to _19_0_3_8df0284_1672982087238_49622_2568
+	]
+	relation instance _19_0_3_c2602ee_1672972388313_69111_469 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972347190_773407_432
+	]
+	relation instance _19_0_3_8df0284_1672980538492_671127_2203 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1672980513707_716343_2190
+	]
+	relation instance _19_0_3_c2602ee_1672972391174_941842_503 : mission:Invokes [
+		from _19_0_3_8df0284_1672101138459_603085_1298
+		to _19_0_3_c2602ee_1672972347190_579800_431
+	]
+	relation instance _19_0_3_1f900fd_1670994463643_898819_1891 : mission:Invokes [
+		from _19_0_3_8df0284_1670917477378_998856_5817
+		to _19_0_3_8df0284_1670918142694_421472_5865
+	]
+	relation instance _19_0_3_2f000fa_1673234805820_881134_616 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495010_634065_643
+		to _19_0_3_2f000fa_1673234747523_108130_607
+	]
+	relation instance _19_0_3_c2602ee_1702607339240_368329_2018 : mission:Invokes [
+		from _19_0_3_c2602ee_1702606548134_876673_1466
+		to _19_0_3_c2602ee_1702606947810_67907_1902
+	]
+	relation instance _19_0_3_c2602ee_1702606964492_972405_1919 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_c2602ee_1702606947810_67907_1902
+	]
+	relation instance _19_0_3_c2602ee_1702604868556_236673_1323 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_c2602ee_1702604868571_449785_1324
+	]
+	relation instance _19_0_3_c2602ee_1702606752498_984579_1756 : mission:Invokes [
+		from _19_0_3_c2602ee_1702606548134_876673_1466
+		to _19_0_3_c2602ee_1702604868571_449785_1324
+	]
+	relation instance _19_0_3_2f000fa_1673238984816_778192_881 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_2f000fa_1673238885982_522091_872
+	]
+	relation instance _19_0_3_1f900fd_1673856690014_378944_4761 : mission:Invokes [
+		from _19_0_3_8df0284_1673496190483_394604_170
+		to _19_0_3_2f000fa_1673238885982_522091_872
+	]
+	relation instance _19_0_3_1f900fd_1673856708036_109683_4834 : mission:Invokes [
+		from _19_0_3_8df0284_1673496190483_394604_170
+		to _19_0_3_2f000fa_1673264741701_33051_2378
+	]
+	relation instance _19_0_3_2f000fa_1673264839573_240673_2392 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_2f000fa_1673264741701_33051_2378
+	]
+	relation instance _19_0_3_2f000fa_1673240339630_537529_1120 : mission:Invokes [
+		from _19_0_3_c2602ee_1672972495017_120175_652
+		to _19_0_3_2f000fa_1673240305515_522824_1111
+	]
+	relation instance _19_0_3_1f900fd_1673857005487_688375_5314 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673240305515_522824_1111
+	]
+	relation instance _19_0_3_2f000fa_1673264491604_348074_2295 : mission:Invokes [
+		from _19_0_3_8df0284_1672979792087_857651_1198
+		to _19_0_3_2f000fa_1673264464038_648550_2286
+	]
+	relation instance _19_0_3_1f900fd_1673857043708_356224_5410 : mission:Invokes [
+		from _19_0_3_8df0284_1673496983689_980699_414
+		to _19_0_3_2f000fa_1673264464038_648550_2286
+	]
+	relation instance _19_0_3_8df0284_1670821469881_60431_6172 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470600_85552_32655
+		to _19_0_3_8df0284_1670821470850_114550_42603
+	]
+	relation instance _19_0_3_8df0284_1670821469867_182209_5764 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470600_85552_32655
+		to _19_0_3_8df0284_1670821470914_183316_45600
+	]
+	relation instance _19_0_3_8df0284_1670821471113_678594_53241 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470600_85552_32655
+		to _19_0_3_8df0284_1670821470750_712573_38100
+	]
+	relation instance _19_0_3_8df0284_1670821471257_642757_57752 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821469948_814026_8485
+	]
+	relation instance _19_0_3_8df0284_1670821469960_79624_8940 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470295_722714_20152
+	]
+	relation instance _19_0_3_8df0284_1670821469679_422365_319 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821469748_694136_1609
+	]
+	relation instance _19_0_3_8df0284_1670821470207_447193_16815 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470617_561074_33304
+	]
+	relation instance _19_0_3_8df0284_1670821470793_98667_40026 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821469990_784182_10038
+	]
+	relation instance _19_0_3_8df0284_1670821469896_421919_6605 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821471240_760092_57099
+	]
+	relation instance _19_0_3_8df0284_1670821470311_786874_20817 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821471135_141678_54259
+	]
+	relation instance _19_0_3_8df0284_1670821469834_560007_4531 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470617_561074_33304
+	]
+	relation instance _19_0_3_8df0284_1670821470875_959237_43750 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821471142_661681_54604
+	]
+	relation instance _19_0_3_8df0284_1670821470028_702617_10368 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821471059_489354_51067
+	]
+	relation instance _19_0_3_8df0284_1670821470532_606066_29572 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470145_137293_14620
+	]
+	relation instance _19_0_3_8df0284_1670821470461_534390_26160 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470537_911774_29809
+	]
+	relation instance _19_0_3_8df0284_1670821470813_50467_40992 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470075_634911_12024
+	]
+	relation instance _19_0_3_8df0284_1670821470038_559342_10667 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821471110_712897_53124
+	]
+	relation instance _19_0_3_8df0284_1670821470225_411424_17394 : mission:Invokes [
+		from _19_0_3_8df0284_1670821470850_114550_42603
+		to _19_0_3_8df0284_1670821470292_906662_19963
+	]
+
+
+}

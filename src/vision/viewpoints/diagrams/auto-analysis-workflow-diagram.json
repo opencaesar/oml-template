@@ -1,0 +1,29 @@
+{
+"auto-analysis-workflow-diagram": {
+  "name": "auto-analysis-workflow-diagram",
+  "queries": {
+    "node": "auto-analysis-workflow-diagram-node.sparql",
+    "edge": "auto-analysis-workflow-diagram-edge.sparql"
+  },
+  "rowMapping": {
+    "id": "node",
+    "name": "source",
+    "labelFormat": "{source}",
+    "nodeColor": "#006994",
+    "nodeTextColor": "white",
+    "nodeType": "{nodetype}",
+    "edgeMatchKey": "source"
+  },
+  "edges": [
+    {
+      "id": "edge",
+      "name": "Edge",
+      "animated": true,
+      "labelFormat": "{edge_label}",
+      "legendItems": "{edge_label}",
+      "sourceKey": "source",
+      "targetKey": "target"
+    }
+  ]
+}
+}

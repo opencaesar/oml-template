@@ -1,7 +1,0 @@
-PREFIX vocabulary1:   <http://opencaesar.io/template/vocabulary/vocabulary1#>
-
-SELECT ?x ?y
-
-WHERE {
-	?x vocabulary1:r ?y
-}

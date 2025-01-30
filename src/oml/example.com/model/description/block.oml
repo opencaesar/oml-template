@@ -1,0 +1,1072 @@
+description <http://example.com/model/description/block#> as block {
+
+  uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+  uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+  uses <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel
+
+// SysML Imported - dxmetamodel:Block
+	instance _19_0_3_1f900fd_1670982013083_536580_420 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1670982013083_536580_420"
+		base:hasCanonicalName "可視光"
+	]
+	instance _19_0_3_1f900fd_1670982140299_803848_476 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1670982140299_803848_476"
+		base:hasCanonicalName "観測要求"
+	]
+	instance _19_0_3_1f900fd_1670982480449_15046_575 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1670982480449_15046_575"
+		base:hasCanonicalName "標準処理画像（緊急時）"
+	]
+	instance _19_0_3_1f900fd_1670983435775_521656_692 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1670983435775_521656_692"
+		base:hasCanonicalName "パンシャープン画像等（緊急時）"
+	]
+	instance _19_0_3_1f900fd_1670985934795_301397_1496 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1670985934795_301397_1496"
+		base:hasCanonicalName "観測運用計画（緊急時）"
+	]
+	instance _19_0_3_1f900fd_1671000019070_621511_3612 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1671000019070_621511_3612"
+		base:hasCanonicalName "災害発生地域"
+	]
+	instance _19_0_3_1f900fd_1671437306963_989086_1499 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1671437306963_989086_1499"
+		base:hasCanonicalName "太陽光"
+	]
+	instance _19_0_3_1f900fd_1671586983522_823262_638 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1671586983522_823262_638"
+		base:hasCanonicalName "衛星運用システム"
+	]
+	instance _19_0_3_1f900fd_1671587039371_208940_657 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1671587039371_208940_657"
+		base:hasCanonicalName "防災I/Fシステム"
+	]
+	instance _19_0_3_1f900fd_1671587339914_424113_676 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1671587339914_424113_676"
+		base:hasCanonicalName "打上げシステム"
+	]
+	instance _19_0_3_1f900fd_1698114012577_880114_548 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114012577_880114_548"
+		base:hasCanonicalName "推進系"
+	]
+	instance _19_0_3_1f900fd_1698114012581_596081_550 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114012581_596081_550"
+		base:hasCanonicalName "電源系"
+	]
+	instance _19_0_3_1f900fd_1698114118596_578300_563 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114118596_578300_563"
+		base:hasCanonicalName "バッテリ"
+	]
+	instance _19_0_3_1f900fd_1698114118599_563712_565 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114118599_563712_565"
+		base:hasCanonicalName "太陽電池セル"
+	]
+	instance _19_0_3_1f900fd_1698114118602_842836_567 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114118602_842836_567"
+		base:hasCanonicalName "太陽電池パネル"
+	]
+	instance _19_0_3_1f900fd_1698114118608_433109_569 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114118608_433109_569"
+		base:hasCanonicalName "電力分配ユニット"
+	]
+	instance _19_0_3_1f900fd_1698114118651_336381_571 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114118651_336381_571"
+		base:hasCanonicalName "電力制御ユニット"
+	]
+	instance _19_0_3_1f900fd_1698114133160_147311_573 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114133160_147311_573"
+		base:hasCanonicalName "スラスタ"
+	]
+	instance _19_0_3_1f900fd_1698114133163_368238_575 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114133163_368238_575"
+		base:hasCanonicalName "推薬タンク"
+	]
+	instance _19_0_3_1f900fd_1698114133164_142348_577 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114133164_142348_577"
+		base:hasCanonicalName "推薬供給線"
+	]
+	instance _19_0_3_2f000fa_1673231435382_801663_278 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673231435382_801663_278"
+		base:hasCanonicalName "恒星光"
+	]
+	instance _19_0_3_2f000fa_1673240719850_951978_1183 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673240719850_951978_1183"
+		base:hasCanonicalName "伝送開始コマンド（平時）"
+	]
+	instance _19_0_3_2f000fa_1673240742847_588730_1185 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673240742847_588730_1185"
+		base:hasCanonicalName "送信アンテナ対向アンテナ（平時）"
+	]
+	instance _19_0_3_2f000fa_1673240759392_324714_1187 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673240759392_324714_1187"
+		base:hasCanonicalName "観測開始コマンド（平時）"
+	]
+	instance _19_0_3_2f000fa_1673265093018_547684_2583 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673265093018_547684_2583"
+		base:hasCanonicalName "伝送開始コマンド（緊急時）"
+	]
+	instance _19_0_3_2f000fa_1673265128697_87890_2585 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_2f000fa_1673265128697_87890_2585"
+		base:hasCanonicalName "送信アンテナ対向アンテナ（緊急時）"
+	]
+	instance _19_0_3_8df0284_1670821469711_353761_800 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469711_353761_800"
+		base:hasCanonicalName "太陽"
+	]
+	instance _19_0_3_8df0284_1670821470111_353263_13288 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470111_353263_13288"
+		base:hasCanonicalName "GPS衛星"
+	]
+	instance _19_0_3_8df0284_1670821470163_800609_15183 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470163_800609_15183"
+		base:hasCanonicalName "環境"
+	]
+	instance _19_0_3_8df0284_1670821470302_147908_20430 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470302_147908_20430"
+		base:hasCanonicalName "地上システム"
+	]
+	instance _19_0_3_8df0284_1670821470373_318497_22505 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470373_318497_22505"
+		base:hasCanonicalName "地磁気"
+	]
+	instance _19_0_3_8df0284_1670821470471_976356_26656 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470471_976356_26656"
+		base:hasCanonicalName "姿勢制御系"
+	]
+	instance _19_0_3_8df0284_1670821470497_998842_27895 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470497_998842_27895"
+		base:hasCanonicalName "重力"
+	]
+	instance _19_0_3_8df0284_1670821470755_393800_38374 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470755_393800_38374"
+		base:hasCanonicalName "衛星システム"
+	]
+	instance _19_0_3_8df0284_1670821470890_603074_44445 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470890_603074_44445"
+		base:hasCanonicalName "光学センサ系"
+	]
+	instance _19_0_3_8df0284_1670821471006_119806_49388 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471006_119806_49388"
+		base:hasCanonicalName "信号インタフェース"
+	]
+	instance _19_0_3_8df0284_1670821471055_892531_50858 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471055_892531_50858"
+		base:hasCanonicalName "軌道決定値"
+	]
+	instance _19_0_3_8df0284_1670821471088_935922_52137 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471088_935922_52137"
+		base:hasCanonicalName "ユーザ（官公庁）"
+	]
+	instance _19_0_3_8df0284_1670821471114_386604_53300 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471114_386604_53300"
+		base:hasCanonicalName "総合システム"
+	]
+	instance _19_0_3_8df0284_1670821471128_446019_53904 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471128_446019_53904"
+		base:hasCanonicalName "地上局システム"
+	]
+	instance _19_0_3_8df0284_1670821471219_612839_56270 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471219_612839_56270"
+		base:hasCanonicalName "地球"
+	]
+	instance _19_0_3_8df0284_1670821471227_954948_56587 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471227_954948_56587"
+		base:hasCanonicalName "全体システム"
+	]
+	instance _19_0_3_8df0284_1670821471258_266946_57760 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471258_266946_57760"
+		base:hasCanonicalName "GPS信号"
+	]
+	instance _19_0_3_8df0284_1670821471258_382656_57763 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471258_382656_57763"
+		base:hasCanonicalName "電源インタフェース"
+	]
+	instance _19_0_3_8df0284_1670821471268_732845_58297 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471268_732845_58297"
+		base:hasCanonicalName "H3ロケット"
+	]
+	instance _19_0_3_8df0284_1671073184003_619758_1966 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1671073184003_619758_1966"
+		base:hasCanonicalName "I/O"
+	]
+	instance _19_0_3_8df0284_1671073753985_933671_2150 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1671073753985_933671_2150"
+		base:hasCanonicalName "energy"
+	]
+	instance _19_0_3_8df0284_1671092842926_961710_298 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1671092842926_961710_298"
+		base:hasCanonicalName "光学センサ"
+	]
+	instance _19_0_3_8df0284_1672022712737_69482_38 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672022712737_69482_38"
+		base:hasCanonicalName "外部システム"
+	]
+	instance _19_0_3_8df0284_1672023055732_509882_117 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672023055732_509882_117"
+		base:hasCanonicalName "その他バス機器（TBD）"
+	]
+	instance _19_0_3_8df0284_1672110136067_187116_4757 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672110136067_187116_4757"
+		base:hasCanonicalName "観測運用計画（平時）"
+	]
+	instance _19_0_3_8df0284_1672110279172_261656_4828 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672110279172_261656_4828"
+		base:hasCanonicalName "姿勢マヌーバコマンド（緊急時）"
+	]
+	instance _19_0_3_8df0284_1672128135676_980624_7471 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672128135676_980624_7471"
+		base:hasCanonicalName "OperationalConcept"
+	]
+	instance _19_0_3_8df0284_1672128955842_788019_9028 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1672128955842_788019_9028"
+		base:hasCanonicalName "コマンド計画"
+	]
+	instance _19_0_3_8df0284_1673324726511_616430_1206 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1673324726511_616430_1206"
+		base:hasCanonicalName "標準処理画像（平時）"
+	]
+	instance _19_0_3_8df0284_1673324743318_778260_1208 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1673324743318_778260_1208"
+		base:hasCanonicalName "パンシャープン画像等（平時）"
+	]
+	instance _19_0_3_8df0284_1673326345780_782024_1341 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1673326345780_782024_1341"
+		base:hasCanonicalName "ベースマップ画像提供要求"
+	]
+	instance _19_0_3_8df0284_1698127355431_169381_2120 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_169381_2120"
+		base:hasCanonicalName "衛星システム-スラスタ 機械的インタフェース"
+	]
+	instance _19_0_3_8df0284_1698127428226_252785_2310 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_252785_2310"
+		base:hasCanonicalName "衛星システム-推薬タンク 機械的インタフェース"
+	]
+	instance _19_0_3_8df0284_1698127458074_712691_2433 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_712691_2433"
+		base:hasCanonicalName "衛星システム-推薬供給線 機械的インタフェース"
+	]
+	instance _19_0_3_8df0284_1698283445660_699891_624 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_8df0284_1698283445660_699891_624"
+		base:hasCanonicalName "駆動制御信号"
+	]
+	instance _19_0_3_c2602ee_1672972858936_22816_1452 : dxmetamodel:Block [
+		base:hasIdentifier "_19_0_3_c2602ee_1672972858936_22816_1452"
+		base:hasCanonicalName "観測データ"
+	]
+	instance _19_0_3_8df0284_1672033393977_821812_3210 : dxmetamodel:ConstraintBlock [
+		base:hasIdentifier "_19_0_3_8df0284_1672033393977_821812_3210"
+		base:hasCanonicalName "地表分解能"
+	]
+	instance _19_0_3_8df0284_1672033440467_913745_3265 : dxmetamodel:ConstraintBlock [
+		base:hasIdentifier "_19_0_3_8df0284_1672033440467_913745_3265"
+		base:hasCanonicalName "観測幅"
+	]
+	instance _19_0_3_8df0284_1672033477185_611402_3320 : dxmetamodel:ConstraintBlock [
+		base:hasIdentifier "_19_0_3_8df0284_1672033477185_611402_3320"
+		base:hasCanonicalName "画素地表位置決定精度"
+	]
+	instance _19_0_3_8df0284_1672033499344_620660_3375 : dxmetamodel:ConstraintBlock [
+		base:hasIdentifier "_19_0_3_8df0284_1672033499344_620660_3375"
+		base:hasCanonicalName "カバー頻度"
+	]
+	instance _19_0_3_1f900fd_1671004233688_873569_4059 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_1f900fd_1671004233688_873569_4059"
+		base:hasCanonicalName "地表分解能"
+	]
+	instance _19_0_3_1f900fd_1671004737949_982231_4066 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_1f900fd_1671004737949_982231_4066"
+		base:hasCanonicalName "観測幅"
+	]
+	instance _19_0_3_1f900fd_1671434212469_476243_1161 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_1f900fd_1671434212469_476243_1161"
+		base:hasCanonicalName "カバー頻度"
+	]
+	instance _19_0_3_1f900fd_1698114040675_830658_552 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_1f900fd_1698114040675_830658_552"
+		base:hasCanonicalName "推薬量 : kg = 120.0"
+	]
+	instance _19_0_3_1f900fd_1698116273089_26087_1627 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_1f900fd_1698116273089_26087_1627"
+		base:hasCanonicalName "軌道保持精度 : kg = ±5"
+	]
+	instance _19_0_3_8df0284_1670821469677_54163_266 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469677_54163_266"
+		base:hasCanonicalName "power"
+	]
+	instance _19_0_3_8df0284_1670821469728_311942_1190 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469728_311942_1190"
+		base:hasCanonicalName "power"
+	]
+	instance _19_0_3_8df0284_1670821469749_252972_1632 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469749_252972_1632"
+		base:hasCanonicalName "mass"
+	]
+	instance _19_0_3_8df0284_1670821469755_615500_1822 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469755_615500_1822"
+		base:hasCanonicalName "経度"
+	]
+	instance _19_0_3_8df0284_1670821469783_362693_2763 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469783_362693_2763"
+		base:hasCanonicalName "a"
+	]
+	instance _19_0_3_8df0284_1670821469827_604449_4259 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469827_604449_4259"
+		base:hasCanonicalName "Control Mode"
+	]
+	instance _19_0_3_8df0284_1670821469920_674448_7461 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469920_674448_7461"
+		base:hasCanonicalName "最低可視時間"
+	]
+	instance _19_0_3_8df0284_1670821469949_546954_8533 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469949_546954_8533"
+		base:hasCanonicalName "mass"
+	]
+	instance _19_0_3_8df0284_1670821470029_616447_10424 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470029_616447_10424"
+		base:hasCanonicalName "Control Mode"
+	]
+	instance _19_0_3_8df0284_1670821470140_615645_14418 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470140_615645_14418"
+		base:hasCanonicalName "実働パス数"
+	]
+	instance _19_0_3_8df0284_1670821470144_152404_14590 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470144_152404_14590"
+		base:hasCanonicalName "安全姿勢確立時間"
+	]
+	instance _19_0_3_8df0284_1670821470147_881167_14683 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470147_881167_14683"
+		base:hasCanonicalName "外乱トルク"
+	]
+	instance _19_0_3_8df0284_1670821470157_946069_14990 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470157_946069_14990"
+		base:hasCanonicalName "軌道高度"
+	]
+	instance _19_0_3_8df0284_1670821470165_644211_15278 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470165_644211_15278"
+		base:hasCanonicalName "必要発生磁気モーメント"
+	]
+	instance _19_0_3_8df0284_1670821470187_584781_16089 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470187_584781_16089"
+		base:hasCanonicalName "必要トルク値"
+	]
+	instance _19_0_3_8df0284_1670821470195_271347_16347 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470195_271347_16347"
+		base:hasCanonicalName "角速度"
+	]
+	instance _19_0_3_8df0284_1670821470233_749078_17719 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470233_749078_17719"
+		base:hasCanonicalName "Central Body"
+	]
+	instance _19_0_3_8df0284_1670821470280_234093_19489 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470280_234093_19489"
+		base:hasCanonicalName "power"
+	]
+	instance _19_0_3_8df0284_1670821470298_616081_20275 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470298_616081_20275"
+		base:hasCanonicalName "可視確立時間"
+	]
+	instance _19_0_3_8df0284_1670821470308_466839_20694 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470308_466839_20694"
+		base:hasCanonicalName "解析期間（データ収支）開始"
+	]
+	instance _19_0_3_8df0284_1670821470328_947403_21577 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470328_947403_21577"
+		base:hasCanonicalName "Model"
+	]
+	instance _19_0_3_8df0284_1670821470373_761405_22478 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470373_761405_22478"
+		base:hasCanonicalName "大気密度"
+	]
+	instance _19_0_3_8df0284_1670821470408_160643_24021 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470408_160643_24021"
+		base:hasCanonicalName "Perturbation"
+	]
+	instance _19_0_3_8df0284_1670821470538_857501_29864 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470538_857501_29864"
+		base:hasCanonicalName "ダウンリンクに必要な時間"
+	]
+	instance _19_0_3_8df0284_1670821470549_94890_30364 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470549_94890_30364"
+		base:hasCanonicalName "1日あたりの可視パス数"
+	]
+	instance _19_0_3_8df0284_1670821470650_728360_34746 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470650_728360_34746"
+		base:hasCanonicalName "地上局"
+	]
+	instance _19_0_3_8df0284_1670821470713_262355_36354 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470713_262355_36354"
+		base:hasCanonicalName "慣性モーメント"
+	]
+	instance _19_0_3_8df0284_1670821470717_806936_36549 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470717_806936_36549"
+		base:hasCanonicalName "最小可視時間"
+	]
+	instance _19_0_3_8df0284_1670821470739_738528_37605 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470739_738528_37605"
+		base:hasCanonicalName "緯度"
+	]
+	instance _19_0_3_8df0284_1670821470752_159344_38233 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470752_159344_38233"
+		base:hasCanonicalName "解析期間（データ収支）"
+	]
+	instance _19_0_3_8df0284_1670821470786_992612_39699 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470786_992612_39699"
+		base:hasCanonicalName "incl"
+	]
+	instance _19_0_3_8df0284_1670821470788_225345_39778 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470788_225345_39778"
+		base:hasCanonicalName "解析期間（データ収支）終了"
+	]
+	instance _19_0_3_8df0284_1670821470801_982550_40472 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470801_982550_40472"
+		base:hasCanonicalName "地磁気"
+	]
+	instance _19_0_3_8df0284_1670821470813_735142_40975 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470813_735142_40975"
+		base:hasCanonicalName "軌道"
+	]
+	instance _19_0_3_8df0284_1670821470896_772569_44720 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470896_772569_44720"
+		base:hasCanonicalName "安全姿勢における太陽方向検知精度"
+	]
+	instance _19_0_3_8df0284_1670821470922_167550_45720 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470922_167550_45720"
+		base:hasCanonicalName "mass margin"
+	]
+	instance _19_0_3_8df0284_1670821470932_996308_46189 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470932_996308_46189"
+		base:hasCanonicalName "最低運用仰角制限"
+	]
+	instance _19_0_3_8df0284_1670821470962_321146_47458 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470962_321146_47458"
+		base:hasCanonicalName "LTDN"
+	]
+	instance _19_0_3_8df0284_1670821470968_670686_47695 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470968_670686_47695"
+		base:hasCanonicalName "mass margin"
+	]
+	instance _19_0_3_8df0284_1670821471047_10969_50501 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471047_10969_50501"
+		base:hasCanonicalName "安全姿勢における必要姿勢制御精度"
+	]
+	instance _19_0_3_8df0284_1670821471050_683202_50630 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471050_683202_50630"
+		base:hasCanonicalName "1日あたりの平均可視時間"
+	]
+	instance _19_0_3_8df0284_1670821471111_522271_53149 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471111_522271_53149"
+		base:hasCanonicalName "実質合計通信時間"
+	]
+	instance _19_0_3_8df0284_1670821471138_834372_54355 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471138_834372_54355"
+		base:hasCanonicalName "実質平均通信時間"
+	]
+	instance _19_0_3_8df0284_1670821471158_292470_55356 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471158_292470_55356"
+		base:hasCanonicalName "Mass"
+	]
+	instance _19_0_3_8df0284_1670821471220_95049_56307 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471220_95049_56307"
+		base:hasCanonicalName "RAAN"
+	]
+	instance _19_0_3_8df0284_1670821471230_883776_56677 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471230_883776_56677"
+		base:hasCanonicalName "姿勢制御精度"
+	]
+	instance _19_0_3_8df0284_1671063154006_437945_820 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1671063154006_437945_820"
+		base:hasCanonicalName "画素地表位置決定精度"
+	]
+	instance _19_0_3_8df0284_1672035074457_957546_3985 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672035074457_957546_3985"
+		base:hasCanonicalName "mass"
+	]
+	instance _19_0_3_8df0284_1672035106412_869166_3994 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672035106412_869166_3994"
+		base:hasCanonicalName "mass margin"
+	]
+	instance _19_0_3_8df0284_1672035114850_937612_4000 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672035114850_937612_4000"
+		base:hasCanonicalName "power"
+	]
+	instance _19_0_3_8df0284_1672118567706_641713_5930 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672118567706_641713_5930"
+		base:hasCanonicalName "power"
+	]
+	instance _19_0_3_8df0284_1672118579141_213514_5933 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672118579141_213514_5933"
+		base:hasCanonicalName "mass"
+	]
+	instance _19_0_3_8df0284_1672118579142_690787_5934 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1672118579142_690787_5934"
+		base:hasCanonicalName "mass margin"
+	]
+	instance _19_0_3_8df0284_1698127355431_1175_2131 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_1175_2131"
+		base:hasCanonicalName "ファスナ"
+	]
+	instance _19_0_3_8df0284_1698127355431_12174_2143 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_12174_2143"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxy"
+	]
+	instance _19_0_3_8df0284_1698127355431_160677_2142 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_160677_2142"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Izz"
+	]
+	instance _19_0_3_8df0284_1698127355431_241696_2124 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_241696_2124"
+		base:hasCanonicalName "取り付け面粗さ"
+	]
+	instance _19_0_3_8df0284_1698127355431_278757_2134 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_278757_2134"
+		base:hasCanonicalName "取り付け要求"
+	]
+	instance _19_0_3_8df0284_1698127355431_297982_2140 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_297982_2140"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Ixx"
+	]
+	instance _19_0_3_8df0284_1698127355431_319094_2136 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_319094_2136"
+		base:hasCanonicalName "質量"
+	]
+	instance _19_0_3_8df0284_1698127355431_327703_2127 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_327703_2127"
+		base:hasCanonicalName "使用材料"
+	]
+	instance _19_0_3_8df0284_1698127355431_339398_2123 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_339398_2123"
+		base:hasCanonicalName "取り付け面の平面度"
+	]
+	instance _19_0_3_8df0284_1698127355431_398445_2135 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_398445_2135"
+		base:hasCanonicalName "コンポーネント座標系及び衛星座標系との関係"
+	]
+	instance _19_0_3_8df0284_1698127355431_400790_2138 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_400790_2138"
+		base:hasCanonicalName "質量中心_Ycg"
+	]
+	instance _19_0_3_8df0284_1698127355431_443860_2137 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_443860_2137"
+		base:hasCanonicalName "質量中心_Xcg"
+	]
+	instance _19_0_3_8df0284_1698127355431_444787_2132 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_444787_2132"
+		base:hasCanonicalName "締付けトルク"
+	]
+	instance _19_0_3_8df0284_1698127355431_472281_2125 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_472281_2125"
+		base:hasCanonicalName "取り付け面以外の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127355431_544339_2128 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_544339_2128"
+		base:hasCanonicalName "取り付けネジ部厚み"
+	]
+	instance _19_0_3_8df0284_1698127355431_569708_2130 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_569708_2130"
+		base:hasCanonicalName "取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127355431_615421_2145 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_615421_2145"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxz"
+	]
+	instance _19_0_3_8df0284_1698127355431_643434_2133 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_643434_2133"
+		base:hasCanonicalName "コネクタ位置"
+	]
+	instance _19_0_3_8df0284_1698127355431_66593_2139 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_66593_2139"
+		base:hasCanonicalName "質量中心_Zcg"
+	]
+	instance _19_0_3_8df0284_1698127355431_727771_2141 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_727771_2141"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Iyy"
+	]
+	instance _19_0_3_8df0284_1698127355431_782165_2146 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_782165_2146"
+		base:hasCanonicalName "剛性"
+	]
+	instance _19_0_3_8df0284_1698127355431_795358_2126 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_795358_2126"
+		base:hasCanonicalName "取り付け面の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127355431_844038_2129 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_844038_2129"
+		base:hasCanonicalName "基準取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127355431_851032_2121 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_851032_2121"
+		base:hasCanonicalName "インターフェース種類"
+	]
+	instance _19_0_3_8df0284_1698127355431_899701_2122 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_899701_2122"
+		base:hasCanonicalName "形状・外形寸法"
+	]
+	instance _19_0_3_8df0284_1698127355431_941148_2144 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127355431_941148_2144"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pyz"
+	]
+	instance _19_0_3_8df0284_1698127428226_21263_2313 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_21263_2313"
+		base:hasCanonicalName "取り付け面の平面度"
+	]
+	instance _19_0_3_8df0284_1698127428226_216266_2327 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_216266_2327"
+		base:hasCanonicalName "質量中心_Xcg"
+	]
+	instance _19_0_3_8df0284_1698127428226_280780_2336 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_280780_2336"
+		base:hasCanonicalName "剛性"
+	]
+	instance _19_0_3_8df0284_1698127428226_287218_2324 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_287218_2324"
+		base:hasCanonicalName "取り付け要求"
+	]
+	instance _19_0_3_8df0284_1698127428226_295931_2311 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_295931_2311"
+		base:hasCanonicalName "インターフェース種類"
+	]
+	instance _19_0_3_8df0284_1698127428226_369573_2317 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_369573_2317"
+		base:hasCanonicalName "使用材料"
+	]
+	instance _19_0_3_8df0284_1698127428226_373406_2316 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_373406_2316"
+		base:hasCanonicalName "取り付け面の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127428226_374400_2325 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_374400_2325"
+		base:hasCanonicalName "コンポーネント座標系及び衛星座標系との関係"
+	]
+	instance _19_0_3_8df0284_1698127428226_417436_2326 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_417436_2326"
+		base:hasCanonicalName "質量"
+	]
+	instance _19_0_3_8df0284_1698127428226_484026_2331 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_484026_2331"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Iyy"
+	]
+	instance _19_0_3_8df0284_1698127428226_539494_2328 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_539494_2328"
+		base:hasCanonicalName "質量中心_Ycg"
+	]
+	instance _19_0_3_8df0284_1698127428226_552029_2334 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_552029_2334"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pyz"
+	]
+	instance _19_0_3_8df0284_1698127428226_553970_2329 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_553970_2329"
+		base:hasCanonicalName "質量中心_Zcg"
+	]
+	instance _19_0_3_8df0284_1698127428226_616661_2315 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_616661_2315"
+		base:hasCanonicalName "取り付け面以外の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127428226_633268_2330 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_633268_2330"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Ixx"
+	]
+	instance _19_0_3_8df0284_1698127428226_639046_2323 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_639046_2323"
+		base:hasCanonicalName "コネクタ位置"
+	]
+	instance _19_0_3_8df0284_1698127428226_649867_2332 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_649867_2332"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Izz"
+	]
+	instance _19_0_3_8df0284_1698127428226_770342_2320 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_770342_2320"
+		base:hasCanonicalName "取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127428226_812851_2314 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_812851_2314"
+		base:hasCanonicalName "取り付け面粗さ"
+	]
+	instance _19_0_3_8df0284_1698127428226_85010_2322 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_85010_2322"
+		base:hasCanonicalName "締付けトルク"
+	]
+	instance _19_0_3_8df0284_1698127428226_855797_2333 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_855797_2333"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxy"
+	]
+	instance _19_0_3_8df0284_1698127428226_937794_2321 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_937794_2321"
+		base:hasCanonicalName "ファスナ"
+	]
+	instance _19_0_3_8df0284_1698127428226_953026_2318 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_953026_2318"
+		base:hasCanonicalName "取り付けネジ部厚み"
+	]
+	instance _19_0_3_8df0284_1698127428226_965152_2319 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_965152_2319"
+		base:hasCanonicalName "基準取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127428226_975200_2312 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_975200_2312"
+		base:hasCanonicalName "形状・外形寸法"
+	]
+	instance _19_0_3_8df0284_1698127428226_990372_2335 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127428226_990372_2335"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxz"
+	]
+	instance _19_0_3_8df0284_1698127458074_105876_2440 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_105876_2440"
+		base:hasCanonicalName "使用材料"
+	]
+	instance _19_0_3_8df0284_1698127458074_150667_2441 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_150667_2441"
+		base:hasCanonicalName "取り付けネジ部厚み"
+	]
+	instance _19_0_3_8df0284_1698127458074_170439_2443 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_170439_2443"
+		base:hasCanonicalName "取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127458074_180790_2434 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_180790_2434"
+		base:hasCanonicalName "インターフェース種類"
+	]
+	instance _19_0_3_8df0284_1698127458074_192653_2437 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_192653_2437"
+		base:hasCanonicalName "取り付け面粗さ"
+	]
+	instance _19_0_3_8df0284_1698127458074_220243_2450 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_220243_2450"
+		base:hasCanonicalName "質量中心_Xcg"
+	]
+	instance _19_0_3_8df0284_1698127458074_222102_2436 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_222102_2436"
+		base:hasCanonicalName "取り付け面の平面度"
+	]
+	instance _19_0_3_8df0284_1698127458074_235338_2439 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_235338_2439"
+		base:hasCanonicalName "取り付け面の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127458074_295098_2444 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_295098_2444"
+		base:hasCanonicalName "ファスナ"
+	]
+	instance _19_0_3_8df0284_1698127458074_419332_2438 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_419332_2438"
+		base:hasCanonicalName "取り付け面以外の表面処理"
+	]
+	instance _19_0_3_8df0284_1698127458074_579176_2454 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_579176_2454"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Iyy"
+	]
+	instance _19_0_3_8df0284_1698127458074_589087_2448 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_589087_2448"
+		base:hasCanonicalName "コンポーネント座標系及び衛星座標系との関係"
+	]
+	instance _19_0_3_8df0284_1698127458074_617667_2451 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_617667_2451"
+		base:hasCanonicalName "質量中心_Ycg"
+	]
+	instance _19_0_3_8df0284_1698127458074_643614_2445 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_643614_2445"
+		base:hasCanonicalName "締付けトルク"
+	]
+	instance _19_0_3_8df0284_1698127458074_695634_2456 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_695634_2456"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxy"
+	]
+	instance _19_0_3_8df0284_1698127458074_825574_2447 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_825574_2447"
+		base:hasCanonicalName "取り付け要求"
+	]
+	instance _19_0_3_8df0284_1698127458074_828601_2446 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_828601_2446"
+		base:hasCanonicalName "コネクタ位置"
+	]
+	instance _19_0_3_8df0284_1698127458074_868032_2449 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_868032_2449"
+		base:hasCanonicalName "質量"
+	]
+	instance _19_0_3_8df0284_1698127458074_888814_2435 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_888814_2435"
+		base:hasCanonicalName "形状・外形寸法"
+	]
+	instance _19_0_3_8df0284_1698127458074_910339_2452 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_910339_2452"
+		base:hasCanonicalName "質量中心_Zcg"
+	]
+	instance _19_0_3_8df0284_1698127458074_920459_2442 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_920459_2442"
+		base:hasCanonicalName "基準取り付け穴"
+	]
+	instance _19_0_3_8df0284_1698127458074_989672_2453 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_989672_2453"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Ixx"
+	]
+	instance _19_0_3_8df0284_1698127458074_993839_2455 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458074_993839_2455"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Izz"
+	]
+	instance _19_0_3_8df0284_1698127458090_432215_2459 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458090_432215_2459"
+		base:hasCanonicalName "剛性"
+	]
+	instance _19_0_3_8df0284_1698127458090_644167_2457 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458090_644167_2457"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pyz"
+	]
+	instance _19_0_3_8df0284_1698127458090_747274_2458 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698127458090_747274_2458"
+		base:hasCanonicalName "慣性能率及び慣性乗積_Pxz"
+	]
+	instance _19_0_3_8df0284_1698368812351_165151_598 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698368812351_165151_598"
+		base:hasCanonicalName "地表分解能"
+	]
+	instance _19_0_3_8df0284_1698368822397_162101_601 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698368822397_162101_601"
+		base:hasCanonicalName "観測幅"
+	]
+	instance _19_0_3_8df0284_1698368830707_512118_604 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698368830707_512118_604"
+		base:hasCanonicalName "画素地表位置決定精度"
+	]
+	instance _19_0_3_8df0284_1698369640251_662202_714 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698369640251_662202_714"
+		base:hasCanonicalName "観測波長"
+	]
+	instance _19_0_3_8df0284_1698370916397_875245_723 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698370916397_875245_723"
+		base:hasCanonicalName "観測時間"
+	]
+	instance _19_0_3_8df0284_1698371028756_554196_730 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371028756_554196_730"
+		base:hasCanonicalName "圧縮率"
+	]
+	instance _19_0_3_8df0284_1698371100376_891452_739 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371100376_891452_739"
+		base:hasCanonicalName "圧縮方式"
+	]
+	instance _19_0_3_8df0284_1698371212722_559015_746 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371212722_559015_746"
+		base:hasCanonicalName "マヌーバ角度"
+	]
+	instance _19_0_3_8df0284_1698371233595_162034_748 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371233595_162034_748"
+		base:hasCanonicalName "マヌーバ時間"
+	]
+	instance _19_0_3_8df0284_1698371317899_757505_767 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371317899_757505_767"
+		base:hasCanonicalName "姿勢安定度"
+	]
+	instance _19_0_3_8df0284_1698371378810_767208_775 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371378810_767208_775"
+		base:hasCanonicalName "ポインティング精度"
+	]
+	instance _19_0_3_8df0284_1698371510381_643654_797 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371510381_643654_797"
+		base:hasCanonicalName "最大コマンド数"
+	]
+	instance _19_0_3_8df0284_1698371530616_387427_799 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371530616_387427_799"
+		base:hasCanonicalName "ストアードコマンドの発行間隔"
+	]
+	instance _19_0_3_8df0284_1698371552018_290344_801 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371552018_290344_801"
+		base:hasCanonicalName "最大データ蓄積量"
+	]
+	instance _19_0_3_8df0284_1698371855706_836801_803 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698371855706_836801_803"
+		base:hasCanonicalName "データ伝送レート"
+	]
+	instance _19_0_3_8df0284_1698372032588_192546_805 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698372032588_192546_805"
+		base:hasCanonicalName "変調方式"
+	]
+	instance _19_0_3_8df0284_1698372042312_341792_807 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698372042312_341792_807"
+		base:hasCanonicalName "周波数"
+	]
+	instance _19_0_3_8df0284_1698380966721_474067_2763 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698380966721_474067_2763"
+		base:hasCanonicalName "計画立案時間"
+	]
+	instance _19_0_3_8df0284_1698381000767_293915_2765 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381000767_293915_2765"
+		base:hasCanonicalName "観測データ蓄積量"
+	]
+	instance _19_0_3_8df0284_1698381038707_812703_2767 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381038707_812703_2767"
+		base:hasCanonicalName "観測データ蓄積期間"
+	]
+	instance _19_0_3_8df0284_1698381117610_207601_2769 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381117610_207601_2769"
+		base:hasCanonicalName "処理時間（標準処理機能）"
+	]
+	instance _19_0_3_8df0284_1698381138065_868075_2771 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381138065_868075_2771"
+		base:hasCanonicalName "処理データ量（標準処理機能）"
+	]
+	instance _19_0_3_8df0284_1698381163824_225488_2773 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381163824_225488_2773"
+		base:hasCanonicalName "処理時間（派生プロダクト生成機能）"
+	]
+	instance _19_0_3_8df0284_1698381175227_225602_2775 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698381175227_225602_2775"
+		base:hasCanonicalName "処理データ量（派生プロダクト生成機能）"
+	]
+	instance _19_0_3_8df0284_1698390337905_462393_619 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698390337905_462393_619"
+		base:hasCanonicalName "指向制御精度"
+	]
+	instance _19_0_3_8df0284_1698390381872_811869_629 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698390381872_811869_629"
+		base:hasCanonicalName "指向安定度"
+	]
+	instance _19_0_3_8df0284_1698390474890_597773_634 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698390474890_597773_634"
+		base:hasCanonicalName "推薬量"
+	]
+	instance _19_0_3_8df0284_1698393182513_742428_1063 : dxmetamodel:ValueProperty [
+		base:hasIdentifier "_19_0_3_8df0284_1698393182513_742428_1063"
+		base:hasCanonicalName "分解能"
+	]
+
+// SysML Imported - base:Contains
+	relation instance _19_0_3_8df0284_1672128342982_971701_8450 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_8df0284_1670821471128_446019_53904
+	]
+	relation instance _19_0_3_8df0284_1672128338269_159658_8418 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_8df0284_1670821471088_935922_52137
+	]
+	relation instance _19_0_3_8df0284_1672128352720_804969_8498 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1672128350014_958832_8482 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_1f900fd_1671587039371_208940_657
+	]
+	relation instance _19_0_3_8df0284_1672128346453_391300_8466 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_1f900fd_1671586983522_823262_638
+	]
+	relation instance _19_0_3_8df0284_1672128340645_702540_8434 : base:Aggregates [
+		from _19_0_3_8df0284_1672128135676_980624_7471
+		to _19_0_3_1f900fd_1671000019070_621511_3612
+	]
+	relation instance _19_0_3_8df0284_1672023573660_143066_640 : base:Contains [
+		from _19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_8df0284_1672023055732_509882_117
+	]
+	relation instance _19_0_3_8df0284_1672024268466_107996_1197 : base:Contains [
+		from _19_0_3_8df0284_1670821470163_800609_15183
+		to _19_0_3_8df0284_1672022712737_69482_38
+	]
+	relation instance _19_0_3_8df0284_1671092927233_543093_441 : base:Contains [
+		from _19_0_3_8df0284_1670821470890_603074_44445
+		to _19_0_3_8df0284_1671092842926_961710_298
+	]
+	relation instance _19_0_3_1f900fd_1671587378959_510190_697 : base:Contains [
+		from _19_0_3_1f900fd_1671587339914_424113_676
+		to _19_0_3_8df0284_1670821471268_732845_58297
+	]
+	relation instance _19_0_3_8df0284_1670821470731_790512_37270 : base:Contains [
+		from _19_0_3_8df0284_1670821470163_800609_15183
+		to _19_0_3_8df0284_1670821471219_612839_56270
+	]
+	relation instance _19_0_3_8df0284_1670821469819_574985_3949 : base:Contains [
+		from _19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_8df0284_1670821471128_446019_53904
+	]
+	relation instance _19_0_3_1f900fd_1671005500311_480221_4202 : base:Contains [
+		from _19_0_3_8df0284_1670821471227_954948_56587
+		to _19_0_3_8df0284_1670821471114_386604_53300
+	]
+	relation instance _19_0_3_8df0284_1670821470999_109680_49161 : base:Contains [
+		from _19_0_3_8df0284_1670821471227_954948_56587
+		to _19_0_3_8df0284_1670821471088_935922_52137
+	]
+	relation instance _19_0_3_8df0284_1672023568501_782276_608 : base:Contains [
+		from _19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_8df0284_1670821470890_603074_44445
+	]
+	relation instance _19_0_3_8df0284_1670821471015_491526_49587 : base:Contains [
+		from _19_0_3_8df0284_1670821471114_386604_53300
+		to _19_0_3_8df0284_1670821470755_393800_38374
+	]
+	relation instance _19_0_3_8df0284_1672023571125_286378_624 : base:Contains [
+		from _19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_8df0284_1670821470471_976356_26656
+	]
+	relation instance _19_0_3_8df0284_1670821469952_747194_8649 : base:Contains [
+		from _19_0_3_8df0284_1670821471114_386604_53300
+		to _19_0_3_8df0284_1670821470302_147908_20430
+	]
+	relation instance _19_0_3_8df0284_1670821470148_125511_14706 : base:Contains [
+		from _19_0_3_8df0284_1670821471227_954948_56587
+		to _19_0_3_8df0284_1670821470163_800609_15183
+	]
+	relation instance _19_0_3_8df0284_1672022773914_215975_58 : base:Contains [
+		from _19_0_3_8df0284_1672022712737_69482_38
+		to _19_0_3_8df0284_1670821470111_353263_13288
+	]
+	relation instance _19_0_3_8df0284_1670821470547_525011_30236 : base:Contains [
+		from _19_0_3_8df0284_1670821470163_800609_15183
+		to _19_0_3_8df0284_1670821469711_353761_800
+	]
+	relation instance _19_0_3_1f900fd_1698116060198_56249_1044 : base:Contains [
+		from _19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698114133164_142348_577
+	]
+	relation instance _19_0_3_1f900fd_1698116057551_588498_1028 : base:Contains [
+		from _19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698114133163_368238_575
+	]
+	relation instance _19_0_3_1f900fd_1698116023217_414729_1008 : base:Contains [
+		from _19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698114133160_147311_573
+	]
+	relation instance _19_0_3_1f900fd_1698116112562_650014_1365 : base:Contains [
+		from _19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698114118651_336381_571
+	]
+	relation instance _19_0_3_1f900fd_1698116109344_464024_1349 : base:Contains [
+		from _19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698114118608_433109_569
+	]
+	relation instance _19_0_3_1f900fd_1698116105862_937958_1333 : base:Contains [
+		from _19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698114118602_842836_567
+	]
+	relation instance _19_0_3_1f900fd_1698116102896_97751_1317 : base:Contains [
+		from _19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698114118599_563712_565
+	]
+	relation instance _19_0_3_1f900fd_1698116100126_256558_1301 : base:Contains [
+		from _19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698114118596_578300_563
+	]
+	relation instance _19_0_3_1f900fd_1698116289449_270182_1651 : base:Contains [
+		from _19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1698114012581_596081_550
+	]
+	relation instance _19_0_3_1f900fd_1698116285743_69716_1635 : base:Contains [
+		from _19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1698114012577_880114_548
+	]
+	relation instance _19_0_3_8df0284_1672022827232_378201_74 : base:Contains [
+		from _19_0_3_8df0284_1672022712737_69482_38
+		to _19_0_3_1f900fd_1671587339914_424113_676
+	]
+	relation instance _19_0_3_1f900fd_1671587039424_202720_660 : base:Contains [
+		from _19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1671587039371_208940_657
+	]
+	relation instance _19_0_3_1f900fd_1671586983599_128270_641 : base:Contains [
+		from _19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1671586983522_823262_638
+	]
+	relation instance _19_0_3_1f900fd_1671000019119_787257_3615 : base:Contains [
+		from _19_0_3_8df0284_1670821471219_612839_56270
+		to _19_0_3_1f900fd_1671000019070_621511_3612
+	]
+
+
+}

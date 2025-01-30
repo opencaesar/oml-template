@@ -1,0 +1,39 @@
+description <http://example.com/model/description/statedictionary#> as statedictionary {
+
+	extends <http://example.com/model/description/components#>
+
+	uses <http://bipm.org/jcgm/vim4#>
+
+	uses <http://example.com/model/vocabulary/stateanalysis#> as sa
+
+	uses <http://imce.jpl.nasa.gov/foundation/analysis#>
+
+	instance orbiter-spacecraft.delta-v : sa:StateVariable [
+		sa:affects orbiter-spacecraft.mass.fuel
+	]
+
+	instance orbiter-spacecraft.initial-orbit : sa:StateVariable [
+		sa:affects orbiter-spacecraft.delta-v
+		sa:hasStateValue "400"
+	]
+
+	instance orbiter-spacecraft.isp : sa:StateVariable [
+		sa:affects orbiter-spacecraft.mass.fuel
+		sa:hasStateValue "350"
+	]
+
+	instance orbiter-spacecraft.mass.dry : sa:StateVariable [
+		sa:affects orbiter-spacecraft.mass.fuel
+	]
+
+	instance orbiter-spacecraft.mass.fuel : sa:StateVariable [
+		sa:affects orbiter-spacecraft.mass.wet
+	]
+
+	instance orbiter-spacecraft.mass.wet : sa:StateVariable
+
+	instance orbiter-spacecraft.target-orbit : sa:StateVariable [
+		sa:affects orbiter-spacecraft.delta-v
+		sa:hasStateValue "35786"
+	]
+}

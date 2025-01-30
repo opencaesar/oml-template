@@ -1,0 +1,70 @@
+description <http://example.com/model/description/sysmlmms#> as sysmlmms {
+
+  uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+  uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+  extends <http://example.com/model/description/missions#> as mission
+
+// SysML Imported - mission:Objective
+	instance sysml-tank : mission:Component [
+		base:hasIdentifier "tank"
+	]
+	instance sysml-lander : mission:Mission [
+		base:hasIdentifier "lander"
+	]
+	instance sysml-orbiter : mission:Mission [
+		base:hasIdentifier "orbiter"
+	]
+	instance sysml-characterize-atmosphere : mission:Objective [
+		base:hasIdentifier "O.01"
+	]
+	instance sysml-characterize-liquid-ocean : mission:Objective [
+		base:hasIdentifier "O.02"
+	]
+	instance sysml-characterize-gravitational-field : mission:Objective [
+		base:hasIdentifier "O.03"
+	]
+	instance sysml-characterize-rocky-core : mission:Objective [
+		base:hasIdentifier "O.04"
+	]
+	instance sysml-characterize-rocky-core-density : mission:Objective [
+		base:hasIdentifier "O.05"
+	]
+	instance sysml-characterize-rocky-core-shape : mission:Objective [
+		base:hasIdentifier "O.06"
+	]
+	instance sysml-characterize-environment : mission:Objective [
+		base:hasIdentifier "O.07"
+	]
+
+// SysML Imported - mission:Pursues
+	relation instance _19_0_4_420019d_1720226674316_419270_46411 : mission:Pursues [
+		from sysml-orbiter
+		to sysml-characterize-environment
+	]
+	relation instance _19_0_4_420019d_1720226672210_318516_46403 : mission:Pursues [
+		from sysml-lander
+		to sysml-characterize-rocky-core-shape
+	]
+	relation instance _19_0_4_420019d_1721082757322_790455_44286 : mission:Pursues [
+		from sysml-tank
+		to sysml-characterize-gravitational-field
+	]
+	relation instance _19_0_4_420019d_1720226666452_84754_46392 : mission:Pursues [
+		from sysml-lander
+		to sysml-characterize-atmosphere
+	]
+	relation instance _19_0_4_420019d_1720226672835_910208_46407 : mission:Pursues [
+		from sysml-lander
+		to sysml-characterize-environment
+	]
+	relation instance _19_0_4_420019d_1720226667452_68712_46396 : mission:Pursues [
+		from sysml-orbiter
+		to sysml-characterize-atmosphere
+	]
+	relation instance _19_0_4_420019d_1720226669979_258830_46399 : mission:Pursues [
+		from sysml-orbiter
+		to sysml-characterize-gravitational-field
+	]
+
+
+}

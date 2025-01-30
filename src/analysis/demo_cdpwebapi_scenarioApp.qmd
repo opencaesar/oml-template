@@ -1,0 +1,482 @@
+---
+title: "Round Trip Demo with CDP and OML"
+date: now
+date-format: "MMM D, YYYY, HH:mm:ss"
+author: "Yuta Nakajima"
+description: "<BR>This shell scripts execute different types of analysis codes."
+title-block-banner: true
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly    
+    fontsize: 1.0em
+    self-contained: true
+    toc: true
+    toc-location: left
+    number-sections: true
+    number-depth: 3
+    code-fold: false
+    grid:
+      sidebar-width: 200px
+      body-width: 1000px
+      margin-width: 200px
+      gutter-width: 2.5rem
+execute:
+  warning: false
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+## 目的
+
+OMLとCDP Web API版を連携した解析ワークフローのラウンドトリップをデモする。
+
+## 課題
+
+OMLで解析シナリオを定義し、これをインプット条件として、CDPで解析をする。
+
+* OMLの役割は、解析条件の定義。
+  * 太陽同期軌道の初期値（高度、LST）を定義。
+  * 解析結果をFilekeyとして取り込む。
+
+* CDPの役割は、OMLで定義した解析条件に対して解析プログラムを実行。
+  * 出力はFilekeyで代表。
+  * 解析結果の記録は、Filekeyで識別可能な解析ファイルサーバに格納。
+  
+
+## スコープ
+
+今回のデモは、シナリオアプリのみを対象とする。
+
+![demo](../../../img/image-55.png)
+
+
+## このスクリプトの実行方法
+
+下記をterminalで実行するとスクリプトが実行され、htmlファイルが生成される。
+quarto notebook上で、1つ1つセルを手動で実行した場合も同様の結果が得られる。
+
+```bash
+quarto render src/analysis/demo_cdpwebapi_scenarioApp.qmd
+
+# 実行結果の確認 
+open  src/analysis/demo_cdpwebapi_scenarioApp.html
+```
+
+## 解析ワークフロー
+
+```{mermaid}
+  graph LR;
+      n01[(OML)]-->n02[(fuseki)];
+      n02-->n03[SPARQL];
+      n03-->n04((parameters));
+      n04-->n05(CDP1.Scenario);
+      n05-->n06((filekey));
+      n06-->n07[SPARQL UPDATE];
+      n07-.->n02
+      n07-->n09[Owl2Oml];
+      n09-.->n01
+```
+
+### load utility files
+
+```{r}
+#| warning: false
+library(reactable)
+library(stringr)
+
+searchDirectory <- function(iteration, pattern, parent_directory){
+  for(i in 1:iteration){
+      path <- list.files(parent_directory, recursive = TRUE, pattern = pattern, full.names = TRUE)
+      if(length(path)){
+        return(path)
+      }
+      parent_directory <- dirname(parent_directory)
+  }
+  print("file not found")
+  return(path)
+}
+
+source(searchDirectory(4, "osr_common.R", (getwd())))
+source(searchDirectory(4, "massRollupKepler16b.R", (getwd())))
+```
+
+```{r}
+library(reticulate)
+use_condaenv("py393")
+py_config()
+```
+
+### Build and Run a Fuseki SPARQL endpoint for oml model query
+```{r}
+#| label: gradle-01
+#| warning: false
+library(omlhashiR)
+oml_repository <- omlrepo
+# ret1 <- omlhashiR::oml_refresh()
+```
+
+```{r}
+#| label: gradle-02-stop
+# ret2 <- omlhashiR::oml_stop_Daemon(oml_repository)
+```
+```{r}
+#| label: gradle-03-build
+# ret3 <- omlhashiR::oml_callTask(oml_repository, "build")
+```
+
+#### Start Fuseki Server
+```{r}
+#| label: gradle-04-start-fuseki
+# ret4 <- omlhashiR::oml_callTask(oml_repository, "startFuseki")
+```
+
+#### Load in OWL ontologies to Fuseki Server
+```{r}
+#| label: gradle-05-owl-load
+# ret5 <- omlhashiR::oml_callTask(oml_repository, "owlLoad")
+```
+
+
+### Get Simulation Configuration
+
+シナリオを指定し、必要な初期値情報を取得する。
+
+```{r}
+#| label: Get-Simulation-Configuration
+library(tansakusuR)
+endpoint_url <- "http://localhost:3030/model/sparql"
+
+configuration_root_iri <- "http://example.com/model/description/analysis/orbit_analysis_02#cdp-analysis-02.scenario"
+```
+
+#### SPARQL CODE
+
+```{r}
+#| label: Get-Simulation-Configuration-SPARQL-CODE
+query_string <- '
+PREFIX oml: 			<http://opencaesar.io/oml#>
+PREFIX base:        <http://imce.jpl.nasa.gov/foundation/base#>
+PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
+PREFIX sa: 	<http://example.com/model/vocabulary/stateanalysis#>
+PREFIX analysis: <http://imce.jpl.nasa.gov/foundation/analysis#>
+
+SELECT DISTINCT ?scenario ?iri ?scenario_instancename ?statevariable ?value ?type ?value_iri
+#SELECT DISTINCT ?scenario ?iri ?value ?type ?iri2
+WHERE {
+
+##  VALUES ?componentType {sa:simulationScenario}
+##	?scenario a ?componentType .
+
+  VALUES ?scenario {<$configuration_root_iri>}
+  { 
+    {
+      ?scenario analysis:asserts ?iri.
+      BIND("Objectives" as ?type).
+    }
+    UNION
+    {
+      ?value_iri oml:hasSource ?scenario.
+      ?value_iri oml:hasTarget ?iri.
+      OPTIONAL{
+        ?value_iri sa:assumeInitialStateValue ?value. 
+        BIND("DesignVariables" as ?type).
+      }
+    }
+  }
+  UNION
+  {
+     {?scenario analysis:asserts ?analysisTarget.
+      ?analysisTarget sa:isAffectedBy* ?iri2 .}
+     FILTER NOT EXISTS {
+      {
+        ?scenario analysis:asserts ?analysisTarget.
+        BIND(?analysisTarget as ?iri2).
+      }
+      UNION {
+        ?value_iri oml:hasSource ?scenario.
+         ?value_iri oml:hasTarget ?iri2.
+      }
+    }
+	 BIND("Dependents" as ?type).
+
+	 BIND(?iri2 as ?iri).
+
+
+  }
+
+  BIND(STRAFTER(STR(?scenario), "#") AS ?scenario_instancename) .
+  BIND(STRAFTER(STR(?iri), "#") AS ?statevariable) .
+ }
+ORDER BY ?c1_id
+
+'
+query_string <- str_replace(query_string, "\\$configuration_root_iri", configuration_root_iri)
+```
+
+
+#### Query
+
+```{r}
+#| label: Get-Simulation-Configuration-Query
+df_query_param <- send_query(endpoint_url,query_string)
+```
+
+
+#### Table
+
+```{r}
+#| label: Get-Simulation-Configuration-Table
+
+df_table <- df_query_param %>% 
+  select(scenario_instancename,statevariable,value,type) 
+  
+
+datatable(df_table, options = list(autoWidth = TRUE, pageLength = -1))
+
+```
+
+
+### Binding to R Dataframe
+
+df_parametersという変数で解析パラメータを管理する。
+OMLの解析シナリオファイルに解析結果をアップデートするためのローカルデータベースをRのデータフレームを使って構築する。
+pythonへのデータ受け渡しを考慮して、このファイル内のローカル変数とoml内での変数名のマッピングをしている。
+処理として冗長かもしれないのと、このマッピングすらoml内ワークフローとして記述して、自動化できると嬉しい。
+（今後の課題の１つ. Kedroを試行中）
+
+
+```{r}
+#| label: Binding to R Dataframe
+df_table <- df_query_param %>% 
+  select(scenario_instancename,statevariable,value,type) 
+
+
+mapping <- list(
+  c("PowerAllocation", "output.PowerAllocation.FileKey"),
+  c("PowerBudget", "output.PowerBudget.FileKey"),
+  c("Scenario","output.Scenario.FileKey"),
+  c("Altitude","output.Scenario.Parameter.InitialOrbitElements.Altitude"),
+  c("LTDN","output.Scenario.Parameter.InitialOrbitElements.LTDN"),
+  c("OrbitType","output.Scenario.Parameter.InitialOrbitElements.Type"),
+  c("StartTime","output.Scenario.Parameter.StartTime"),
+  c("StopTime","output.Scenario.Parameter.StopTime")
+)
+
+# Convert to dataframe
+mapping_df <- mapping %>% 
+  map_df(~data.frame(.x[1], .x[2])) 
+colnames(mapping_df) <- c("parameter", "statevariable")
+
+df_parameters_before <- left_join(df_query_param, mapping_df, by=c("statevariable"="statevariable")) 
+
+# parameter database for quarto with R
+df_parameters <- df_parameters_before %>% 
+#  mutate(value2 = as.double(replace(value, is.na(value), 0))) %>%
+  mutate(value2 =as.character((replace(value, is.na(value), 0)))) %>%
+  select(parameter,value2) %>%
+  pivot_wider(
+#    id_cols = age_cat,
+    names_from = parameter,
+    values_from = value2
+    )
+
+```
+
+### Binding Variables: toPython
+
+```{python}
+#| label: Binding-Variables-toPython
+
+SunSyncLST = r.df_parameters.LTDN.tolist()[0]
+SunSyncAltitude = r.df_parameters.Altitude.tolist()[0]
+ScenarioStartTime = r.df_parameters.StartTime.tolist()[0]
+ScenarioStopTime = r.df_parameters.StopTime.tolist()[0]
+
+# SunSyncLST = 10.5
+# SunSyncAltitude = 333
+# ScenarioStartTime = '20 Mar 2030 12:00:00'
+# ScenarioStopTime = '21 Mar 2030 12:00:00'
+
+SunSyncLST
+SunSyncAltitude
+ScenarioStartTime
+ScenarioStopTime
+```
+
+
+### Input Parameter to CDP and Run CDP
+```{python}
+#| label: Input-Parameter-to-CDP-and-Run-CDP
+
+# define mat file name
+matFileName = 'Scenario_webApiTest_demo234'
+
+
+```
+
+#### Run
+```{python}
+#| label: Run-CDP
+import os
+import sys
+
+print('getcwd:      ', os.getcwd())
+
+sys.path.append(os.getcwd())
+sys.path.append(os.getcwd()+'/src/analysis')
+
+# ここ、今はローカルディレクトリにpyライブラリを置いているがこれをgitlabに移したい。
+#from src.analysis import pycdpapi
+import pycdpapi
+cdpScenarioAppInstance = pycdpapi.ScenarioApp(matFileName) # instance化して使用するのが基本？？
+
+cdpScenarioAppInstance.SunSyncLST = SunSyncLST
+cdpScenarioAppInstance.SunSyncAltitude = SunSyncAltitude
+cdpScenarioAppInstance.ScenarioStartTime = ScenarioStartTime
+cdpScenarioAppInstance.ScenarioStopTime = ScenarioStopTime
+
+cdpScenarioAppInstance.checkPath()
+cdpScenarioAppInstance.matFileName
+cdpScenarioAppInstance.setJsonData()
+cdpScenarioAppInstance.sendJsonToWebApiAndReceiveMatFile()
+cdpScenarioAppInstance.saveReceivedMatFile()
+```
+
+#### Get CDP Results
+
+```{python}
+#| label: Get-CDP-Results
+cdpScenarioAppInstance.getFilekey()
+filekey = cdpScenarioAppInstance.filekey
+```
+
+
+### Binding Variables : toR
+
+```{r}
+py$filekey
+df_parameters$Scenario <- py$filekey
+```
+
+### Finally, Update OML
+
+
+#### parameter table updated
+```{r}
+df_parameters_pivot <- df_parameters %>% 
+  mutate(id=1) %>%
+  pivot_longer(!id, names_to = "parameter", values_to = "value") %>%
+  select(-id)
+```
+
+#### identify changed parameters before and after
+
+```{r}
+df_parameters_after <-  left_join(df_parameters_before, df_parameters_pivot,
+                                  by = c("parameter"="parameter"),
+                                  suffix=c("_before","_after")) %>%
+  mutate(status = case_when(
+#    as.double(value_before) == value_after ~ "unchanged",
+    value_before == value_after ~ "unchanged",
+    TRUE ~ "changed"
+  ))
+
+df_table <- df_parameters_after %>%
+  select(parameter,value_before, value_after, status)
+
+datatable(df_table, options = list(autoWidth = TRUE, pageLength = -1))
+```
+
+#### sending update query
+
+```{r}
+source(searchDirectory(4, "updateSparqlQuery.R", (getwd())))
+```
+
+```{r}
+df_update <- df_parameters_after %>% 
+  filter(status == "changed") %>%
+  filter(value_iri != "NA")
+
+endpoint_url <- "http://localhost:3030/model-tdb/"
+
+for( i in 1:nrow(df_update) ){
+  df <- df_update[i,]
+  update_value <- as.character(df$value_after)
+  update_iri <- df$value_iri
+
+  df_ret <- updateScenarioSparqlQuery(endpoint_url, update_value, update_iri)
+  
+  ret <- send_update(endpoint_url = endpoint_url, df_ret$query_string_delete_tdb)
+  ret <- send_update(endpoint_url = endpoint_url, df_ret$query_string_insert_tdb)
+  
+}
+
+# cat(df_ret$query_string_delete_tdb)
+# cat(df_ret$query_string_insert_tdb)
+
+
+```
+
+#### Run Save in OML-Vision
+
+Using OML-Vision GUI, run the save task.
+Then you can see the oml file is updated.
+
+```{r}
+#| label: gradle-06-save-oml
+#ret6 <- omlhashiR::oml_callTask(oml_repository, "save")
+```
+
+### Visualize Orbit
+
+
+```{python}
+#| label: visualize-analysis-results
+
+cdpScenarioAppInstance.matFileName
+print('getcwd:      ', os.getcwd())
+
+
+fig = cdpScenarioAppInstance.visualizeOrbit()
+
+
+```
+```{python}
+fig.show()
+```
+
+## This is debug codes
+```{r}
+# library(reticulate)
+# use_condaenv("py393")
+# py_config()
+```
+
+```{python}
+# import os
+# import sys
+# print(sys.executable)
+
+
+# print('getcwd:      ', os.getcwd())
+
+# sys.path.append(os.getcwd())
+# sys.path.append(os.getcwd()+'/src/analysis')
+
+# import importlib
+# # from src.analysis import pycdpapi
+# import pycdpapi
+# importlib.reload(pycdpapi)
+# cdpScenarioAppInstance = pycdpapi.ScenarioApp('Scenario_webApi_debug') # instance化して使用するのが基本？？
+# pycdpapi.cdpApi.checkVersion(1)
+
+# cdpScenarioAppInstance.debug()
+
+# cdpScenarioAppInstance.sendJsonToWebApiAndReceiveMatFile()
+# cdpScenarioAppInstance.saveReceivedMatFile()
+
+```

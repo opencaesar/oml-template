@@ -1,0 +1,66 @@
+PREFIX base:        <http://imce.jpl.nasa.gov/foundation/base#>
+PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
+PREFIX project:        <http://imce.jpl.nasa.gov/foundation/project#>
+PREFIX analysis:        <http://imce.jpl.nasa.gov/foundation/analysis#>
+
+SELECT DISTINCT ?iri ?source ?targetIri ?target ?edge_label
+WHERE {
+  {
+    VALUES ?concept { project:WorkPackage }
+    VALUES ?relation { project:executes }
+    ?parentiri a ?concept .
+    ?parentiri ?relation ?iri .
+    
+    VALUES ?filter_iri { "http://example.com/model/description/analysis/orbit_analysis_02#cdp-analysis-02" }
+    FILTER(STRSTARTS(STR(?parentiri), ?filter_iri)) .
+    
+    ?iri project:interchangesThrough ?ip_iri.
+    ?ip_iri project:delivers ?targetIri.
+    
+    BIND(STRAFTER(STR(?iri), "#") AS ?source) .
+    BIND(STRAFTER(STR(?targetIri), "#") AS ?target) .
+    BIND("project:Process" AS ?source_type) .
+    BIND("project:delivers" AS ?edge_label)
+  }
+  UNION
+  {
+    VALUES ?concept { project:WorkPackage }
+    VALUES ?relation { project:executes }
+    ?parentiri a ?concept .
+    ?parentiri ?relation ?iri .
+    
+    VALUES ?filter_iri { "http://example.com/model/description/analysis/orbit_analysis_02#cdp-analysis-02" }
+    FILTER(STRSTARTS(STR(?parentiri), ?filter_iri)) .
+   
+    ?iri project:interchangesThrough ?ip_iri.
+    ?ip_iri project:receives ?targetIri.
+    
+    BIND(STRAFTER(STR(?iri), "#") AS ?source) .
+    BIND(STRAFTER(STR(?targetIri), "#") AS ?target) .
+    BIND("project:Process" AS ?source_type) .
+    BIND("project:receives" AS ?edge_label)
+  }
+  UNION
+  {
+    VALUES ?componentType { project:WorkPackage }
+    VALUES ?relationType { project:executes }
+    VALUES ?filter_iri { "http://example.com/model/description/analysis/orbit_analysis_02#cdp-analysis-02" "http://example.com/model/description/cdpworkflow"}
+    FILTER(STRSTARTS(STR(?iri), ?filter_iri)) .  
+
+      {
+        ?iri a ?componentType ;
+
+        OPTIONAL{
+          ?iri ?relationType ?targetIri ;
+          BIND("project:executes" AS ?edge_label)
+
+        }
+
+        BIND(STRAFTER(STR(?iri), "#") AS ?source) .
+        BIND(STRAFTER(STR(?targetIri), "#") AS ?target) .
+        
+      }
+
+  }
+}
+ORDER BY ?targetIri

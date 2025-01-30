@@ -1,0 +1,29 @@
+{
+"orbit-analysis-01-workflow": {
+  "name": "orbit-analysis-01-workflow",
+  "queries": {
+    "node": "orbit-analysis-01-workflow.sparql",
+    "edge": "orbit-analysis-01-workflow.sparql"
+  },
+  "rowMapping": {
+    "id": "node",
+    "name": "Parent",
+    "labelFormat": "<<{c1_type}>> {c1_instancename}",
+    "nodeColor": "#006994",
+    "nodeTextColor": "white",
+    "nodeType": "NA",
+    "edgeMatchKey": "c1_instancename"
+  },
+  "edges": [
+    {
+      "id": "edge",
+      "name": "Edge",
+      "animated": true,
+      "labelFormat": "project:isExecutedBy",
+      "legendItems": "c2_instancename",
+      "sourceKey": "c1_instancename",
+      "targetKey": "c2_instancename"
+    }
+  ]
+}
+}

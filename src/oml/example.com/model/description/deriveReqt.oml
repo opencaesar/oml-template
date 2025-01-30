@@ -1,0 +1,1697 @@
+description <http://example.com/model/description/deriveReqt#> as deriveReqt {
+
+  uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+  uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+  uses <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel
+	
+  extends <http://example.com/model/description/block#> as block
+  extends <http://example.com/model/description/activity#> as activity
+
+// SysML Imported - dxmetamodel:Requirement
+	instance _19_0_3_1f900fd_1670978936943_377910_688 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1670978936943_377910_688"
+		base:hasCanonicalName "平常時の観測"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1670978958538_106396_694 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1670978958538_106396_694"
+		base:hasCanonicalName "緊急時の観測"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1670978970426_199402_700 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1670978970426_199402_700"
+		base:hasCanonicalName "光学センサ性能"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1670979231725_679868_706 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1670979231725_679868_706"
+		base:hasCanonicalName "打上げ投入軌道"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671430680218_829941_1149 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671430680218_829941_1149"
+		base:hasCanonicalName "利用想定"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671431376669_417042_1155 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671431376669_417042_1155"
+		base:hasCanonicalName "災害応急対応時"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596338524_778175_850 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596338524_778175_850"
+		base:hasCanonicalName "観測要求入力"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596411612_393149_858 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596411612_393149_858"
+		base:hasCanonicalName "観測運用計画作成"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596627018_360346_1176 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596627018_360346_1176"
+		base:hasCanonicalName "衛星運用計画作成"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596677785_474580_1186 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596677785_474580_1186"
+		base:hasCanonicalName "可視運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596724135_13806_1193 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596724135_13806_1193"
+		base:hasCanonicalName "平時観測運用（観測要求入力）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596736407_615071_1200 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596736407_615071_1200"
+		base:hasCanonicalName "緊急観測運用（観測要求入力）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471088_935922_52137
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596872538_755151_1222 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596872538_755151_1222"
+		base:hasCanonicalName "平時観測運用（運用計画作成）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596906560_910977_1228 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596906560_910977_1228"
+		base:hasCanonicalName "緊急観測運用（運用計画作成）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671596995479_840219_1236 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671596995479_840219_1236"
+		base:hasCanonicalName "緊急観測要求発行時の平時観測運用対応"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671597329073_574477_1247 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671597329073_574477_1247"
+		base:hasCanonicalName "バス運用計画と観測運用計画の立案時"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671597452212_302523_1263 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671597452212_302523_1263"
+		base:hasCanonicalName "コマンド計画情報の作成"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671597704132_155221_1292 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671597704132_155221_1292"
+		base:hasCanonicalName "コマンドの送信及び登録"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671597759271_863765_1308 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671597759271_863765_1308"
+		base:hasCanonicalName "衛星システム状態のモニタ"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671598099263_426078_1319 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671598099263_426078_1319"
+		base:hasCanonicalName "観測運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671598132455_835706_1325 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671598132455_835706_1325"
+		base:hasCanonicalName "共通の運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671598132456_141373_1326 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671598132456_141373_1326"
+		base:hasCanonicalName "平時観測運用"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671599200400_321805_1373 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671599200400_321805_1373"
+		base:hasCanonicalName "観測データの圧縮処理"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671599278412_419988_1389 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671599278412_419988_1389"
+		base:hasCanonicalName "観測データの取得及び蓄積"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671599448057_965130_1405 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671599448057_965130_1405"
+		base:hasCanonicalName "観測期限（緊急時観測運用）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671599664412_922591_1421 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671599664412_922591_1421"
+		base:hasCanonicalName "観測機器の指向（緊急時観測運用）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671599724648_357578_1437 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671599724648_357578_1437"
+		base:hasCanonicalName "緊急時観測運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671608773699_776220_100 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671608773699_776220_100"
+		base:hasCanonicalName "伝送運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671608773705_483858_102 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671608773705_483858_102"
+		base:hasCanonicalName "平時観測運用（伝送運用）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671608773707_385885_103 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671608773707_385885_103"
+		base:hasCanonicalName "緊急時観測運用（伝送運用）"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671608773710_151024_110 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671608773710_151024_110"
+		base:hasCanonicalName "観測データの伝送（緊急時観測運用）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671608773710_740672_111 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671608773710_740672_111"
+		base:hasCanonicalName "準リアルタイム伝送（緊急時観測運用）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671609119528_69115_215 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671609119528_69115_215"
+		base:hasCanonicalName "観測データ処理・配布運用"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671609146761_150377_221 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671609146761_150377_221"
+		base:hasCanonicalName "標準処理画像の提供準備"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1671609146762_425425_222 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1671609146762_425425_222"
+		base:hasCanonicalName "パンシャープン画像等の派生プロダクトの提供準備"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1672191961390_75452_1128 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1672191961390_75452_1128"
+		base:hasCanonicalName "観測データ直接伝送機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1672193441623_224395_1365 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1672193441623_224395_1365"
+		base:hasCanonicalName "総合システムへの要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1672193920772_539061_1395 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1672193920772_539061_1395"
+		base:hasCanonicalName "衛星システムへの要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1672193938220_504523_1401 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1672193938220_504523_1401"
+		base:hasCanonicalName "地上システムへの要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1672194599432_64660_1514 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1672194599432_64660_1514"
+		base:hasCanonicalName "データ受信・蓄積機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414080009_561517_346 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414080009_561517_346"
+		base:hasCanonicalName "前提条件"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1673414112610_336419_352 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414112610_336419_352"
+		base:hasCanonicalName "打上げロケット"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "Assumption [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414144951_199910_373 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414144951_199910_373"
+		base:hasCanonicalName "打上げコンフィギュレーション"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "designConstraint [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414174680_58892_379 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414174680_58892_379"
+		base:hasCanonicalName "軌道"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "Assumption [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414192198_821191_385 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414192198_821191_385"
+		base:hasCanonicalName "降交点通過地方太陽時(LST)"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "Assumption [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414200343_430763_391 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414200343_430763_391"
+		base:hasCanonicalName "運用期間"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "Assumption [Class]"
+	]
+	instance _19_0_3_1f900fd_1673414831893_635690_475 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673414831893_635690_475"
+		base:hasCanonicalName "緊急観測機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415059361_633878_497 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415059361_633878_497"
+		base:hasCanonicalName "姿勢制御系への要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1673415175945_743815_521 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415175945_743815_521"
+		base:hasCanonicalName "観測データ取得・蓄積機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415226108_159808_543 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415226108_159808_543"
+		base:hasCanonicalName "定常姿勢"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415272723_448540_565 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415272723_448540_565"
+		base:hasCanonicalName "コマンド送信機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415273852_758989_589 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415273852_758989_589"
+		base:hasCanonicalName "標準処理機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415277160_263469_613 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415277160_263469_613"
+		base:hasCanonicalName "派生プロダクト生成機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415383613_895704_667 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415383613_895704_667"
+		base:hasCanonicalName "光学センサ系への要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1673415403160_217507_675 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415403160_217507_675"
+		base:hasCanonicalName "観測データ取得機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415405140_677748_699 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415405140_677748_699"
+		base:hasCanonicalName "圧縮処理機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415435693_844954_723 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415435693_844954_723"
+		base:hasCanonicalName "姿勢マヌーバ機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415437134_841620_743 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415437134_841620_743"
+		base:hasCanonicalName "姿勢制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673415512919_452001_803 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673415512919_452001_803"
+		base:hasCanonicalName "その他バス機器への要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1673424389115_371533_909 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673424389115_371533_909"
+		base:hasCanonicalName "コマンド受信・蓄積機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673424395345_872369_929 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673424395345_872369_929"
+		base:hasCanonicalName "ストアードコマンド発行機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673424429813_214857_949 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673424429813_214857_949"
+		base:hasCanonicalName "観測データ蓄積機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1673424431345_211387_969 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1673424431345_211387_969"
+		base:hasCanonicalName "観測データ伝送機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113634217_278372_330 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113634217_278372_330"
+		base:hasCanonicalName "軌道制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113634332_169998_337 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113634332_169998_337"
+		base:hasCanonicalName "軌道保持精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113634353_720658_343 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113634353_720658_343"
+		base:hasCanonicalName "デオービット機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113634375_623631_349 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113634375_623631_349"
+		base:hasCanonicalName "搭載推薬量"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113634399_467647_355 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113634399_467647_355"
+		base:hasCanonicalName "電力制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113749563_135733_362 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113749563_135733_362"
+		base:hasCanonicalName "推進系への要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1698113749595_656893_368 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113749595_656893_368"
+		base:hasCanonicalName "電源系への要求"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_1f900fd_1698113804176_190464_374 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804176_190464_374"
+		base:hasCanonicalName "スラスタ制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113804200_968123_380 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804200_968123_380"
+		base:hasCanonicalName "搭載推薬量"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113804223_137821_386 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804223_137821_386"
+		base:hasCanonicalName "ロバスト性"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "designConstraint [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113804245_852236_392 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804245_852236_392"
+		base:hasCanonicalName "スラスタ配置"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "physicalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113804268_462074_398 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804268_462074_398"
+		base:hasCanonicalName "組立・保守性"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "designConstraint [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113804295_171586_404 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113804295_171586_404"
+		base:hasCanonicalName "安全要求"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "designConstraint [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113822201_856465_410 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113822201_856465_410"
+		base:hasCanonicalName "電力収支"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012581_596081_550
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113822224_994800_416 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113822224_994800_416"
+		base:hasCanonicalName "蓄電機能"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012581_596081_550
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113822246_59375_422 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113822246_59375_422"
+		base:hasCanonicalName "発電機能"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012581_596081_550
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_1f900fd_1698113822267_904448_428 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_1f900fd_1698113822267_904448_428"
+		base:hasCanonicalName "電力供給機能"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012581_596081_550
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1670821469768_933484_2257 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469768_933484_2257"
+		base:hasCanonicalName "緊急観測時のプロダクト提供（初動対応）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821469777_73959_2541 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469777_73959_2541"
+		base:hasCanonicalName "詳細状況把握"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821469824_59179_4143 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469824_59179_4143"
+		base:hasCanonicalName "初動対応3"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821469910_480123_7051 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469910_480123_7051"
+		base:hasCanonicalName "光学衛星の観測幅"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821469920_998978_7465 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821469920_998978_7465"
+		base:hasCanonicalName "打上げ条件"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470026_119179_10304 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470026_119179_10304"
+		base:hasCanonicalName "観測波長"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470073_973391_11954 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470073_973391_11954"
+		base:hasCanonicalName "平時の観測"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470241_509199_17982 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470241_509199_17982"
+		base:hasCanonicalName "光学衛星の分解能"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470292_983629_19980 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470292_983629_19980"
+		base:hasCanonicalName "初動対応2"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470299_165192_20299 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470299_165192_20299"
+		base:hasCanonicalName "軌道"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470407_908528_23976 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470407_908528_23976"
+		base:hasCanonicalName "観測幅"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470470_98834_26636 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470470_98834_26636"
+		base:hasCanonicalName "防災・災害対策"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470571_216600_31301 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470571_216600_31301"
+		base:hasCanonicalName "初動対応"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470591_42722_32249 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470591_42722_32249"
+		base:hasCanonicalName "緊急観測時の計画立案"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470648_89765_34629 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470648_89765_34629"
+		base:hasCanonicalName "緊急観測時のプロダクト提供（詳細状況把握）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470842_356879_42227 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470842_356879_42227"
+		base:hasCanonicalName "初動対応1"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470914_787340_45570 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470914_787340_45570"
+		base:hasCanonicalName "サクセスクライテリア（フルサクセス）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470943_253192_46629 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470943_253192_46629"
+		base:hasCanonicalName "ベースマップ初期収集"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821470947_635345_46820 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821470947_635345_46820"
+		base:hasCanonicalName "ベースマップ更新"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821471085_517545_51998 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471085_517545_51998"
+		base:hasCanonicalName "地表分解能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821471093_12056_52352 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471093_12056_52352"
+		base:hasCanonicalName "降交点通過地方太陽時(LST)"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1670821471132_437160_54112 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1670821471132_437160_54112"
+		base:hasCanonicalName "衛星コンフィグレーション方針"
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_8df0284_1671686533018_914514_7504 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1671686533018_914514_7504"
+		base:hasCanonicalName "指向制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1672125452719_632502_7028 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1672125452719_632502_7028"
+		base:hasCanonicalName "地上局指向機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1672126823818_650145_7407 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1672126823818_650145_7407"
+		base:hasCanonicalName "運用計画立案機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673488709585_463843_1081 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673488709585_463843_1081"
+		base:hasCanonicalName "分解能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489048508_942853_1103 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489048508_942853_1103"
+		base:hasCanonicalName "指向制御精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489105770_99452_1126 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489105770_99452_1126"
+		base:hasCanonicalName "指向安定度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489134262_771023_1146 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489134262_771023_1146"
+		base:hasCanonicalName "計画立案時間"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489178146_510911_1166 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489178146_510911_1166"
+		base:hasCanonicalName "観測データの蓄積量"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489198244_701968_1186 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489198244_701968_1186"
+		base:hasCanonicalName "観測データの蓄積期間"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489227253_755605_1206 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489227253_755605_1206"
+		base:hasCanonicalName "処理時間（標準処理機能）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489470301_389744_1226 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489470301_389744_1226"
+		base:hasCanonicalName "処理データ量（標準処理機能）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489513384_872132_1247 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489513384_872132_1247"
+		base:hasCanonicalName "処理データ量（派生プロダクト生成機能）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489513384_945052_1246 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489513384_945052_1246"
+		base:hasCanonicalName "処理時間（派生プロダクト生成機能）"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470302_147908_20430
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489709855_768536_1286 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489709855_768536_1286"
+		base:hasCanonicalName "地表分解能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489779867_768084_1306 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489779867_768084_1306"
+		base:hasCanonicalName "観測幅"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489807286_454490_1326 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489807286_454490_1326"
+		base:hasCanonicalName "観測波長"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489809276_291545_1346 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489809276_291545_1346"
+		base:hasCanonicalName "観測時間"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489851241_840839_1367 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489851241_840839_1367"
+		base:hasCanonicalName "圧縮方式"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489851241_84307_1366 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489851241_84307_1366"
+		base:hasCanonicalName "圧縮率"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489908569_790777_1406 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489908569_790777_1406"
+		base:hasCanonicalName "マヌーバの角度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489960578_332234_1426 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489960578_332234_1426"
+		base:hasCanonicalName "マヌーバの時間"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489987287_166715_1446 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489987287_166715_1446"
+		base:hasCanonicalName "姿勢制御精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673489987303_759142_1447 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673489987303_759142_1447"
+		base:hasCanonicalName "姿勢安定度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490006452_675500_1486 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490006452_675500_1486"
+		base:hasCanonicalName "ポインティング精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490038851_51331_1506 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490038851_51331_1506"
+		base:hasCanonicalName "最大コマンド数"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490123939_628249_1526 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490123939_628249_1526"
+		base:hasCanonicalName "ストアードコマンドの発行間隔"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490144425_100631_1546 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490144425_100631_1546"
+		base:hasCanonicalName "蓄積可能なデータ量"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490148237_938426_1566 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490148237_938426_1566"
+		base:hasCanonicalName "データ伝送レート"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490149788_651552_1586 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490149788_651552_1586"
+		base:hasCanonicalName "変調方式"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673490152647_336_1606 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673490152647_336_1606"
+		base:hasCanonicalName "周波数"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1672023055732_509882_117
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_8df0284_1673502318760_500224_3427 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_8df0284_1673502318760_500224_3427"
+		base:hasCanonicalName "画素地表位置決定精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470890_603074_44445
+		base:hasShortName "performanceRequirement [Class]"
+	]
+	instance _19_0_3_c2602ee_1671170576430_283693_2920 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_c2602ee_1671170576430_283693_2920"
+		base:hasCanonicalName "画素地表位置決定精度"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_c2602ee_1702601780279_804393_372 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_c2602ee_1702601780279_804393_372"
+		base:hasCanonicalName "緊急観測時のデータ伝送"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821471114_386604_53300
+		base:hasShortName "NA"
+	]
+	instance _19_0_3_c2602ee_1702603366428_311377_558 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_c2602ee_1702603366428_311377_558"
+		base:hasCanonicalName "軌道制御機能"
+		dxmetamodel:reqHasSource block:_19_0_3_1f900fd_1698114012577_880114_548
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_c2602ee_1702604403395_110296_1149 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_c2602ee_1702604403395_110296_1149"
+		base:hasCanonicalName "観測データ経由伝送機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470755_393800_38374
+		base:hasShortName "functionalRequirement [Class]"
+	]
+	instance _19_0_3_c2602ee_1702604614854_288825_1181 : dxmetamodel:Requirement [
+		base:hasIdentifier "_19_0_3_c2602ee_1702604614854_288825_1181"
+		base:hasCanonicalName "データ中継衛星指向機能"
+		dxmetamodel:reqHasSource block:_19_0_3_8df0284_1670821470471_976356_26656
+		base:hasShortName "functionalRequirement [Class]"
+	]
+
+// SysML Imported - dxmetamodel:DeriveReqt
+	relation instance _19_0_3_1f900fd_1673848415593_940805_9091 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424389115_371533_909
+		to _19_0_3_1f900fd_1673415226108_159808_543
+	]
+	relation instance _19_0_3_1f900fd_1673848474770_870947_9157 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424389115_371533_909
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_8df0284_1673503184058_836867_3563 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415272723_448540_565
+		to _19_0_3_1f900fd_1671597704132_155221_1292
+	]
+	// relation instance _19_0_3_2f000fa_1673949398395_970718_5821 : dxmetamodel:DeriveReqt [
+	// 	from _19_0_3_1f900fd_1673415272723_448540_565
+	// 	to _19_0_3_1f900fd_1673415272723_448540_565
+	// ]
+	relation instance _19_0_3_2f000fa_1673949406929_280251_5834 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415272723_448540_565
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_1f900fd_1673851200312_486368_212 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490123939_628249_1526
+		to _19_0_3_1f900fd_1673424395345_872369_929
+	]
+	relation instance _19_0_3_1f900fd_1673848337100_34925_9080 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424395345_872369_929
+		to _19_0_3_1f900fd_1673415226108_159808_543
+	]
+	relation instance _19_0_3_1f900fd_1673848497417_980921_9168 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424395345_872369_929
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_1f900fd_1673847939369_493383_8950 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424395345_872369_929
+		to _19_0_3_1f900fd_1672191961390_75452_1128
+	]
+	relation instance _19_0_3_c2602ee_1702944756717_641540_873 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424395345_872369_929
+		to _19_0_3_c2602ee_1702604403395_110296_1149
+	]
+	relation instance _19_0_3_8df0284_1698124581553_665037_895 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113804176_190464_374
+		to _19_0_3_1f900fd_1698113634353_720658_343
+	]
+	relation instance _19_0_3_8df0284_1698124575850_979392_880 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113804176_190464_374
+		to _19_0_3_1f900fd_1698113634217_278372_330
+	]
+	relation instance _19_0_3_c2602ee_1702944817426_830704_925 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604614854_288825_1181
+		to _19_0_3_c2602ee_1702604403395_110296_1149
+	]
+	relation instance _19_0_3_1f900fd_1673851483013_698845_448 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490148237_938426_1566
+		to _19_0_3_1f900fd_1673424431345_211387_969
+	]
+	relation instance _19_0_3_8df0284_1673502191959_537612_3307 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to _19_0_3_8df0284_1670821469768_933484_2257
+	]
+	relation instance _19_0_3_8df0284_1673502226022_762367_3405 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to _19_0_3_8df0284_1670821470648_89765_34629
+	]
+	relation instance _19_0_3_2f000fa_1673949392997_230692_5810 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673503695891_745024_3617 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to _19_0_3_1f900fd_1671599278412_419988_1389
+	]
+	relation instance _19_0_3_c2602ee_1702945295578_147422_1073 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490006452_675500_1486
+		to _19_0_3_c2602ee_1702604614854_288825_1181
+	]
+	relation instance _19_0_3_1f900fd_1673850792633_687495_10876 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490006452_675500_1486
+		to _19_0_3_8df0284_1672125452719_632502_7028
+	]
+	relation instance _19_0_3_1f900fd_1673850726058_769002_10625 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489960578_332234_1426
+		to _19_0_3_1f900fd_1673415435693_844954_723
+	]
+	relation instance _19_0_3_1f900fd_1673850729909_171638_10639 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489908569_790777_1406
+		to _19_0_3_1f900fd_1673415435693_844954_723
+	]
+	relation instance _19_0_3_1f900fd_1673850459838_736066_10034 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489470301_389744_1226
+		to _19_0_3_1f900fd_1673415273852_758989_589
+	]
+	relation instance _19_0_3_8df0284_1673504667864_701596_3716 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489470301_389744_1226
+		to _19_0_3_8df0284_1670821469768_933484_2257
+	]
+	relation instance _19_0_3_1f900fd_1673850496976_682289_10155 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489513384_872132_1247
+		to _19_0_3_1f900fd_1673415277160_263469_613
+	]
+	relation instance _19_0_3_8df0284_1673504666229_662052_3711 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489513384_872132_1247
+		to _19_0_3_8df0284_1670821470648_89765_34629
+	]
+	relation instance _19_0_3_1f900fd_1673850456536_3941_10021 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489227253_755605_1206
+		to _19_0_3_1f900fd_1673415273852_758989_589
+	]
+	relation instance _19_0_3_8df0284_1673504546884_178833_3701 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489227253_755605_1206
+		to _19_0_3_8df0284_1670821469768_933484_2257
+	]
+	relation instance _19_0_3_1f900fd_1673850492659_17179_10142 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489513384_945052_1246
+		to _19_0_3_1f900fd_1673415277160_263469_613
+	]
+	relation instance _19_0_3_8df0284_1673504578515_266605_3706 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489513384_945052_1246
+		to _19_0_3_8df0284_1670821470648_89765_34629
+	]
+	relation instance _19_0_3_8df0284_1673501902414_829300_3272 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673488709585_463843_1081
+		to _19_0_3_8df0284_1670821470571_216600_31301
+	]
+	relation instance _19_0_3_8df0284_1674107600778_567204_5391 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673488709585_463843_1081
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_1f900fd_1673851486554_943445_464 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490152647_336_1606
+		to _19_0_3_1f900fd_1673424431345_211387_969
+	]
+	relation instance _19_0_3_1f900fd_1673848205975_89575_8979 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415405140_677748_699
+		to _19_0_3_1f900fd_1673415175945_743815_521
+	]
+	relation instance _19_0_3_1f900fd_1673850633314_220482_10506 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489851241_840839_1367
+		to _19_0_3_1f900fd_1673415405140_677748_699
+	]
+	relation instance _19_0_3_1f900fd_1673850636840_404067_10520 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489851241_84307_1366
+		to _19_0_3_1f900fd_1673415405140_677748_699
+	]
+	relation instance _19_0_3_1f900fd_1673847900507_80830_8935 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672125452719_632502_7028
+		to _19_0_3_1f900fd_1672191961390_75452_1128
+	]
+	relation instance _19_0_3_8df0284_1673501919654_355401_3277 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489709855_768536_1286
+		to _19_0_3_8df0284_1670821471085_517545_51998
+	]
+	relation instance _19_0_3_1f900fd_1673850584207_935109_10354 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489709855_768536_1286
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_1f900fd_1673851490105_39895_475 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490149788_651552_1586
+		to _19_0_3_1f900fd_1673424431345_211387_969
+	]
+	relation instance _19_0_3_1f900fd_1673848305052_104085_9066 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415435693_844954_723
+		to _19_0_3_1f900fd_1673415226108_159808_543
+	]
+	relation instance _19_0_3_1f900fd_1673848454575_608542_9143 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415435693_844954_723
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_1f900fd_1673848254354_277967_9020 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415437134_841620_743
+		to _19_0_3_1f900fd_1673415175945_743815_521
+	]
+	relation instance _19_0_3_1f900fd_1673850760154_163594_10761 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489987287_166715_1446
+		to _19_0_3_1f900fd_1673415437134_841620_743
+	]
+	relation instance _19_0_3_8df0284_1698379342913_912913_2664 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489987287_166715_1446
+		to _19_0_3_8df0284_1673489048508_942853_1103
+	]
+	relation instance _19_0_3_1f900fd_1673850756784_340034_10747 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489987303_759142_1447
+		to _19_0_3_1f900fd_1673415437134_841620_743
+	]
+	relation instance _19_0_3_8df0284_1698379348812_847854_2677 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489987303_759142_1447
+		to _19_0_3_8df0284_1673489105770_99452_1126
+	]
+	relation instance _19_0_3_2f000fa_1673949375078_953010_5764 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415226108_159808_543
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673504003350_460201_3657 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414144951_199910_373
+		to _19_0_3_1f900fd_1673414112610_336419_352
+	]
+	relation instance _19_0_3_8df0284_1673501734142_642600_3248 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414112610_336419_352
+		to _19_0_3_8df0284_1670821469920_998978_7465
+	]
+	relation instance _19_0_3_2f000fa_1673949370387_20567_5753 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1671686533018_914514_7504
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1671686689322_592022_7547 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1671686533018_914514_7504
+		to _19_0_3_1f900fd_1671599664412_922591_1421
+	]
+	relation instance _19_0_3_1f900fd_1673850346682_670763_9688 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489048508_942853_1103
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_1f900fd_1673850342639_813962_9677 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489105770_99452_1126
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_8df0284_1698124611746_263016_908 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113804200_968123_380
+		to _19_0_3_1f900fd_1698113634375_623631_349
+	]
+	relation instance _19_0_3_1f900fd_1673851173727_666583_118 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490038851_51331_1506
+		to _19_0_3_1f900fd_1673424389115_371533_909
+	]
+	relation instance _19_0_3_8df0284_1673503897243_205798_3649 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415273852_758989_589
+		to _19_0_3_1f900fd_1671609146761_150377_221
+	]
+	relation instance _19_0_3_8df0284_1673502234911_825087_3411 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415273852_758989_589
+		to _19_0_3_8df0284_1670821469768_933484_2257
+	]
+	relation instance _19_0_3_2f000fa_1673949387698_685174_5799 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415273852_758989_589
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673503917567_583568_3653 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415277160_263469_613
+		to _19_0_3_1f900fd_1671609146762_425425_222
+	]
+	relation instance _19_0_3_8df0284_1673502238487_947340_3416 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415277160_263469_613
+		to _19_0_3_8df0284_1670821470648_89765_34629
+	]
+	relation instance _19_0_3_2f000fa_1673949384015_114980_5788 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415277160_263469_613
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673502378982_837760_3449 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673502318760_500224_3427
+		to _19_0_3_c2602ee_1671170576430_283693_2920
+	]
+	relation instance _19_0_3_1f900fd_1673850587678_34196_10368 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673502318760_500224_3427
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_8df0284_1698124748983_237000_1071 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113822246_59375_422
+		to _19_0_3_1f900fd_1698113634399_467647_355
+	]
+	relation instance _19_0_3_8df0284_1673504084562_612901_3672 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414831893_635690_475
+		to _19_0_3_8df0284_1670821470914_787340_45570
+	]
+	relation instance _19_0_3_8df0284_1673504084562_426470_3668 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414831893_635690_475
+		to _19_0_3_8df0284_1670821469768_933484_2257
+	]
+	relation instance _19_0_3_8df0284_1673504084562_853130_3670 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414831893_635690_475
+		to _19_0_3_8df0284_1670821470648_89765_34629
+	]
+	relation instance _19_0_3_8df0284_1673504050923_816780_3662 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414831893_635690_475
+		to _19_0_3_8df0284_1670821470591_42722_32249
+	]
+	relation instance _19_0_3_1f900fd_1673851292046_611188_307 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673490144425_100631_1546
+		to _19_0_3_1f900fd_1673424429813_214857_949
+	]
+	relation instance _19_0_3_8df0284_1698124746387_155438_1058 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113822224_994800_416
+		to _19_0_3_1f900fd_1698113634399_467647_355
+	]
+	relation instance _19_0_3_1f900fd_1673850417729_735629_9916 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489198244_701968_1186
+		to _19_0_3_1f900fd_1672194599432_64660_1514
+	]
+	relation instance _19_0_3_8df0284_1673504812600_977885_3726 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489198244_701968_1186
+		to _19_0_3_1f900fd_1671599278412_419988_1389
+	]
+	relation instance _19_0_3_1f900fd_1673850414960_954755_9902 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489178146_510911_1166
+		to _19_0_3_1f900fd_1672194599432_64660_1514
+	]
+	relation instance _19_0_3_8df0284_1673504810774_3811_3721 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489178146_510911_1166
+		to _19_0_3_1f900fd_1671599278412_419988_1389
+	]
+	relation instance _19_0_3_1f900fd_1673848007066_692800_8964 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424431345_211387_969
+		to _19_0_3_1f900fd_1672191961390_75452_1128
+	]
+	relation instance _19_0_3_c2602ee_1702944718070_831834_828 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424431345_211387_969
+		to _19_0_3_c2602ee_1702604403395_110296_1149
+	]
+	relation instance _19_0_3_1f900fd_1674024221419_416620_2771 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415175945_743815_521
+		to _19_0_3_1f900fd_1671598132456_141373_1326
+	]
+	relation instance _19_0_3_2f000fa_1673949363920_974012_5739 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415175945_743815_521
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673504307285_149222_3690 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415175945_743815_521
+		to _19_0_3_1f900fd_1671599278412_419988_1389
+	]
+	relation instance _19_0_3_1f900fd_1673833164307_735109_1155 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673415403160_217507_675
+		to _19_0_3_1f900fd_1673415175945_743815_521
+	]
+	relation instance _19_0_3_8df0284_1673503818539_647546_3621 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to _19_0_3_1f900fd_1671608773705_483858_102
+	]
+	relation instance _19_0_3_8df0284_1673503876022_902822_3645 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to _19_0_3_1f900fd_1671608773710_740672_111
+	]
+	relation instance _19_0_3_2f000fa_1673949379983_836785_5777 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673503821315_846407_3629 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to _19_0_3_1f900fd_1671608773710_151024_110
+	]
+	relation instance _19_0_3_1f900fd_1674024076420_649680_2757 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to _19_0_3_1f900fd_1671599200400_321805_1373
+	]
+	relation instance _19_0_3_c2602ee_1702944941180_368056_950 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to _19_0_3_1f900fd_1671608773705_483858_102
+	]
+	relation instance _19_0_3_c2602ee_1702944781504_622013_884 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to _19_0_3_1f900fd_1671608773710_740672_111
+	]
+	relation instance _19_0_3_c2602ee_1702944732412_173152_841 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_c2602ee_1702944687754_381448_793 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to _19_0_3_1f900fd_1671608773710_151024_110
+	]
+	relation instance _19_0_3_c2602ee_1702944697094_864905_806 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to _19_0_3_1f900fd_1671599200400_321805_1373
+	]
+	relation instance _19_0_3_1f900fd_1673833127899_736674_1129 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673424429813_214857_949
+		to _19_0_3_1f900fd_1673415175945_743815_521
+	]
+	relation instance _19_0_3_1f900fd_1673850590272_560357_10379 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489779867_768084_1306
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_8df0284_1673501923862_982741_3283 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489779867_768084_1306
+		to _19_0_3_8df0284_1670821470407_908528_23976
+	]
+	relation instance _19_0_3_8df0284_1673502004831_24087_3295 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489809276_291545_1346
+		to _19_0_3_8df0284_1670821470943_253192_46629
+	]
+	relation instance _19_0_3_8df0284_1673502553949_858230_3455 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489809276_291545_1346
+		to _19_0_3_8df0284_1670821470947_635345_46820
+	]
+	relation instance _19_0_3_1f900fd_1673850593103_190546_10390 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489809276_291545_1346
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_1f900fd_1673850595619_368581_10401 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489807286_454490_1326
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_8df0284_1673501926190_488092_3289 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489807286_454490_1326
+		to _19_0_3_8df0284_1670821470026_119179_10304
+	]
+	relation instance _19_0_3_8df0284_1673504422565_108826_3696 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489134262_771023_1146
+		to _19_0_3_8df0284_1670821470591_42722_32249
+	]
+	relation instance _19_0_3_1f900fd_1673850395956_605586_9794 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1673489134262_771023_1146
+		to _19_0_3_8df0284_1672126823818_650145_7407
+	]
+	relation instance _19_0_3_8df0284_1673501835830_125076_3260 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414174680_58892_379
+		to _19_0_3_8df0284_1670821470299_165192_20299
+	]
+	relation instance _19_0_3_c2602ee_1702944443270_403898_81 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702603366428_311377_558
+		to _19_0_3_1f900fd_1698113634353_720658_343
+	]
+	relation instance _19_0_3_c2602ee_1702944439040_731941_68 : dxmetamodel:DeriveReqt [
+		from _19_0_3_c2602ee_1702603366428_311377_558
+		to _19_0_3_1f900fd_1698113634217_278372_330
+	]
+	relation instance _19_0_3_8df0284_1673502266047_933977_3421 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414200343_430763_391
+		to _19_0_3_8df0284_1670821470914_787340_45570
+	]
+	relation instance _19_0_3_1f900fd_1672195407973_718804_1723 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1671597452212_302523_1263
+	]
+	relation instance _19_0_3_8df0284_1673502752258_371602_3467 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1671596724135_13806_1193
+	]
+	relation instance _19_0_3_8df0284_1673502735179_871797_3461 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1671596872538_755151_1222
+	]
+	relation instance _19_0_3_8df0284_1673502153934_870933_3302 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_8df0284_1670821470591_42722_32249
+	]
+	relation instance _19_0_3_2f000fa_1673949410726_4237_5845 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1673502753932_905089_3470 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1671596736407_615071_1200
+	]
+	relation instance _19_0_3_8df0284_1673502737285_434525_3464 : dxmetamodel:DeriveReqt [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to _19_0_3_1f900fd_1671596906560_910977_1228
+	]
+	relation instance _19_0_3_8df0284_1673501840135_942185_3266 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1673414192198_821191_385
+		to _19_0_3_8df0284_1670821471093_12056_52352
+	]
+	relation instance _19_0_3_8df0284_1698124752191_984658_1084 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113822267_904448_428
+		to _19_0_3_1f900fd_1698113634399_467647_355
+	]
+	relation instance _19_0_3_8df0284_1698124743400_259738_1043 : dxmetamodel:DeriveReqt [
+		from _19_0_3_1f900fd_1698113822201_856465_410
+		to _19_0_3_1f900fd_1698113634399_467647_355
+	]
+
+// SysML Imported - dxmetamodel:Satisfy
+	relation instance _19_0_3_8df0284_1698371459823_781466_781 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672023055732_509882_117
+		to _19_0_3_1f900fd_1673424389115_371533_909
+	]
+	relation instance _19_0_3_8df0284_1698371468848_875966_785 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672023055732_509882_117
+		to _19_0_3_1f900fd_1673424395345_872369_929
+	]
+	relation instance _19_0_3_8df0284_1698371478860_412513_793 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672023055732_509882_117
+		to _19_0_3_1f900fd_1673424431345_211387_969
+	]
+	relation instance _19_0_3_8df0284_1698371474242_737824_789 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672023055732_509882_117
+		to _19_0_3_1f900fd_1673424429813_214857_949
+	]
+	relation instance _19_0_3_8df0284_1672034654922_830293_3948 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672033499344_620660_3375
+		to _19_0_3_8df0284_1670821470947_635345_46820
+	]
+	relation instance _19_0_3_8df0284_1698372220518_145042_809 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371530616_387427_799
+		to _19_0_3_8df0284_1673490123939_628249_1526
+	]
+	relation instance _19_0_3_8df0284_1698372227502_730439_813 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371855706_836801_803
+		to _19_0_3_8df0284_1673490148237_938426_1566
+	]
+	relation instance _19_0_3_8df0284_1698371408546_503600_777 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371378810_767208_775
+		to _19_0_3_8df0284_1673490006452_675500_1486
+	]
+	relation instance _19_0_3_8df0284_1698371275198_800859_752 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371233595_162034_748
+		to _19_0_3_8df0284_1673489960578_332234_1426
+	]
+	relation instance _19_0_3_8df0284_1698371278339_434522_756 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371212722_559015_746
+		to _19_0_3_8df0284_1673489908569_790777_1406
+	]
+	relation instance _19_0_3_8df0284_1698284485572_968233_738 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470890_603074_44445
+		to _19_0_3_1f900fd_1673415405140_677748_699
+	]
+	relation instance _19_0_3_8df0284_1698284041875_784934_709 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470890_603074_44445
+		to _19_0_3_1f900fd_1673415403160_217507_675
+	]
+	relation instance _19_0_3_8df0284_1698381249546_302650_2777 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381138065_868075_2771
+		to _19_0_3_8df0284_1673489470301_389744_1226
+	]
+	relation instance _19_0_3_8df0284_1698381254124_590277_2781 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381175227_225602_2775
+		to _19_0_3_8df0284_1673489513384_872132_1247
+	]
+	relation instance _19_0_3_8df0284_1698381271291_823637_2793 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381117610_207601_2769
+		to _19_0_3_8df0284_1673489227253_755605_1206
+	]
+	relation instance _19_0_3_8df0284_1698381264015_28735_2789 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381163824_225488_2773
+		to _19_0_3_8df0284_1673489513384_945052_1246
+	]
+	relation instance _19_0_3_8df0284_1698393218800_967559_1066 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698393182513_742428_1063
+		to _19_0_3_8df0284_1673488709585_463843_1081
+	]
+	relation instance _19_0_3_8df0284_1698372232341_145439_817 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698372042312_341792_807
+		to _19_0_3_8df0284_1673490152647_336_1606
+	]
+	relation instance _19_0_3_8df0284_1698371114848_937210_742 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371100376_891452_739
+		to _19_0_3_8df0284_1673489851241_840839_1367
+	]
+	relation instance _19_0_3_8df0284_1698371086949_425636_735 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371028756_554196_730
+		to _19_0_3_8df0284_1673489851241_84307_1366
+	]
+	relation instance _19_0_3_8df0284_1698374609049_917531_857 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1673415272723_448540_565
+	]
+	relation instance _19_0_3_8df0284_1698374610844_810348_861 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1672194599432_64660_1514
+	]
+	relation instance _19_0_3_8df0284_1698374615452_131197_865 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1673415273852_758989_589
+	]
+	relation instance _19_0_3_8df0284_1698374620165_499503_869 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_1f900fd_1673415277160_263469_613
+	]
+	relation instance _19_0_3_8df0284_1698374582421_92354_853 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470302_147908_20430
+		to _19_0_3_8df0284_1672126823818_650145_7407
+	]
+	relation instance _19_0_3_8df0284_1672034638779_502105_3912 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672033393977_821812_3210
+		to _19_0_3_8df0284_1670821471085_517545_51998
+	]
+	relation instance _19_0_3_8df0284_1698369611031_157065_702 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698368812351_165151_598
+		to _19_0_3_8df0284_1673489709855_768536_1286
+	]
+	relation instance _19_0_3_8df0284_1698372237203_352928_821 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698372032588_192546_805
+		to _19_0_3_8df0284_1673490149788_651552_1586
+	]
+	relation instance _19_0_3_8df0284_1698371290446_529752_763 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821471230_883776_56677
+		to _19_0_3_8df0284_1673489987287_166715_1446
+	]
+	relation instance _19_0_3_c2602ee_1702945544571_572658_1268 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470471_976356_26656
+		to _19_0_3_c2602ee_1702604614854_288825_1181
+	]
+	relation instance _19_0_3_8df0284_1698284416008_662609_734 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470471_976356_26656
+		to _19_0_3_8df0284_1672125452719_632502_7028
+	]
+	relation instance _19_0_3_8df0284_1698284133326_913858_716 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470471_976356_26656
+		to _19_0_3_1f900fd_1673415435693_844954_723
+	]
+	relation instance _19_0_3_8df0284_1698284410667_519987_730 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470471_976356_26656
+		to _19_0_3_1f900fd_1673415437134_841620_743
+	]
+	relation instance _19_0_3_8df0284_1698371366457_725928_771 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371317899_757505_767
+		to _19_0_3_8df0284_1673489987303_759142_1447
+	]
+	relation instance _19_0_3_8df0284_1698391761441_683930_932 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698390337905_462393_619
+		to _19_0_3_8df0284_1673489048508_942853_1103
+	]
+	relation instance _19_0_3_8df0284_1698391753699_999662_920 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698390381872_811869_629
+		to _19_0_3_8df0284_1673489105770_99452_1126
+	]
+	relation instance _19_0_3_8df0284_1698391748369_859020_907 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698390474890_597773_634
+		to _19_0_3_1f900fd_1698113634375_623631_349
+	]
+	relation instance _19_0_3_8df0284_1698125361561_325404_1805 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114040675_830658_552
+		to _19_0_3_1f900fd_1698113804200_968123_380
+	]
+	relation instance _19_0_3_8df0284_1698125321407_282906_1793 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698113804176_190464_374
+	]
+	relation instance _19_0_3_8df0284_1698283596959_106081_695 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698113804245_852236_392
+	]
+	relation instance _19_0_3_8df0284_1698125408032_165610_1817 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698113804223_137821_386
+	]
+	relation instance _19_0_3_8df0284_1698386700916_578370_333 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698113804295_171586_404
+	]
+	relation instance _19_0_3_8df0284_1698125598334_345583_1841 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_1f900fd_1698113804268_462074_398
+	]
+	relation instance _19_0_3_c2602ee_1702944468962_918433_104 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012577_880114_548
+		to _19_0_3_c2602ee_1702603366428_311377_558
+	]
+	relation instance _19_0_3_8df0284_1698372244413_58181_825 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371510381_643654_797
+		to _19_0_3_8df0284_1673490038851_51331_1506
+	]
+	relation instance _19_0_3_8df0284_1698372253747_807767_829 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698371552018_290344_801
+		to _19_0_3_8df0284_1673490144425_100631_1546
+	]
+	relation instance _19_0_3_8df0284_1698369624671_899025_710 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698368830707_512118_604
+		to _19_0_3_8df0284_1673502318760_500224_3427
+	]
+	relation instance _19_0_3_8df0284_1672034645279_590176_3936 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672033477185_611402_3320
+		to _19_0_3_c2602ee_1671170576430_283693_2920
+	]
+	relation instance _19_0_3_8df0284_1698393118469_339936_1059 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821471114_386604_53300
+		to _19_0_3_1f900fd_1673414831893_635690_475
+	]
+	relation instance _19_0_3_8df0284_1698391853607_724237_966 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1698113634353_720658_343
+	]
+	relation instance _19_0_3_8df0284_1698391832343_661760_953 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1673415226108_159808_543
+	]
+	relation instance _19_0_3_8df0284_1698391838408_468032_957 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1673414144951_199910_373
+	]
+	relation instance _19_0_3_8df0284_1698391814468_199186_941 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_8df0284_1671686533018_914514_7504
+	]
+	relation instance _19_0_3_8df0284_1698391819488_284692_945 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1673415175945_743815_521
+	]
+	relation instance _19_0_3_8df0284_1698391823716_416226_949 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1672191961390_75452_1128
+	]
+	relation instance _19_0_3_c2602ee_1702944915556_860624_938 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_c2602ee_1702604403395_110296_1149
+	]
+	relation instance _19_0_3_8df0284_1698391842657_347708_961 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1698113634217_278372_330
+	]
+	relation instance _19_0_3_8df0284_1698391860729_156599_971 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1670821470755_393800_38374
+		to _19_0_3_1f900fd_1698113634399_467647_355
+	]
+	relation instance _19_0_3_8df0284_1698381279118_232306_2797 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381038707_812703_2767
+		to _19_0_3_8df0284_1673489198244_701968_1186
+	]
+	relation instance _19_0_3_8df0284_1698381283734_355228_2801 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698381000767_293915_2765
+		to _19_0_3_8df0284_1673489178146_510911_1166
+	]
+	relation instance _19_0_3_8df0284_1672034641839_423874_3924 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1672033440467_913745_3265
+		to _19_0_3_8df0284_1670821470407_908528_23976
+	]
+	relation instance _19_0_3_8df0284_1698369618871_221097_706 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698368822397_162101_601
+		to _19_0_3_8df0284_1673489779867_768084_1306
+	]
+	relation instance _19_0_3_8df0284_1698371014775_143033_726 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698370916397_875245_723
+		to _19_0_3_8df0284_1673489809276_291545_1346
+	]
+	relation instance _19_0_3_8df0284_1698370885433_446350_719 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698369640251_662202_714
+		to _19_0_3_8df0284_1673489807286_454490_1326
+	]
+	relation instance _19_0_3_8df0284_1698381289034_880333_2805 : dxmetamodel:Satisfy [
+		from block:_19_0_3_8df0284_1698380966721_474067_2763
+		to _19_0_3_8df0284_1673489134262_771023_1146
+	]
+	relation instance _19_0_3_8df0284_1698125000938_292216_1296 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698116273089_26087_1627
+		to _19_0_3_1f900fd_1698113634332_169998_337
+	]
+	relation instance _19_0_3_8df0284_1698125190662_222636_1769 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698113822246_59375_422
+	]
+	relation instance _19_0_3_8df0284_1698125186438_966493_1757 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698113822224_994800_416
+	]
+	relation instance _19_0_3_8df0284_1698125194120_200270_1781 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698113822267_904448_428
+	]
+	relation instance _19_0_3_8df0284_1698125182534_207675_1745 : dxmetamodel:Satisfy [
+		from block:_19_0_3_1f900fd_1698114012581_596081_550
+		to _19_0_3_1f900fd_1698113822201_856465_410
+	]
+
+// SysML Imported - dxmetamodel:Refine
+	relation instance _19_0_3_16a7041f_1676618744302_474873_513 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673424389115_371533_909
+		to activity:_19_0_3_8df0284_1673496983689_329902_413
+	]
+	relation instance _19_0_3_16a7041f_1676618633284_535501_475 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415272723_448540_565
+		to activity:_19_0_3_c2602ee_1672972347190_579800_431
+	]
+	relation instance _19_0_3_16a7041f_1676618698783_435842_495 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415272723_448540_565
+		to activity:_19_0_3_8df0284_1670918142694_421472_5865
+	]
+	relation instance _19_0_3_16a7041f_1676618747612_113667_515 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673424395345_872369_929
+		to activity:_19_0_3_8df0284_1673496983689_980699_414
+	]
+	relation instance _19_0_3_c2602ee_1702868098067_250937_339 : dxmetamodel:Refine [
+		from _19_0_3_c2602ee_1702604614854_288825_1181
+		to activity:_19_0_3_c2602ee_1702606548134_876673_1466
+	]
+	relation instance _19_0_3_16a7041f_1676618640347_554080_477 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to activity:_19_0_3_c2602ee_1672972347190_442541_430
+	]
+	relation instance _19_0_3_16a7041f_1676618702204_535335_497 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1672194599432_64660_1514
+		to activity:_19_0_3_8df0284_1672980711364_329675_2271
+	]
+	// relation instance _19_0_3_8df0284_1672121071528_42101_6118 : dxmetamodel:Refine [
+	// 	from _19_0_3_8df0284_1672040506752_72541_5098
+	// 	to activity:_19_0_3_8df0284_1670821470943_253192_46629
+	// ]
+	// relation instance _19_0_3_8df0284_1672121064190_125746_6106 : dxmetamodel:Refine [
+	// 	from _19_0_3_8df0284_1672040506752_72541_5098
+	// 	to activity:_19_0_3_8df0284_1670821470947_635345_46820
+	// ]
+	relation instance _19_0_3_16a7041f_1676618721421_517034_505 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415405140_677748_699
+		to activity:_19_0_3_8df0284_1673493264655_19747_123
+	]
+	relation instance _19_0_3_16a7041f_1676618733754_349549_511 : dxmetamodel:Refine [
+		from _19_0_3_8df0284_1672125452719_632502_7028
+		to activity:_19_0_3_8df0284_1673496190483_394604_170
+	]
+	relation instance _19_0_3_16a7041f_1676618725011_379397_507 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415435693_844954_723
+		to activity:_19_0_3_8df0284_1673496149650_87110_166
+	]
+	relation instance _19_0_3_16a7041f_1676618728380_514298_509 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415437134_841620_743
+		to activity:_19_0_3_8df0284_1673496173108_465085_168
+	]
+	relation instance _19_0_3_16a7041f_1676618689652_549789_491 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415226108_159808_543
+		to activity:_19_0_3_8df0284_1672979792087_910654_1200
+	]
+	relation instance _19_0_3_16a7041f_1676618676583_502640_485 : dxmetamodel:Refine [
+		from _19_0_3_8df0284_1671686533018_914514_7504
+		to activity:_19_0_3_1f900fd_1670985958554_428136_1500
+	]
+	relation instance _19_0_3_16a7041f_1676618705586_611347_499 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415273852_758989_589
+		to activity:_19_0_3_8df0284_1672980711364_81582_2270
+	]
+	relation instance _19_0_3_16a7041f_1676618646740_428716_479 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415273852_758989_589
+		to activity:_19_0_3_c2602ee_1672972347190_870188_429
+	]
+	relation instance _19_0_3_16a7041f_1676618653352_725835_481 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415277160_263469_613
+		to activity:_19_0_3_8df0284_1673323478528_661862_477
+	]
+	relation instance _19_0_3_16a7041f_1676618708914_31846_501 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415277160_263469_613
+		to activity:_19_0_3_c2602ee_1671174281178_801947_3444
+	]
+	// Model Consistency Error
+	// relation instance _19_0_3_c2602ee_1702605651996_795254_1436 : dxmetamodel:Refine [
+	// 	from _19_0_3_8df0284_1671516982241_544918_1614
+	// 	to activity:_19_0_3_c2602ee_1702601780279_804393_372
+	// ]
+	// relation instance _19_0_3_8df0284_1672121481966_761790_6160 : dxmetamodel:Refine [
+	// 	from _19_0_3_8df0284_1671516982241_544918_1614
+	// 	to activity:_19_0_3_8df0284_1670821469768_933484_2257
+	// ]
+	// relation instance _19_0_3_8df0284_1672121485914_978728_6172 : dxmetamodel:Refine [
+	// 	from _19_0_3_8df0284_1671516982241_544918_1614
+	// 	to activity:_19_0_3_8df0284_1670821470648_89765_34629
+	// ]
+	relation instance _19_0_3_16a7041f_1676618663745_429960_483 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673414831893_635690_475
+		to activity:_19_0_3_8df0284_1670917477378_998856_5817
+	]
+	relation instance _19_0_3_16a7041f_1676618754314_675027_519 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673424431345_211387_969
+		to activity:_19_0_3_8df0284_1673496332588_795716_244
+	]
+	relation instance _19_0_3_16a7041f_1676618577810_854702_467 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415175945_743815_521
+		to activity:_19_0_3_c2602ee_1672972495010_634065_643
+	]
+	relation instance _19_0_3_16a7041f_1676618680524_820287_487 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415175945_743815_521
+		to activity:_19_0_3_8df0284_1672979792087_253915_1199
+	]
+	relation instance _19_0_3_16a7041f_1676618717389_222973_503 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673415403160_217507_675
+		to activity:_19_0_3_8df0284_1673491647262_183675_4370
+	]
+	relation instance _19_0_3_16a7041f_1676618604635_95157_469 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to activity:_19_0_3_c2602ee_1672972495017_120175_652
+	]
+	relation instance _19_0_3_16a7041f_1676618684646_990914_489 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to activity:_19_0_3_8df0284_1672979792087_857651_1198
+	]
+	relation instance _19_0_3_16a7041f_1676618611930_190063_471 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1672191961390_75452_1128
+		to activity:_19_0_3_c2602ee_1672972347190_442541_430
+	]
+	relation instance _19_0_3_c2602ee_1702606011271_374251_1452 : dxmetamodel:Refine [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to activity:_19_0_3_c2602ee_1672972495017_120175_652
+	]
+	relation instance _19_0_3_c2602ee_1702605993113_148849_1448 : dxmetamodel:Refine [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to activity:_19_0_3_8df0284_1672979792087_857651_1198
+	]
+	relation instance _19_0_3_c2602ee_1702606000087_757165_1450 : dxmetamodel:Refine [
+		from _19_0_3_c2602ee_1702604403395_110296_1149
+		to activity:_19_0_3_c2602ee_1672972347190_442541_430
+	]
+	relation instance _19_0_3_16a7041f_1676618750902_871663_517 : dxmetamodel:Refine [
+		from _19_0_3_1f900fd_1673424429813_214857_949
+		to activity:_19_0_3_8df0284_1673491970937_516264_4441
+	]
+	relation instance _19_0_3_16a7041f_1676618621559_544628_473 : dxmetamodel:Refine [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to activity:_19_0_3_c2602ee_1672972347190_773407_432
+	]
+	relation instance _19_0_3_16a7041f_1676618695708_33984_493 : dxmetamodel:Refine [
+		from _19_0_3_8df0284_1672126823818_650145_7407
+		to activity:_19_0_3_8df0284_1672980513707_716343_2190
+	]
+
+
+}

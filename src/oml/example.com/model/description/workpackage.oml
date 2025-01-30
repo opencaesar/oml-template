@@ -1,0 +1,10 @@
+description <http://example.com/model/description/workpackage#> as workpackages {
+
+	extends <http://example.com/model/description/missions#>
+
+	uses <http://imce.jpl.nasa.gov/foundation/mission#>
+
+	uses <http://imce.jpl.nasa.gov/foundation/project#> as project
+
+	instance myworkpackage : project:WorkPackage
+}

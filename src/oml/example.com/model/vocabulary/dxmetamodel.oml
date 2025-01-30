@@ -1,0 +1,129 @@
+vocabulary <http://example.com/model/vocabulary/dxmetamodel#> as dxmetamodel {
+
+	extends <http://www.w3.org/2000/01/rdf-schema#> as rdfs
+
+	extends <http://purl.org/dc/elements/1.1/> as dc
+
+	extends <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+	extends <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+
+	@rdfs:label "Requirement"
+	@dc:description "SysML Requirement is mapped to mission:Requirement"
+	concept Requirement < mission:Requirement
+
+	@rdfs:label "Block"
+	@dc:description "SysML Block is mapped to mission:Component"
+	concept Block < mission:Component, SatisfyingElement
+
+	@rdfs:label "deriveReqt"
+	@dc:description "A [=Requirement=] [=deriveReqt=] zero or more [=Requirement=]s."
+	relation entity DeriveReqt [
+		from Requirement
+		to Requirement
+		@rdfs:label "deriveReqt"
+		forward deriveReqt
+		@rdfs:label "is deriveReqted from"
+		reverse isderiveReqtedFrom
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:label "Satisfying Element"
+	@dc:description "[=SatisfyingElement=] is the domain of [=satisfy=].
+		Any concept that [=satisfy=] a [=Requirement=] should specialize [=SatisfyingElement=]."
+	aspect SatisfyingElement
+
+	@rdfs:label "Satisfy"
+	@dc:description "A [=Block=] [=satisfy=] zero or more [=Requirement=]s."
+	relation entity Satisfy [
+		from SatisfyingElement
+		to Requirement
+		@rdfs:label "satisfy"
+		forward satisfy
+		@rdfs:label "is Satisfied from"
+		reverse isSatisfiedFrom
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:label "ReqHasSource"
+	@dc:description "A [=Requirement=] [=ReqHasSource=] zero or more [=Block=]s."
+	relation entity ReqHasSource [
+		from Requirement
+		to Block
+		@rdfs:label "reqHasSource"
+		forward reqHasSource
+		@rdfs:label "is reqHasSourced from"
+		reverse isReqHasSourcedFrom
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:label "Allocating Element"
+	@dc:description "[=AllocatingElement=] is the domain of [=allocate=].
+		Any concept that [=allocate=] a [=block=] should specialize [=AllocatingElement=]."
+	aspect AllocatingElement
+
+	@rdfs:label "Activity"
+	@dc:description "SysML Activity is mapped to mission:Function"
+	concept Activity < mission:Function, AllocatingElement, RefinedElement
+
+	@rdfs:label "Function"
+	@dc:description "SysML Function is mapped to mission:Function"
+	concept Function < mission:Function, AllocatingElement, RefinedElement
+
+	@rdfs:label "deriveAct"
+	@dc:description "A [=Function=] [=deriveAct=] zero or more [=Activity=]s."
+	relation entity DeriveAct [
+		from Function
+		to Activity
+		@rdfs:label "deriveAct"
+		forward deriveAct
+		@rdfs:label "is deriveActed from"
+		reverse isDeriveActedFrom
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:label "Allocate"
+	@dc:description "A [=Activity=] [=allocate=] zero or more [=Block=]s."
+	relation entity Allocate [
+		from AllocatingElement
+		to Block
+		@rdfs:label "allocate"
+		forward allocate
+		@rdfs:label "is Allocated from"
+		reverse isAllocatedFrom
+		asymmetric
+		irreflexive
+	]
+
+	@rdfs:label "ValueProperty"
+	@dc:description "SysML ValueProperty is mapped to mission:Component"
+	concept ValueProperty < mission:Component, SatisfyingElement
+
+	@rdfs:label "ConstraintBlock"
+	@dc:description "SysML ConstraintBlock is mapped to mission:Component"
+	concept ConstraintBlock < mission:Component, SatisfyingElement
+
+	@rdfs:label "Refined Element"
+	@dc:description "[=RefinedElement=] is the domain of [=refine=].
+		Any concept that [=refined=] by a [=requirement=] should specialize [=RefinedElement=]."
+	aspect RefinedElement
+
+	@rdfs:label "Refine"
+	@dc:description "A [=Requirement=] [=refine=] zero or more [=RefinedElement=]s."
+	relation entity Refine [
+		from Requirement
+		to RefinedElement
+		@rdfs:label "refine"
+		forward refine
+		@rdfs:label "is refined by"
+		reverse isRefinedBy
+		asymmetric
+		irreflexive
+	]
+
+}
+

@@ -1,0 +1,24 @@
+description bundle <http://example.com/model/description/bundle#> as ^bundle {
+
+	includes <http://example.com/model/description/block#>
+
+	includes <http://example.com/model/description/components#>
+
+	includes <http://example.com/model/description/interfaces#>
+
+	includes <http://example.com/model/description/junctions#>
+
+	includes <http://example.com/model/description/masses#>
+
+	includes <http://example.com/model/description/missions#>
+
+	includes <http://example.com/model/description/objectives#>
+
+	includes <http://example.com/model/description/requirements#>
+
+	includes <http://example.com/model/description/deriveReqt#>
+
+	includes <http://example.com/model/description/activity#>
+
+	uses <http://example.com/model/vocabulary/bundle#>
+}

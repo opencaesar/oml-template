@@ -1,0 +1,17 @@
+
+PREFIX dxmetamodel:  <http://example.com/model/vocabulary/dxmetamodel#>
+PREFIX base: <http://imce.jpl.nasa.gov/foundation/base#>
+
+SELECT * WHERE {
+  ?r a dxmetamodel:Requirement;
+     dxmetamodel:isSatisfiedFrom ?b;
+     dxmetamodel:refine ?f.
+        ?f dxmetamodel:deriveAct ?a.
+        ?a dxmetamodel:allocate ?c.
+        ?r base:hasCanonicalName ?rn.
+        ?b base:hasCanonicalName ?bn.
+        ?f base:hasCanonicalName ?fn.
+        ?a base:hasCanonicalName ?an.
+        ?c base:hasCanonicalName ?cn.
+  BIND(IF(?b = ?c, "OK", "NG") AS ?result)
+}

@@ -1,0 +1,22 @@
+{
+  "getparameterfromscenario01": {
+    "name": "Scenario",
+    "diagrams": {
+      "all-rows": "parameter-table"
+    },
+    "columnNames": {
+      "scenario_instancename": "Scenario",
+      "statevariable": "State Variable",
+      "value": "State Value",
+      "type" : "type"
+    },
+    "queries": {
+      "obj-query": "getparameterfromscenario01.sparql"
+    },
+    "rowMapping": {
+      "id": "obj-query",
+      "name": "SV",
+      "labelFormat": "SV"
+    }
+  }
+}

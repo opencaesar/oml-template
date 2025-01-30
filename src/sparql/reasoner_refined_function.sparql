@@ -1,0 +1,15 @@
+# From-Toの抜け漏れチェック
+# 誰にもrefineされていないされていないfunctionを抽出
+
+PREFIX dxmetamodel:  <http://example.com/model/vocabulary/dxmetamodel#>
+PREFIX base: <http://imce.jpl.nasa.gov/foundation/base#>
+ 
+SELECT * WHERE {
+    ?f a dxmetamodel:Function;
+  		base:hasCanonicalName ?fn.
+  	OPTIONAL{
+    	?f dxmetamodel:isRefinedBy ?r;
+    }
+    FILTER (!bound(?r))
+  	BIND(IF(bound(?r), "OK", "NG") AS ?result)
+} 

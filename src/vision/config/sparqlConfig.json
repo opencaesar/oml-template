@@ -1,0 +1,6 @@
+{
+    "queryEndpoint": "http://localhost:3030/model/sparql",
+    "updateAssertionEndpoint": "http://localhost:3030/model-tdb/update",
+    "updateInferenceEndpoint": "http://localhost:3030/model/update",
+    "pingEndpoint": "http://localhost:3030/$/ping"
+}

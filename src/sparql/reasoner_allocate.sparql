@@ -1,0 +1,15 @@
+PREFIX dxmetamodel:  <http://example.com/model/vocabulary/dxmetamodel#>
+PREFIX base: <http://imce.jpl.nasa.gov/foundation/base#>
+
+SELECT * WHERE {
+    ?f a dxmetamodel:Function;
+         dxmetamodel:allocate ?b;
+         dxmetamodel:deriveAct ?a.
+         ?a dxmetamodel:allocate ?c.
+         ?f base:hasCanonicalName ?fn.
+         ?b base:hasCanonicalName ?bn.
+         ?a base:hasCanonicalName ?an.
+         ?c base:hasCanonicalName ?cn.
+         BIND(IF(?b = ?c, "OK", "NG") AS ?result)
+}
+

@@ -1,0 +1,99 @@
+description <http://example.com/model/description/masses#> as masses {
+
+	extends <http://example.com/model/description/components#> as components
+
+	uses <http://bipm.org/jcgm/vim4#> as vim4
+
+	uses <http://example.com/model/vocabulary/mechanical#> as mechanical
+
+	ref instance components:lander-launch-system : mechanical:MechanicalComponent
+
+	ref instance components:lander-spacecraft : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-command-and-data-handling-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-guidance-navigation-control-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-harness : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-launch-system : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-mechanical-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-power-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-propulsion-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-spacecraft : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-spacraft-flight-software : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-telecom-subsystem : mechanical:MechanicalComponent
+
+	ref instance components:orbiter-thermal-subsystem : mechanical:MechanicalComponent
+
+	instance lander-launch-system.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:lander-launch-system
+		vim4:hasDoubleNumber 3.50E+03
+	]
+
+	instance lander-spacecraft.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:lander-spacecraft
+		vim4:hasDoubleNumber 1.20E+03
+	]
+
+	instance orbiter-command-and-data-handling-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-command-and-data-handling-subsystem
+		vim4:hasDoubleNumber 1.47E+02
+	]
+
+	instance orbiter-guidance-navigation-control-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-guidance-navigation-control-subsystem
+		vim4:hasDoubleNumber 1.56E+02
+	]
+
+	instance orbiter-harness.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-harness
+		vim4:hasDoubleNumber 1.38E+02
+	]
+
+	instance orbiter-launch-system.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-launch-system
+		vim4:hasDoubleNumber 2.00E+03
+	]
+
+	instance orbiter-mechanical-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-mechanical-subsystem
+		vim4:hasDoubleNumber 3.25E+02
+	]
+
+	instance orbiter-power-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-power-subsystem
+		vim4:hasDoubleNumber 2.97E+02
+	]
+
+	instance orbiter-propulsion-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-propulsion-subsystem
+		vim4:hasDoubleNumber 1.06E+02
+	]
+
+	instance orbiter-spacecraft.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-spacecraft
+		vim4:hasDoubleNumber 0.00E+00
+	]
+
+	instance orbiter-spacraft-flight-software.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-spacraft-flight-software
+		vim4:hasDoubleNumber 1.65E+02
+	]
+
+	instance orbiter-telecom-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-telecom-subsystem
+		vim4:hasDoubleNumber 3.16E+02
+	]
+
+	instance orbiter-thermal-subsystem.mass.magnitude : mechanical:MassMagnitude [
+		vim4:characterizes components:orbiter-thermal-subsystem
+		vim4:hasDoubleNumber 3.07E+02
+	]
+}

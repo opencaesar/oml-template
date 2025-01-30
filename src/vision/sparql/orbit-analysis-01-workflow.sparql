@@ -1,0 +1,40 @@
+PREFIX base:        <http://imce.jpl.nasa.gov/foundation/base#>
+PREFIX mission:        <http://imce.jpl.nasa.gov/foundation/mission#>
+PREFIX analysis:        <http://imce.jpl.nasa.gov/foundation/analysis#>
+PREFIX project:        <http://imce.jpl.nasa.gov/foundation/project#>
+PREFIX rdf: 					<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+SELECT DISTINCT ?c1 ?c1_instancename ?c1_id ?c1_name ?c2 ?c2_instancename ?c2_id ?c2_name ?c1_type ?c2_type
+WHERE {
+
+  VALUES ?componentType { project:Process project:WorkPackage}
+
+  ?c1 a ?componentType ;
+    OPTIONAL{
+      ?c1 base:hasIdentifier ?c1_id ;
+        base:hasCanonicalName ?c1_name ;
+    }
+
+  OPTIONAL{
+    ?c1 project:isExecutedBy ?c2 ;
+    OPTIONAL{
+      ?c2 base:hasIdentifier ?c2_id ;
+          base:hasCanonicalName ?c2_name .
+    }
+  }
+  
+	OPTIONAL {
+		?c1 a project:Process ;
+			BIND("Process"  AS ?c1_type) .
+	}
+	OPTIONAL {
+		?c1 a project:WorkPackage ;
+			BIND("WorkPackage"  AS ?c1_type) .
+	}
+      
+  
+  
+  BIND(STRAFTER(STR(?c1), "#") AS ?c1_instancename) .
+  BIND(STRAFTER(STR(?c2), "#") AS ?c2_instancename) .
+ }
+ORDER BY ?c1_id

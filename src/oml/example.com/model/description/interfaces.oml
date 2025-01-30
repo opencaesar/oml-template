@@ -1,0 +1,48 @@
+description <http://example.com/model/description/interfaces#> as interfaces {
+
+	extends <http://example.com/model/description/components#> as components
+
+	uses <http://imce.jpl.nasa.gov/foundation/base#> as base
+
+	uses <http://imce.jpl.nasa.gov/foundation/mission#> as mission
+
+	instance orbiter-ground-data-system.commandOut : mission:Interface [
+		base:hasCanonicalName "Command Out"
+		base:hasIdentifier "I.03"
+	]
+
+	relation instance orbiter-ground-data-system.presents.commandOut : mission:Presents [
+		from components:orbiter-ground-data-system
+		to orbiter-ground-data-system.commandOut
+	]
+
+	relation instance orbiter-ground-data-system.presents.telemetryIn : mission:Presents [
+		from components:orbiter-ground-data-system
+		to orbiter-ground-data-system.telemetryIn
+	]
+
+	instance orbiter-ground-data-system.telemetryIn : mission:Interface [
+		base:hasCanonicalName "Telemetry In"
+		base:hasIdentifier "I.04"
+	]
+
+	instance orbiter-spacecraft.commandIn : mission:Interface [
+		base:hasCanonicalName "Command In"
+		base:hasIdentifier "I.01"
+	]
+
+	relation instance orbiter-spacecraft.presents.commandIn : mission:Presents [
+		from components:orbiter-spacecraft
+		to orbiter-spacecraft.commandIn
+	]
+
+	relation instance orbiter-spacecraft.presents.telemetryOut : mission:Presents [
+		from components:orbiter-spacecraft
+		to orbiter-spacecraft.telemetryOut
+	]
+
+	instance orbiter-spacecraft.telemetryOut : mission:Interface [
+		base:hasCanonicalName "Telemetry Out"
+		base:hasIdentifier "I.02"
+	]
+}
