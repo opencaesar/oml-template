@@ -20,9 +20,9 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
-
+      
     - name: Check Current Locale
-      run: Get-WinSystemLocale
+      run: $PSVersionTable.PSVersion
       shell: pwsh
 
     - name: Install Japanese Language Pack
