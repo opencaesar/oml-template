@@ -13,7 +13,7 @@ repositories:
 dependencies:
    - io.opencaesar.ontologies:core-vocabularies:5.+
 
-# Prokect's datasets
+# Project's datasets
 datasets:
    example: # configured in fuseki.ttl
       label: Oml Example Dataset
