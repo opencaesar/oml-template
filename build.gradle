@@ -232,8 +232,8 @@ publishing {
 							}
 						}
 					}
-					root.appendNode('name', oml.project.title)
-					root.appendNode('description', oml.project.description)
+					root.appendNode('name', oml.dataset.label)
+					root.appendNode('description', oml.dataset.description)
 					root.appendNode('url', 'https://github.com/opencaesar/'+rootProject.name)
 					root.children().last() + pomConfig
 				}
