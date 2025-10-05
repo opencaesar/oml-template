@@ -1,0 +1,23 @@
+# Project's properties
+project:
+   title: Oml Template
+   description: This is the OML project template
+   group: io.opencaesar
+   version: 0.1.0
+
+# Maven repositories
+repositories:
+   - https://repo.maven.apache.org/maven2
+
+# Maven dependencies
+dependencies:
+   - io.opencaesar.ontologies:core-vocabularies:5.+
+
+# Prokect's datasets
+datasets:
+   example: # configured in fuseki.ttl
+      label: Oml Example Dataset
+      description: This is an OML example dataset
+      iri: http://opencaesar.io/example/description/bundle
+      sources: [ 'src/oml' ]
+      queries: src/sparql

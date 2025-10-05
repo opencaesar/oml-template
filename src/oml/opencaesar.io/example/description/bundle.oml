@@ -1,0 +1,12 @@
+@dc:title "Example Description Bundle"
+@dc:creator "Example Company"
+@dc:rights "Copyright 2019, by Example Company"
+description bundle <http://opencaesar.io/example/description/bundle#> as d-bundle {
+	
+	uses <http://purl.org/dc/elements/1.1/> as dc	
+
+	uses <http://opencaesar.io/example/vocabulary/bundle#>
+	
+	includes <http://opencaesar.io/example/description/description1#>
+
+}

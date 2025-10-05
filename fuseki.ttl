@@ -1,0 +1,27 @@
+PREFIX :        <#>
+PREFIX fuseki:  <http://jena.apache.org/fuseki#>
+PREFIX ja:      <http://jena.hpl.hp.com/2005/11/Assembler#>
+PREFIX tdb:     <http://jena.hpl.hp.com/2008/tdb#>
+
+####################################################################################
+# Minimal variables to customize this configuration
+
+# the name of the dataset in Fuseki (matches one in onml.yml)
+:service
+    fuseki:name "example" .
+
+#####################################################################################
+# Configuration provides a single Service exposing query/update/graphstore endpoints.
+# one a single (TDB) dataset 
+
+:service a fuseki:Service ;
+  fuseki:dataset :dataset ;
+  fuseki:serviceQuery "" , "query", "sparql" ;
+  fuseki:serviceReadWriteGraphStore "data" ;
+  fuseki:serviceReadGraphStore "get" ;
+  .
+  
+:dataset a tdb:DatasetTDB ;
+  tdb:location "--mem--" ;
+  tdb:unionDefaultGraph true ;
+  .
