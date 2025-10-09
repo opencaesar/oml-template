@@ -105,7 +105,7 @@ task reason(type:io.opencaesar.owl.reason.OwlReasonTask, group:"oml", dependsOn:
         "$oml.dataset.iri/individuals = ALL_INSTANCE | DATA_PROPERTY_VALUE | OBJECT_PROPERTY_VALUE | SAME_AS"
     ]
 	reportPath = file("build/logs/${oml.dataset.name}/reasoning.xml")
-	uniqueNames = true
+	uniqueNames = false
 }
 
 /*
